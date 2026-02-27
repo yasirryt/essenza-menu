@@ -755,94 +755,375 @@ async function hashPassword(pw) {
 }
 
 const defaultData = {
-  eyebrow: 'Restoran',
-  heroSub: 'Milano · 2019\'dan beri',
-  navLabels: ['Tadım Menüsü','Başlangıçlar','Birinci Yemekler','Ana Yemekler','Tatlılar','Şaraplar'],
-  deguLabel: 'Tam Deneyim', deguTitle: 'Tadım Menüsü',
-  antipastiLabel: 'Başlangıç İçin', antipastiTitle: 'Başlangıçlar',
-  primiLabel: 'Birinci Yemekler', primiTitle: 'Primi',
-  secondiLabel: 'Ana Yemekler', secondiTitle: 'Secondi',
-  dolciLabel: 'Yemek Sonu', dolciTitle: 'Tatlılar',
-  viniLabel: 'Mahzenimiz', viniTitle: 'Şaraplar',
-  footerLogo: 'Essenza',
-  currency: '€',
-  footerAddr: 'Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
-  deguBadge: '★ Şefin İmzası ★',
-  deguName: 'Terra & Mare',
-  deguSub: '8 kurs · Şarap eşleştirmesi mevcut',
-  deguPrice: '240',
-  pairingBtn: '+ Şarap Eşleştirme · €120',
-  courses: [
-    { num:'I', name:'Şef\'in Amuse-Bouche\'u', desc:'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
-    { num:'II', name:'İstiridye ve Havyar', desc:'Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu' },
-    { num:'III', name:'Çiğ Sarı Kuyruk Balığı', desc:'Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler' },
-    { num:'IV', name:'Milanese Risotto', desc:'Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın' },
-    { num:'V', name:'Taze Makarna — Açık Raviolo', desc:'Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı' },
-    { num:'VI', name:'Bresse Güvercini', desc:'Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan' },
-    { num:'VII', name:'Ön Tatlı', desc:'Amalfi limon sorbesi, taze nane, gül suyu' },
-    { num:'VIII', name:'Tatlı — Çikolata & Fındık', desc:'Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması' },
+  "eyebrow": "Restaurant",
+  "heroSub": "Antalya · Lara",
+  "navLabels": [
+    "Tadım Menüsü",
+    "Başlangıçlar",
+    "Birinci Yemekler",
+    "Ana Yemekler",
+    "Tatlılar",
+    "Şaraplar"
   ],
-  antipasti: [
-    { name:'Dana Carpaccio', sub:'Fassona', desc:'Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf', tags:'İmza', price:'38', hidden:false, chefPick:true, vegan:false, vegetarian:false, calories:'', allergens:'Süt, Gluten' },
-    { name:'Mazara Kırmızı Karidesi', sub:'', desc:'Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu', tags:'Mevsimlik, Çiğ', price:'52', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Kabuklu deniz ürünleri' },
-    { name:'Foie Gras', sub:'Venedik Usulü', desc:'Ördek ciğeri terrinesi, Marsala\'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi', tags:'Klasik', price:'46', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Gluten, Süt, Yumurta' },
-    { name:'Andria Burratası', sub:'', desc:'Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri', tags:'Vejetaryen', price:'28', hidden:false, chefPick:false, vegan:false, vegetarian:true, calories:'', allergens:'Süt, Fındık' },
+  "deguLabel": "Tam Deneyim",
+  "deguTitle": "Tadım Menüsü",
+  "antipastiLabel": "Başlangıç İçin",
+  "antipastiTitle": "Başlangıçlar",
+  "primiLabel": "Birinci Yemekler",
+  "primiTitle": "Primi",
+  "secondiLabel": "Ana Yemekler",
+  "secondiTitle": "Secondi",
+  "dolciLabel": "Yemek Sonu",
+  "dolciTitle": "Tatlılar",
+  "viniLabel": "Mahzenimiz",
+  "viniTitle": "Şaraplar",
+  "footerLogo": "Essenza",
+  "currency": "€",
+  "footerAddr": "Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur",
+  "deguBadge": "★ Şefin İmzası ★",
+  "deguName": "Terra & Mare",
+  "deguSub": "8 kurs · Şarap eşleştirmesi mevcut",
+  "deguPrice": "240",
+  "pairingBtn": "+ Şarap Eşleştirme · €120",
+  "courses": [
+    {
+      "num": "I",
+      "name": "Şef'in Amuse-Bouche'u",
+      "desc": "Mutfaktan hoş geldin — dört mevsimlik küçük lokma"
+    },
+    {
+      "num": "II",
+      "name": "İstiridye ve Havyar",
+      "desc": "Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu"
+    },
+    {
+      "num": "III",
+      "name": "Çiğ Sarı Kuyruk Balığı",
+      "desc": "Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler"
+    },
+    {
+      "num": "IV",
+      "name": "Milanese Risotto",
+      "desc": "Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın"
+    },
+    {
+      "num": "V",
+      "name": "Taze Makarna — Açık Raviolo",
+      "desc": "Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı"
+    },
+    {
+      "num": "VI",
+      "name": "Bresse Güvercini",
+      "desc": "Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan"
+    },
+    {
+      "num": "VII",
+      "name": "Ön Tatlı",
+      "desc": "Amalfi limon sorbesi, taze nane, gül suyu"
+    },
+    {
+      "num": "VIII",
+      "name": "Tatlı — Çikolata & Fındık",
+      "desc": "Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması"
+    }
   ],
-  primi: [
-    { name:'Safran Risotto', sub:'Şefin Yorumu', desc:'Carnaroli Riserva San Massimo, L\'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın', tags:'İmza, Glutensiz', price:'44', hidden:false, chefPick:true, vegan:false, vegetarian:false, calories:'', allergens:'Süt' },
-    { name:'Beyaz Trüflü Tagliolini', sub:'', desc:'Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut', tags:'Mevsimlik', price:'68', hidden:false, chefPick:true, vegan:false, vegetarian:true, calories:'', allergens:'Gluten, Yumurta, Süt' },
-    { name:'Açık Raviolo', sub:'Yumurtalı', desc:'İrmik raviolosu, 63°C confit yumurta sarısı, Val d\'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı', tags:'Vejetaryen', price:'38', hidden:false, chefPick:false, vegan:false, vegetarian:true, calories:'', allergens:'Gluten, Yumurta, Süt' },
-    { name:'Deniz Kestaneli Spaghetti', sub:'', desc:'Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon', tags:'Deniz', price:'42', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Gluten, Balık' },
+  "antipasti": [
+    {
+      "name": "Dana Carpaccio",
+      "sub": "Fassona",
+      "desc": "Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf",
+      "tags": "İmza",
+      "price": "38",
+      "allergens": "Süt, Gluten",
+      "calories": "",
+      "hidden": false,
+      "chefPick": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Mazara Kırmızı Karidesi",
+      "sub": "",
+      "desc": "Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu",
+      "tags": "Mevsimlik, Çiğ",
+      "price": "52",
+      "allergens": "Kabuklu deniz ürünleri",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Foie Gras",
+      "sub": "Venedik Usulü",
+      "desc": "Ördek ciğeri terrinesi, Marsala'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi",
+      "tags": "Klasik",
+      "price": "46",
+      "allergens": "Gluten, Süt, Yumurta",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Andria Burratası",
+      "sub": "",
+      "desc": "Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri",
+      "tags": "Vejetaryen",
+      "price": "28",
+      "allergens": "Süt, Fındık",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": true,
+      "vegan": false
+    }
   ],
-  secondi: [
-    { name:'Bresse Güvercini', sub:'İki Pişirme Tekniği', desc:'Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı', tags:'İmza, Kara', price:'62', hidden:false, chefPick:true, vegan:false, vegetarian:false, calories:'', allergens:'Süt' },
-    { name:'Tuzda Yabani Levrek', sub:'', desc:'Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı', tags:'Deniz', price:'58', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Balık' },
-    { name:'Wagyu A4 Kontrfile', sub:'', desc:'Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak', tags:'Premium', price:'95', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Süt, Gluten' },
-    { name:'Dana Uykuluğu', sub:'Altın Rengi', desc:'Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon', tags:'Klasik', price:'48', hidden:false, chefPick:false, vegan:false, vegetarian:false, calories:'', allergens:'Süt' },
+  "primi": [
+    {
+      "name": "Safran Risotto",
+      "sub": "Şefin Yorumu",
+      "desc": "Carnaroli Riserva San Massimo, L'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın",
+      "tags": "İmza, Glutensiz",
+      "price": "44",
+      "allergens": "Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Beyaz Trüflü Tagliolini",
+      "sub": "",
+      "desc": "Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut",
+      "tags": "Mevsimlik",
+      "price": "68",
+      "allergens": "Gluten, Yumurta, Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    {
+      "name": "Açık Raviolo",
+      "sub": "Yumurtalı",
+      "desc": "İrmik raviolosu, 63°C confit yumurta sarısı, Val d'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı",
+      "tags": "Vejetaryen",
+      "price": "38",
+      "allergens": "Gluten, Yumurta, Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": true,
+      "vegan": false
+    },
+    {
+      "name": "Deniz Kestaneli Spaghetti",
+      "sub": "",
+      "desc": "Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon",
+      "tags": "Deniz",
+      "price": "42",
+      "allergens": "Gluten, Balık",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    }
   ],
-  dolci: [
-    { name:'Tiramisu', sub:'Yeniden Yorumlanan', desc:'Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması', tags:'İmza', price:'24', hidden:false, chefPick:true, vegan:false, vegetarian:true, calories:'', allergens:'Gluten, Yumurta, Süt' },
-    { name:'Guanaja Çikolata & Fındık', sub:'', desc:'Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül', tags:'Glutensiz', price:'22', hidden:false, chefPick:false, vegan:false, vegetarian:true, calories:'', allergens:'Süt, Fındık' },
-    { name:'Limoncello Sufle', sub:'', desc:'Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir', tags:'Siparişe Özel', price:'26', hidden:false, chefPick:false, vegan:false, vegetarian:true, calories:'', allergens:'Gluten, Yumurta, Süt' },
-    { name:'Küçük Pastacılık Tabağı', sub:'', desc:'Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları', tags:'İki Kişilik', price:'18', hidden:false, chefPick:false, vegan:false, vegetarian:true, calories:'', allergens:'Gluten, Süt, Fındık' },
+  "secondi": [
+    {
+      "name": "Bresse Güvercini",
+      "sub": "İki Pişirme Tekniği",
+      "desc": "Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı",
+      "tags": "İmza, Kara",
+      "price": "62",
+      "allergens": "Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Tuzda Yabani Levrek",
+      "sub": "",
+      "desc": "Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı",
+      "tags": "Deniz",
+      "price": "58",
+      "allergens": "Balık",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Wagyu A4 Kontrfile",
+      "sub": "",
+      "desc": "Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak",
+      "tags": "Premium",
+      "price": "95",
+      "allergens": "Süt, Gluten",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    {
+      "name": "Dana Uykuluğu",
+      "sub": "Altın Rengi",
+      "desc": "Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon",
+      "tags": "Klasik",
+      "price": "48",
+      "allergens": "Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": false,
+      "vegan": false
+    }
   ],
-  // YENİ: Banner
-  bannerActive: false,
-  bannerText: 'Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.',
-
-  // YENİ: Rezervasyon
-  reservationActive: true,
-  reservationLabel: 'Rezervasyon',
-  reservationLink: 'https://wa.me/905001234567',
-
-  // YENİ: Sosyal medya
-  socialInstagram: '',
-  socialFacebook: '',
-
-  // YENİ: Menü görünürlük ayarları
-  showAllergens: true,
-  showVeganIcons: true,
-  showCalories: false,
-  showChefBadge: true,
-
-  wineCats: [
-    { title:'Şampanya & Köpüklü', wines:[
-      { name:'Krug Grande Cuvée', info:'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass:'38', bottle:'320' },
-      { name:'Franciacorta Riserva Vittorio Moretti', info:'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015', glass:'22', bottle:'165' },
-    ]},
-    { title:'Seçkin Beyazlar', wines:[
-      { name:'Gaia & Rey Chardonnay', info:'Langhe DOC · Gaja · Piemonte · 2020', glass:'28', bottle:'210' },
-      { name:'Vernaccia di San Gimignano Riserva', info:'DOCG · Montenidoli · Toskana · 2019', glass:'16', bottle:'95' },
-    ]},
-    { title:'Önemli Kırmızılar', wines:[
-      { name:'Barolo Brunate', info:'DOCG · Roberto Voerzio · Nebbiolo · 2018', glass:'42', bottle:'380' },
-      { name:'Sassicaia', info:'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019', glass:'55', bottle:'490' },
-      { name:'Amarone della Valpolicella', info:'DOCG · Dal Forno Romano · Veneto · 2015', glass:'48', bottle:'420' },
-    ]},
-    { title:'Tatlı Şaraplar', wines:[
-      { name:'Passito di Pantelleria Ben Ryé', info:'DOC · Donnafugata · Sicilya · Zibibbo · 2021', glass:'18', bottle:'95' },
-    ]},
+  "dolci": [
+    {
+      "name": "Tiramisu",
+      "sub": "Yeniden Yorumlanan",
+      "desc": "Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması",
+      "tags": "İmza",
+      "price": "24",
+      "allergens": "Gluten, Yumurta, Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    {
+      "name": "Guanaja Çikolata & Fındık",
+      "sub": "",
+      "desc": "Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül",
+      "tags": "Glutensiz",
+      "price": "22",
+      "allergens": "Süt, Fındık",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": true,
+      "vegan": false
+    },
+    {
+      "name": "Limoncello Sufle",
+      "sub": "",
+      "desc": "Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir",
+      "tags": "Siparişe Özel",
+      "price": "26",
+      "allergens": "Gluten, Yumurta, Süt",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": true,
+      "vegan": false
+    },
+    {
+      "name": "Küçük Pastacılık Tabağı",
+      "sub": "",
+      "desc": "Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları",
+      "tags": "İki Kişilik",
+      "price": "18",
+      "allergens": "Gluten, Süt, Fındık",
+      "calories": "",
+      "hidden": false,
+      "chefPick": false,
+      "vegetarian": true,
+      "vegan": false
+    }
   ],
+  "bannerActive": false,
+  "bannerText": "Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.",
+  "reservationActive": true,
+  "reservationLabel": "Rezervasyon",
+  "reservationLink": "https://wa.me/905001234567",
+  "socialInstagram": "",
+  "socialFacebook": "",
+  "showAllergens": true,
+  "showVeganIcons": true,
+  "showCalories": false,
+  "showChefBadge": true,
+  "wineCats": [
+    {
+      "title": "Şampanya & Köpüklü",
+      "wines": [
+        {
+          "name": "Krug Grande Cuvée",
+          "info": "Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier",
+          "glass": "38",
+          "bottle": "320"
+        },
+        {
+          "name": "Franciacorta Riserva Vittorio Moretti",
+          "info": "Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015",
+          "glass": "22",
+          "bottle": "165"
+        }
+      ]
+    },
+    {
+      "title": "Seçkin Beyazlar",
+      "wines": [
+        {
+          "name": "Gaia & Rey Chardonnay",
+          "info": "Langhe DOC · Gaja · Piemonte · 2020",
+          "glass": "28",
+          "bottle": "210"
+        },
+        {
+          "name": "Vernaccia di San Gimignano Riserva",
+          "info": "DOCG · Montenidoli · Toskana · 2019",
+          "glass": "16",
+          "bottle": "95"
+        }
+      ]
+    },
+    {
+      "title": "Önemli Kırmızılar",
+      "wines": [
+        {
+          "name": "Barolo Brunate",
+          "info": "DOCG · Roberto Voerzio · Nebbiolo · 2018",
+          "glass": "42",
+          "bottle": "380"
+        },
+        {
+          "name": "Sassicaia",
+          "info": "Bolgheri Sassicaia DOC · Tenuta San Guido · 2019",
+          "glass": "55",
+          "bottle": "490"
+        },
+        {
+          "name": "Amarone della Valpolicella",
+          "info": "DOCG · Dal Forno Romano · Veneto · 2015",
+          "glass": "48",
+          "bottle": "420"
+        }
+      ]
+    },
+    {
+      "title": "Tatlı Şaraplar",
+      "wines": [
+        {
+          "name": "Passito di Pantelleria Ben Ryé",
+          "info": "DOC · Donnafugata · Sicilya · Zibibbo · 2021",
+          "glass": "18",
+          "bottle": "95"
+        }
+      ]
+    }
+  ]
 };
 
 function loadData() {
@@ -1169,292 +1450,5 @@ function downloadFile(){
 
 function bakeAndDownload(src){
   // 1. Eski baked-data script bloğunu temizle
-  src = src.replace(/<script id="baked-data">[\s\S]*?<\/script>\s*/g, '');
-
-  // 2. defaultData bloğunu D'nin güncel haliyle değiştir
-  // Bloğun başını bul
-  const MARKER = 'const defaultData = {';
-  const start = src.indexOf(MARKER);
-  if(start === -1){ showToast('Hata: kaynak bulunamadı'); return; }
-
-  // Bloğun sonunu bul — brace sayarak
-  let depth = 0, pos = start;
-  while(pos < src.length){
-    const ch = src[pos];
-    if(ch === '{') depth++;
-    else if(ch === '}') { depth--; if(depth === 0){ pos++; break; } }
-    pos++;
-  }
-  // Noktalı virgülü atla
-  if(src[pos] === ';') pos++;
-
-  // Yeni blok — JSON.stringify güvenli, tırnak veya escape problemi olmaz
-  const newBlock = 'const defaultData = ' + JSON.stringify(D, null, 2) + ';';
-
-  // Değiştir
-  const finalSrc = src.slice(0, start) + newBlock + src.slice(pos);
-
-  // İndir
-  const blob = new Blob([finalSrc], { type: 'text/html;charset=utf-8' });
-  const url  = URL.createObjectURL(blob);
-  const a    = document.createElement('a');
-  a.href = url;
-  a.download = 'essenza-menu.html';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-  showToast('Dosya indirildi ✓');
-}
-
-function openReservation(){
-  const link = D.reservationLink || '#';
-  window.open(link, '_blank');
-}
-
-function selectCur(btn){
-  document.querySelectorAll('.cur-btn').forEach(b=>b.classList.remove('selected'));
-  btn.classList.add('selected');
-  D.currency = btn.dataset.cur;
-}
-
-// SAVE ALL
-function saveAll(){
-  // Generale
-  D.eyebrow = gval('a-eyebrow'); D.heroSub = gval('a-heroSub');
-  D.navLabels = [0,1,2,3,4,5].map(i=>gval('a-nav'+i));
-  D.deguLabel=gval('a-deguLabel'); D.deguTitle=gval('a-deguTitle');
-  D.antipastiLabel=gval('a-antipastiLabel'); D.antipastiTitle=gval('a-antipastiTitle');
-  D.primiLabel=gval('a-primiLabel'); D.primiTitle=gval('a-primiTitle');
-  D.secondiLabel=gval('a-secondiLabel'); D.secondiTitle=gval('a-secondiTitle');
-  D.dolciLabel=gval('a-dolciLabel'); D.dolciTitle=gval('a-dolciTitle');
-  D.viniLabel=gval('a-viniLabel'); D.viniTitle=gval('a-viniTitle');
-  D.footerLogo=gval('a-footerLogo'); D.footerAddr=gval('a-footerAddr');
-  D.deguBadge=gval('a-deguBadge'); D.deguName=gval('a-deguName');
-  D.deguSub=gval('a-deguSub'); D.deguPrice=gval('a-deguPrice'); D.pairingBtn=gval('a-pairingBtn');
-  // Görünüm
-  const getChk = id => document.getElementById(id)?.checked || false;
-  D.bannerActive      = getChk('t-bannerActive');
-  D.reservationActive = getChk('t-reservationActive');
-  D.showChefBadge     = getChk('t-showChefBadge');
-  D.showVeganIcons    = getChk('t-showVeganIcons');
-  D.showAllergens     = getChk('t-showAllergens');
-  D.showCalories      = getChk('t-showCalories');
-  D.bannerText        = gval('a-bannerText');
-  D.reservationLabel  = gval('a-reservationLabel');
-  D.reservationLink   = gval('a-reservationLink');
-  D.socialInstagram   = gval('a-socialInstagram');
-  D.socialFacebook    = gval('a-socialFacebook');
-  collectCourses(); collectItems('antipasti'); collectItems('primi'); collectItems('secondi'); collectItems('dolci'); collectWines();
-  localStorage.setItem('essenzaData', JSON.stringify(D));
-  renderMenu();
-  showToast('Değişiklikler kaydedildi ✓');
-}
-
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg;
-  t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'), 2800);
-}
-
-// ══════════════════════════════════════════════
-// NAV SCROLL SPY
-// ══════════════════════════════════════════════
-function scrollToNav(){ document.getElementById('menu-nav').scrollIntoView({behavior:'smooth'}); }
-function scrollTo(id){ const el=document.getElementById(id); if(el){ const top=el.getBoundingClientRect().top+window.scrollY-70; window.scrollTo({top,behavior:'smooth'}); } }
-
-const sectionIds = ['degu','antipasti','primi','secondi','dolci','vini'];
-const obs = new IntersectionObserver((entries)=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-      const id=entry.target.id, idx=sectionIds.indexOf(id);
-      if(idx!==-1){ document.querySelectorAll('.nav-btn').forEach(b=>b.classList.remove('active')); const btns=document.querySelectorAll('.nav-btn'); if(btns[idx]) btns[idx].classList.add('active'); }
-    }
-  });
-},{ threshold:0.12, rootMargin:'-60px 0px -20% 0px' });
-
-document.querySelectorAll('.section').forEach(s=>obs.observe(s));
-
-// ══════════════════════════════════════════════
-// PAIRING
-// ══════════════════════════════════════════════
-function openPairing(){
-  document.getElementById('pairingOverlay').classList.add('open');
-  document.getElementById('pairingBody').innerHTML = `
-    <div class="pairing-loading">
-      <div class="pairing-spinner"></div>
-      <div class="pairing-loading-text">Eşleştirmeler hazırlanıyor...</div>
-    </div>`;
-  fetchPairings();
-}
-
-function closePairing(){
-  document.getElementById('pairingOverlay').classList.remove('open');
-}
-
-function fetchPairings(){
-  // Sommelier bilgi tabanı — anahtar kelime → şarap profili eşleştirme
-  const PAIRING_RULES = [
-    // Köpüklü / hafif başlangıçlar
-    { keywords:['istiridye','ostrica','kabuk','deniz','caviale','havyar','crudo','çiğ','karides','gambero','hamsi','ton'], wineProfile:'sparkling', reasons:[
-      'Deniz ürünlerinin iyot ve mineral notaları köpüklü şarapların asidik yapısıyla mükemmel denge kuruyor.',
-      'Kabukluların tuzlu deniz aroması, köpüklü şarabın ince balonlarıyla zarif bir uyum sağlıyor.',
-      'Şampanyanın mineralli ve asidik karakteri bu hafif deniz lezzetini taze tutuyor.'
-    ]},
-    // Beyaz — balık / deniz
-    { keywords:['balık','branzino','levrek','ricciola','salmone','sogliola','orata','calamari','polpo','ahtapot','ıstakoz'], wineProfile:'white_mineral', reasons:[
-      'Balığın narin yapısı, beyaz şarabın mineral ve asidik notalarıyla harika bir armoni oluşturuyor.',
-      'Bu deniz yemeğinin yumuşak dokusu, beyaz şarabın ferahlığıyla mükemmel eşleşiyor.',
-      'Beyaz şarabın asidik karakteri balığın yağlılığını dengeleyen ideal bir tamamlayıcı.'
-    ]},
-    // Beyaz — krema / yumurta / pasta
-    { keywords:['risotto','pasta','makarna','raviolo','tagliolini','spaghetti','uovo','yumurta','burro','tereyağ','parmigiano','parmesan','fonduta','fondü','trüf','tartufo'], wineProfile:'white_full', reasons:[
-      'Yemekteki kremamsı doku ve zengin aromalar, tam gövdeli beyaz şarabın yağlı yapısıyla uyum içinde.',
-      'Şarabın mineral notaları makarna ve risottodaki nişastalı yapıyı dengelerken lezzeti tamamlıyor.',
-      'Bu zengin kursu hafifletmek için ferah asidiyetli bir beyaz ideal tercih.'
-    ]},
-    // Pembe — hafif et / kümes
-    { keywords:['kümes','ördek','anatra','piccione','güvercin','quaglia','bıldırcın','animelle','uykuluk','prosciutto'], wineProfile:'rose_or_light_red', reasons:[
-      'Kümes hayvanlarının yumuşak etli yapısı hem rosé hem de hafif kırmızı şaraplarla dengeleniyor.',
-      'Bu yemeğin narin protein yapısı, çok ağır olmayan kırmızı şarapların meyveli tanenleriyle uyum sağlıyor.',
-      'Ettin yağlılığı şarabın tanenli yapısıyla temizlenirken aromalar birbirini tamamlıyor.'
-    ]},
-    // Kırmızı — güçlü et
-    { keywords:['manzo','dana','sığır','bistecca','biftek','wagyu','kontrfile','fiorentina','agnello','kuzu','cinghiale','yaban domuzu','selvaggina','av'], wineProfile:'red_full', reasons:[
-      'Etin güçlü protein yapısı ve yağlılığı, Barolo\'nun ağır tanen yapısıyla mükemmel denge kuruyor.',
-      'Bu zengin et yemeği, tam gövdeli kırmızıların kompleks meyve ve toprak notalarını en iyi şekilde ortaya çıkarıyor.',
-      'Şarabın uzun bitiş süresi ve tanenleri etin yoğunluğunu dengeleyerek olağanüstü bir kombinasyon oluşturuyor.'
-    ]},
-    // Tatlı şarap
-    { keywords:['dolce','tatlı','dessert','cioccolato','çikolata','tiramisù','tiramisu','panna cotta','gelato','dondurma','nocciola','fındık','caramello','karamel','soufflé','sufle','pasticceria'], wineProfile:'sweet', reasons:[
-      'Tatlı şarabın bal ve kuru meyve notaları tatlının zengin lezzetini zarif biçimde tamamlıyor.',
-      'Bu tatlının yoğun aroması, şarabın doğal tatlılığıyla aynı yoğunlukta buluşup mükemmel uyum sağlıyor.',
-      'Şarabın asidiyeti tatlının şekerliğini dengeleyerek son kursu ferah bir notayla tamamlıyor.'
-    ]},
-    // Foie gras / zengin başlangıç
-    { keywords:['foie','ciğer','terrine','burrata','carpaccio','prosciutto'], wineProfile:'white_full', reasons:[
-      'Zengin ve yağlı yapı, beyaz şarabın asidiyeti ile dengeleniyor.',
-      'Şarabın mineral notaları zengin başlangıcın ağırlığını hafifletiyor.',
-      'Bu lüks başlangıç için şarabın karmaşık aromatik yapısı ideal eşlikçi.'
-    ]},
-  ];
-
-  const WINE_PROFILES = {
-    sparkling:     ['Şampanya', 'Köpüklü', 'Bollicine', 'Franciacorta', 'Prosecco', 'Cava', 'Crémant'],
-    white_mineral: ['Vernaccia', 'Soave', 'Greco', 'Fiano', 'Vermentino', 'Pinot Grigio', 'Gavi', 'Sauvignon', 'Chablis', 'Riesling'],
-    white_full:    ['Chardonnay', 'Gaia', 'Viognier', 'White Burgundy', 'Beyaz'],
-    rose_or_light_red: ['Rosé', 'Rosato', 'Pinot Nero', 'Pinot Noir', 'Bardolino', 'Valpolicella'],
-    red_full:      ['Barolo', 'Barbaresco', 'Brunello', 'Amarone', 'Sassicaia', 'Bolgheri', 'Chianti', 'Nebbiolo', 'Cabernet', 'Syrah', 'Primitivo', 'Montepulciano'],
-    sweet:         ['Passito', 'Vin Santo', 'Moscato', 'Sauternes', 'Dessert', 'Tatlı', 'Recioto'],
-  };
-
-  // Tüm şarapları düz listeye çek
-  const allWines = [];
-  D.wineCats.forEach(cat => cat.wines.forEach(w => allWines.push(w)));
-
-  // Her kurs için eşleştir
-  const pairings = D.courses.map(course => {
-    const text = (course.name + ' ' + course.desc).toLowerCase();
-
-    // Hangi profile uyuyor?
-    let matchedProfile = null;
-    let matchedReasons = [];
-    for(const rule of PAIRING_RULES){
-      if(rule.keywords.some(kw => text.includes(kw))){
-        matchedProfile = rule.wineProfile;
-        matchedReasons = rule.reasons;
-        break;
-      }
-    }
-
-    // Amuse-bouche / pre-dessert özel durumlar
-    if(!matchedProfile){
-      if(text.includes('amuse') || text.includes('welcome') || text.includes('hoş geldin') || text.includes('bouchée')){
-        matchedProfile = 'sparkling';
-        matchedReasons = ['Karşılama servisinde köpüklü şarap hem damağı açıyor hem de geceye şık bir giriş yapıyor.'];
-      } else if(text.includes('pre-dessert') || text.includes('ön tatlı') || text.includes('sorbetto') || text.includes('sorbesi') || text.includes('granita')){
-        matchedProfile = 'sweet';
-        matchedReasons = ['Ara temizleyici bu servis, hafif tatlı notalarla geçişi zarif kılıyor.'];
-      } else {
-        matchedProfile = 'white_full';
-        matchedReasons = ['Bu kursun dengeli aroması, orta gövdeli bir beyaz şarapla zarif uyum sağlıyor.'];
-      }
-    }
-
-    // Profildeki anahtar kelimelerle listedeki şarabı bul
-    const profileKeywords = WINE_PROFILES[matchedProfile] || [];
-    let bestWine = null;
-    for(const kw of profileKeywords){
-      bestWine = allWines.find(w => w.name.toLowerCase().includes(kw.toLowerCase()) || (w.info||'').toLowerCase().includes(kw.toLowerCase()));
-      if(bestWine) break;
-    }
-
-    const reason = matchedReasons[Math.floor(Math.random() * matchedReasons.length)];
-
-    if(bestWine){
-      return { courseNum: course.num, courseName: course.name, wineName: bestWine.name, reason, isExternal: false };
-    } else {
-      // Listede uygun yok — genel öneri
-      const generalSuggestions = {
-        sparkling:     'Krug Grande Cuvée veya Billecart-Salmon Blanc de Blancs',
-        white_mineral: 'Chablis Premier Cru veya Sancerre',
-        white_full:    'Puligny-Montrachet veya Meursault',
-        rose_or_light_red: 'Pinot Noir Burgundy veya Bandol Rosé',
-        red_full:      'Barolo Bussia veya Bolgheri Superiore',
-        sweet:         'Château d\'Yquem veya Vin Santo del Chianti',
-      };
-      return {
-        courseNum: course.num,
-        courseName: course.name,
-        wineName: generalSuggestions[matchedProfile] || 'Sommelierimize danışın',
-        reason: reason + ' Mevcut listemizde bu kursa en yakın alternatif için sommelierimize danışabilirsiniz.',
-        isExternal: true
-      };
-    }
-  });
-
-  // Kısa bir gecikmeyle render et (loading animasyonu görünsün)
-  setTimeout(() => renderPairings(pairings), 600);
-}
-
-function renderPairings(pairings){
-  const html = `<div class="pairing-courses">
-    ${pairings.map((p, i) => `
-      <div class="pairing-course-card" style="animation-delay:${i * 0.08}s">
-        <div class="pairing-course-header">
-          <span class="pairing-course-num">${esc(p.courseNum)}</span>
-          <span class="pairing-course-name">${esc(p.courseName)}</span>
-        </div>
-        <div class="pairing-wine-name">◆ ${esc(p.wineName)}</div>
-        <div class="pairing-wine-reason">${esc(p.reason)}</div>
-        ${p.isExternal ? `<div class="pairing-external-note">* Menü şarap listesi dışında öneri</div>` : ''}
-      </div>`).join('')}
-  </div>`;
-  document.getElementById('pairingBody').innerHTML = html;
-}
-
-// Close pairing on overlay click
-document.getElementById('pairingOverlay').addEventListener('click', function(e){
-  if(e.target === this) closePairing();
-});
-
-// ── INTRO ───────────────────────────────────────────────────────────────
-(function(){
-  const intro = document.getElementById('introScreen');
-  // 2.4s sonra intro kapanır
-  setTimeout(() => {
-    intro.classList.add('hide');
-    // Animasyon bitince DOM'dan kaldır
-    setTimeout(() => intro.remove(), 1000);
-  }, 2400);
-})();
-
-// ══════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════
-renderMenu();
-</script>
-</body>
+  src = src.replace(/</body>
 </html>
