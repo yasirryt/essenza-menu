@@ -1,11 +1,13 @@
-<html lang="tr"><head>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#080808">
 <title>Essenza — Restoran</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Cinzel:wght@400;600&amp;family=Jost:wght@300;400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -347,399 +349,24 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   .admin-trigger{width:52px;height:52px;bottom:16px;right:16px}
 }
 </style>
-<style type="text/css" id="operaUserStyle"></style>
-<script id="baked-data">
-// Baked data — admin panelinden kaydedilen son hali
-(function(){
-  try {
-    var baked = {
-  "eyebrow": "Restoran",
-  "heroSub": "Milano · 2019'dan beri",
-  "navLabels": [
-    "Tadım Menüsü",
-    "Başlangıçlar",
-    "Birinci Yemekler",
-    "Ana Yemekler",
-    "Tatlılar",
-    "Şaraplar"
-  ],
-  "deguLabel": "Tam Deneyim",
-  "deguTitle": "Tadım Menüsü",
-  "antipastiLabel": "Başlangıç İçin",
-  "antipastiTitle": "Başlangıçlar",
-  "primiLabel": "Birinci Yemekler",
-  "primiTitle": "Primi",
-  "secondiLabel": "Ana Yemekler",
-  "secondiTitle": "Secondi",
-  "dolciLabel": "Yemek Sonu",
-  "dolciTitle": "Tatlılar",
-  "viniLabel": "Mahzenimiz",
-  "viniTitle": "Şaraplar",
-  "footerLogo": "Essenza",
-  "currency": "€",
-  "footerAddr": "Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur",
-  "deguBadge": "★ Yasir Şefin İmzası ★",
-  "deguName": "Terra & Mare",
-  "deguSub": "8 kurs · Şarap eşleştirmesi mevcut",
-  "deguPrice": "240",
-  "pairingBtn": "+ Şarap Eşleştirme · €120",
-  "courses": [
-    {
-      "num": "I",
-      "name": "Şef'in Amuse-Bouche'u",
-      "desc": "Mutfaktan hoş geldin — dört mevsimlik küçük lokma"
-    },
-    {
-      "num": "II",
-      "name": "İstiridye ve Havyar",
-      "desc": "Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu"
-    },
-    {
-      "num": "III",
-      "name": "Çiğ Sarı Kuyruk Balığı",
-      "desc": "Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler"
-    },
-    {
-      "num": "IV",
-      "name": "Milanese Risotto",
-      "desc": "Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın"
-    },
-    {
-      "num": "V",
-      "name": "Taze Makarna — Açık Raviolo",
-      "desc": "Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı"
-    },
-    {
-      "num": "VI",
-      "name": "Bresse Güvercini",
-      "desc": "Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan"
-    },
-    {
-      "num": "VII",
-      "name": "Ön Tatlı",
-      "desc": "Amalfi limon sorbesi, taze nane, gül suyu"
-    },
-    {
-      "num": "VIII",
-      "name": "Tatlı — Çikolata & Fındık",
-      "desc": "Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması"
-    }
-  ],
-  "antipasti": [
-    {
-      "name": "Dana Carpaccio",
-      "sub": "Fassona",
-      "desc": "Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf",
-      "tags": "İmza",
-      "price": "38",
-      "allergens": "Süt, Gluten",
-      "calories": "",
-      "hidden": false,
-      "chefPick": true,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Mazara Kırmızı Karidesi",
-      "sub": "",
-      "desc": "Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu",
-      "tags": "Mevsimlik, Çiğ",
-      "price": "52",
-      "allergens": "Kabuklu deniz ürünleri",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Foie Gras",
-      "sub": "Venedik Usulü",
-      "desc": "Ördek ciğeri terrinesi, Marsala'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi",
-      "tags": "Klasik",
-      "price": "46",
-      "allergens": "Gluten, Süt, Yumurta",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Andria Burratası",
-      "sub": "",
-      "desc": "Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri",
-      "tags": "Vejetaryen",
-      "price": "28",
-      "allergens": "Süt, Fındık",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": true,
-      "vegan": false
-    }
-  ],
-  "primi": [
-    {
-      "name": "Safran Risotto",
-      "sub": "Şefin Yorumu",
-      "desc": "Carnaroli Riserva San Massimo, L'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın",
-      "tags": "İmza, Glutensiz",
-      "price": "44",
-      "allergens": "Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": true,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Beyaz Trüflü Tagliolini",
-      "sub": "",
-      "desc": "Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut",
-      "tags": "Mevsimlik",
-      "price": "68",
-      "allergens": "Gluten, Yumurta, Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": true,
-      "vegetarian": true,
-      "vegan": false
-    },
-    {
-      "name": "Açık Raviolo",
-      "sub": "Yumurtalı",
-      "desc": "İrmik raviolosu, 63°C confit yumurta sarısı, Val d'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı",
-      "tags": "Vejetaryen",
-      "price": "38",
-      "allergens": "Gluten, Yumurta, Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": true,
-      "vegan": false
-    },
-    {
-      "name": "Deniz Kestaneli Spaghetti",
-      "sub": "",
-      "desc": "Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon",
-      "tags": "Deniz",
-      "price": "42",
-      "allergens": "Gluten, Balık",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    }
-  ],
-  "secondi": [
-    {
-      "name": "Bresse Güvercini",
-      "sub": "İki Pişirme Tekniği",
-      "desc": "Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı",
-      "tags": "İmza, Kara",
-      "price": "62",
-      "allergens": "Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": true,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Tuzda Yabani Levrek",
-      "sub": "",
-      "desc": "Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı",
-      "tags": "Deniz",
-      "price": "58",
-      "allergens": "Balık",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Wagyu A4 Kontrfile",
-      "sub": "",
-      "desc": "Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak",
-      "tags": "Premium",
-      "price": "95",
-      "allergens": "Süt, Gluten",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    },
-    {
-      "name": "Dana Uykuluğu",
-      "sub": "Altın Rengi",
-      "desc": "Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon",
-      "tags": "Klasik",
-      "price": "48",
-      "allergens": "Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": false,
-      "vegan": false
-    }
-  ],
-  "dolci": [
-    {
-      "name": "Tiramisu",
-      "sub": "Yeniden Yorumlanan",
-      "desc": "Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması",
-      "tags": "İmza",
-      "price": "24",
-      "allergens": "Gluten, Yumurta, Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": true,
-      "vegetarian": true,
-      "vegan": false
-    },
-    {
-      "name": "Guanaja Çikolata & Fındık",
-      "sub": "",
-      "desc": "Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül",
-      "tags": "Glutensiz",
-      "price": "22",
-      "allergens": "Süt, Fındık",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": true,
-      "vegan": false
-    },
-    {
-      "name": "Limoncello Sufle",
-      "sub": "",
-      "desc": "Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir",
-      "tags": "Siparişe Özel",
-      "price": "26",
-      "allergens": "Gluten, Yumurta, Süt",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": true,
-      "vegan": false
-    },
-    {
-      "name": "Küçük Pastacılık Tabağı",
-      "sub": "",
-      "desc": "Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları",
-      "tags": "İki Kişilik",
-      "price": "18",
-      "allergens": "Gluten, Süt, Fındık",
-      "calories": "",
-      "hidden": false,
-      "chefPick": false,
-      "vegetarian": true,
-      "vegan": false
-    }
-  ],
-  "bannerActive": false,
-  "bannerText": "Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.",
-  "reservationActive": true,
-  "reservationLabel": "Rezervasyon",
-  "reservationLink": "https://wa.me/905321590514",
-  "socialInstagram": "",
-  "socialFacebook": "",
-  "showAllergens": true,
-  "showVeganIcons": true,
-  "showCalories": false,
-  "showChefBadge": true,
-  "wineCats": [
-    {
-      "title": "Şampanya & Köpüklü",
-      "wines": [
-        {
-          "name": "Krug Grande Cuvée",
-          "info": "Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier",
-          "glass": "38",
-          "bottle": "320"
-        },
-        {
-          "name": "Franciacorta Riserva Vittorio Moretti",
-          "info": "Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015",
-          "glass": "22",
-          "bottle": "165"
-        }
-      ]
-    },
-    {
-      "title": "Seçkin Beyazlar",
-      "wines": [
-        {
-          "name": "Gaia & Rey Chardonnay",
-          "info": "Langhe DOC · Gaja · Piemonte · 2020",
-          "glass": "28",
-          "bottle": "210"
-        },
-        {
-          "name": "Vernaccia di San Gimignano Riserva",
-          "info": "DOCG · Montenidoli · Toskana · 2019",
-          "glass": "16",
-          "bottle": "95"
-        }
-      ]
-    },
-    {
-      "title": "Önemli Kırmızılar",
-      "wines": [
-        {
-          "name": "Barolo Brunate",
-          "info": "DOCG · Roberto Voerzio · Nebbiolo · 2018",
-          "glass": "42",
-          "bottle": "380"
-        },
-        {
-          "name": "Sassicaia",
-          "info": "Bolgheri Sassicaia DOC · Tenuta San Guido · 2019",
-          "glass": "55",
-          "bottle": "490"
-        },
-        {
-          "name": "Amarone della Valpolicella",
-          "info": "DOCG · Dal Forno Romano · Veneto · 2015",
-          "glass": "48",
-          "bottle": "420"
-        }
-      ]
-    },
-    {
-      "title": "Tatlı Şaraplar",
-      "wines": [
-        {
-          "name": "Passito di Pantelleria Ben Ryé",
-          "info": "DOC · Donnafugata · Sicilya · Zibibbo · 2021",
-          "glass": "18",
-          "bottle": "95"
-        }
-      ]
-    }
-  ]
-};
-    localStorage.setItem('essenzaData', JSON.stringify(baked));
-  } catch(e){}
-})();
-</script>
 </head>
 <body>
 
 <!-- INTRO SCREEN -->
-
+<div class="intro" id="introScreen">
+  <div class="intro-logo"><span>Es</span>senza</div>
+  <div class="intro-line"></div>
+  <div class="intro-sub">Restaurant</div>
+  <div class="intro-stars">✦ &nbsp; ✦ &nbsp; ✦</div>
+</div>
 
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-ornament"></div>
   <div class="hero-stars"><span style="color:var(--gold);font-size:14px;letter-spacing:4px">✦ ✦ ✦</span></div>
-  <p class="hero-eyebrow" id="d-eyebrow">Restoran</p>
+  <p class="hero-eyebrow" id="d-eyebrow">Ristorante</p>
   <h1 class="hero-title" id="d-heroTitle"><span>Es</span>senza</h1>
-  <p class="hero-sub" id="d-heroSub">Milano · 2019'dan beri</p>
+  <p class="hero-sub" id="d-heroSub">Milano · Dal 2019</p>
   <div class="hero-divider"></div>
   <div class="scroll-hint" onclick="scrollToNav()">
     <span>Menü</span><div class="scroll-line"></div>
@@ -748,82 +375,28 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 
 <!-- BANNER -->
 <div class="site-banner" id="siteBanner">
-  <span class="site-banner-text" id="d-bannerText">Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi &amp; Salı geçerlidir.</span>
+  <span class="site-banner-text" id="d-bannerText"></span>
 </div>
 
 <!-- NAV -->
 <nav class="nav" id="menu-nav">
-  <div class="nav-inner" id="d-navInner"><button class="nav-btn active" onclick="scrollTo('degu')">Tadım Menüsü</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo('antipasti')">Başlangıçlar</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo('primi')">Birinci Yemekler</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo('secondi')">Ana Yemekler</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo('dolci')">Tatlılar</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo('vini')">Şaraplar</button></div>
+  <div class="nav-inner" id="d-navInner">
+    <!-- rendered by JS -->
+  </div>
 </nav>
 
 <!-- DEGU -->
-<section class="section visible" id="degu">
+<section class="section" id="degu">
   <div class="section-header">
-    <span class="section-label" id="d-deguLabel">Tam Deneyim</span>
-    <h2 class="section-title" id="d-deguTitle">Tadım Menüsü</h2>
+    <span class="section-label" id="d-deguLabel">Esperienza Completa</span>
+    <h2 class="section-title" id="d-deguTitle">Degustazione</h2>
     <div class="section-line"></div>
   </div>
   <div class="degu-card">
-    <div class="degu-badge"><span id="d-deguBadge">★ Yasir Şefin İmzası ★</span></div>
-    <div class="degu-name" id="d-deguName">Terra &amp; Mare</div>
-    <div class="degu-sub" id="d-deguSub">8 kurs · Şarap eşleştirmesi mevcut</div>
-    <div class="degu-courses" id="d-courses">
-    <div class="degu-course">
-      <div class="course-num">I</div>
-      <div class="course-info">
-        <div class="course-name">Şef'in Amuse-Bouche'u</div>
-        <div class="course-desc">Mutfaktan hoş geldin — dört mevsimlik küçük lokma</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">II</div>
-      <div class="course-info">
-        <div class="course-name">İstiridye ve Havyar</div>
-        <div class="course-desc">Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">III</div>
-      <div class="course-info">
-        <div class="course-name">Çiğ Sarı Kuyruk Balığı</div>
-        <div class="course-desc">Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">IV</div>
-      <div class="course-info">
-        <div class="course-name">Milanese Risotto</div>
-        <div class="course-desc">Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">V</div>
-      <div class="course-info">
-        <div class="course-name">Taze Makarna — Açık Raviolo</div>
-        <div class="course-desc">Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">VI</div>
-      <div class="course-info">
-        <div class="course-name">Bresse Güvercini</div>
-        <div class="course-desc">Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">VII</div>
-      <div class="course-info">
-        <div class="course-name">Ön Tatlı</div>
-        <div class="course-desc">Amalfi limon sorbesi, taze nane, gül suyu</div>
-      </div>
-    </div>
-    <div class="degu-course">
-      <div class="course-num">VIII</div>
-      <div class="course-info">
-        <div class="course-name">Tatlı — Çikolata &amp; Fındık</div>
-        <div class="course-desc">Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması</div>
-      </div>
-    </div></div>
+    <div class="degu-badge"><span id="d-deguBadge">★ Firma dello Chef ★</span></div>
+    <div class="degu-name" id="d-deguName">Terra & Mare</div>
+    <div class="degu-sub" id="d-deguSub">8 portate · Abbinamento vini disponibile</div>
+    <div class="degu-courses" id="d-courses"></div>
     <div class="degu-footer">
       <div class="degu-price"><span id="d-deguPrice">240</span></div>
       <button class="pairing-btn" id="d-pairingBtn" onclick="openPairing()">+ Şarap Eşleştirme · €120</button>
@@ -834,369 +407,57 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- ANTIPASTI -->
-<section class="section visible" id="antipasti">
+<section class="section" id="antipasti">
   <div class="section-header">
-    <span class="section-label" id="d-antipastiLabel">Başlangıç İçin</span>
-    <h2 class="section-title" id="d-antipastiTitle">Başlangıçlar</h2>
+    <span class="section-label" id="d-antipastiLabel">Per Iniziare</span>
+    <h2 class="section-title" id="d-antipastiTitle">Antipasti</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-antipasti">
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Dana Carpaccio <em>Fassona</em>
-            <span class="badge-chef">★ Şef</span>
-            
-            
-          </div>
-          <div class="item-desc">Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf</div>
-          <div class="item-tags"><span class="tag">İmza</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Gluten</div>
-        </div>
-        <div class="item-price">38</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Mazara Kırmızı Karidesi
-            
-            
-            
-          </div>
-          <div class="item-desc">Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu</div>
-          <div class="item-tags"><span class="tag">Mevsimlik</span><span class="tag">Çiğ</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Kabuklu deniz ürünleri</div>
-        </div>
-        <div class="item-price">52</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Foie Gras <em>Venedik Usulü</em>
-            
-            
-            
-          </div>
-          <div class="item-desc">Ördek ciğeri terrinesi, Marsala'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi</div>
-          <div class="item-tags"><span class="tag">Klasik</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Süt, Yumurta</div>
-        </div>
-        <div class="item-price">46</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Andria Burratası
-            
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri</div>
-          <div class="item-tags"><span class="tag">Vejetaryen</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Fındık</div>
-        </div>
-        <div class="item-price">28</div>
-      </div></div>
+  <div class="menu-grid" id="d-antipasti"></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- PRIMI -->
 <section class="section" id="primi">
   <div class="section-header">
-    <span class="section-label" id="d-primiLabel">Birinci Yemekler</span>
+    <span class="section-label" id="d-primiLabel">I Primi Piatti</span>
     <h2 class="section-title" id="d-primiTitle">Primi</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-primi">
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Safran Risotto <em>Şefin Yorumu</em>
-            <span class="badge-chef">★ Şef</span>
-            
-            
-          </div>
-          <div class="item-desc">Carnaroli Riserva San Massimo, L'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın</div>
-          <div class="item-tags"><span class="tag">İmza</span><span class="tag">Glutensiz</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
-        </div>
-        <div class="item-price">44</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Beyaz Trüflü Tagliolini
-            <span class="badge-chef">★ Şef</span>
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut</div>
-          <div class="item-tags"><span class="tag">Mevsimlik</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
-        </div>
-        <div class="item-price">68</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Açık Raviolo <em>Yumurtalı</em>
-            
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">İrmik raviolosu, 63°C confit yumurta sarısı, Val d'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı</div>
-          <div class="item-tags"><span class="tag">Vejetaryen</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
-        </div>
-        <div class="item-price">38</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Deniz Kestaneli Spaghetti
-            
-            
-            
-          </div>
-          <div class="item-desc">Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon</div>
-          <div class="item-tags"><span class="tag">Deniz</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Balık</div>
-        </div>
-        <div class="item-price">42</div>
-      </div></div>
+  <div class="menu-grid" id="d-primi"></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- SECONDI -->
 <section class="section" id="secondi">
   <div class="section-header">
-    <span class="section-label" id="d-secondiLabel">Ana Yemekler</span>
+    <span class="section-label" id="d-secondiLabel">I Secondi Piatti</span>
     <h2 class="section-title" id="d-secondiTitle">Secondi</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-secondi">
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Bresse Güvercini <em>İki Pişirme Tekniği</em>
-            <span class="badge-chef">★ Şef</span>
-            
-            
-          </div>
-          <div class="item-desc">Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı</div>
-          <div class="item-tags"><span class="tag">İmza</span><span class="tag">Kara</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
-        </div>
-        <div class="item-price">62</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Tuzda Yabani Levrek
-            
-            
-            
-          </div>
-          <div class="item-desc">Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı</div>
-          <div class="item-tags"><span class="tag">Deniz</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Balık</div>
-        </div>
-        <div class="item-price">58</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Wagyu A4 Kontrfile
-            
-            
-            
-          </div>
-          <div class="item-desc">Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak</div>
-          <div class="item-tags"><span class="tag">Premium</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Gluten</div>
-        </div>
-        <div class="item-price">95</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Dana Uykuluğu <em>Altın Rengi</em>
-            
-            
-            
-          </div>
-          <div class="item-desc">Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon</div>
-          <div class="item-tags"><span class="tag">Klasik</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
-        </div>
-        <div class="item-price">48</div>
-      </div></div>
+  <div class="menu-grid" id="d-secondi"></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- DOLCI -->
 <section class="section" id="dolci">
   <div class="section-header">
-    <span class="section-label" id="d-dolciLabel">Yemek Sonu</span>
-    <h2 class="section-title" id="d-dolciTitle">Tatlılar</h2>
+    <span class="section-label" id="d-dolciLabel">Fine Pasto</span>
+    <h2 class="section-title" id="d-dolciTitle">Dolci</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-dolci">
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Tiramisu <em>Yeniden Yorumlanan</em>
-            <span class="badge-chef">★ Şef</span>
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması</div>
-          <div class="item-tags"><span class="tag">İmza</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
-        </div>
-        <div class="item-price">24</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Guanaja Çikolata &amp; Fındık
-            
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül</div>
-          <div class="item-tags"><span class="tag">Glutensiz</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Fındık</div>
-        </div>
-        <div class="item-price">22</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Limoncello Sufle
-            
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir</div>
-          <div class="item-tags"><span class="tag">Siparişe Özel</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
-        </div>
-        <div class="item-price">26</div>
-      </div>
-      <div class="menu-item">
-        <div>
-          <div class="item-name">
-            Küçük Pastacılık Tabağı
-            
-            <span class="badge-v" title="Vejetaryen">V</span>
-            
-          </div>
-          <div class="item-desc">Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları</div>
-          <div class="item-tags"><span class="tag">İki Kişilik</span></div>
-          
-          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Süt, Fındık</div>
-        </div>
-        <div class="item-price">18</div>
-      </div></div>
+  <div class="menu-grid" id="d-dolci"></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- VINI -->
 <section class="section" id="vini">
   <div class="section-header">
-    <span class="section-label" id="d-viniLabel">Mahzenimiz</span>
-    <h2 class="section-title" id="d-viniTitle">Şaraplar</h2>
+    <span class="section-label" id="d-viniLabel">La Cantina</span>
+    <h2 class="section-title" id="d-viniTitle">Vini</h2>
     <div class="section-line"></div>
   </div>
-  <div id="d-vini">
-    <div class="wine-category">
-      <div class="wine-cat-title">Şampanya &amp; Köpüklü</div>
-      
-        <div class="wine-item">
-          <div><div class="wine-name">Krug Grande Cuvée</div><div class="wine-info">Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 38</div>
-            <div class="bottle">Şişe 320</div>
-          </div>
-        </div>
-        <div class="wine-item">
-          <div><div class="wine-name">Franciacorta Riserva Vittorio Moretti</div><div class="wine-info">Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 22</div>
-            <div class="bottle">Şişe 165</div>
-          </div>
-        </div>
-    </div>
-    <div class="wine-category">
-      <div class="wine-cat-title">Seçkin Beyazlar</div>
-      
-        <div class="wine-item">
-          <div><div class="wine-name">Gaia &amp; Rey Chardonnay</div><div class="wine-info">Langhe DOC · Gaja · Piemonte · 2020</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 28</div>
-            <div class="bottle">Şişe 210</div>
-          </div>
-        </div>
-        <div class="wine-item">
-          <div><div class="wine-name">Vernaccia di San Gimignano Riserva</div><div class="wine-info">DOCG · Montenidoli · Toskana · 2019</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 16</div>
-            <div class="bottle">Şişe 95</div>
-          </div>
-        </div>
-    </div>
-    <div class="wine-category">
-      <div class="wine-cat-title">Önemli Kırmızılar</div>
-      
-        <div class="wine-item">
-          <div><div class="wine-name">Barolo Brunate</div><div class="wine-info">DOCG · Roberto Voerzio · Nebbiolo · 2018</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 42</div>
-            <div class="bottle">Şişe 380</div>
-          </div>
-        </div>
-        <div class="wine-item">
-          <div><div class="wine-name">Sassicaia</div><div class="wine-info">Bolgheri Sassicaia DOC · Tenuta San Guido · 2019</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 55</div>
-            <div class="bottle">Şişe 490</div>
-          </div>
-        </div>
-        <div class="wine-item">
-          <div><div class="wine-name">Amarone della Valpolicella</div><div class="wine-info">DOCG · Dal Forno Romano · Veneto · 2015</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 48</div>
-            <div class="bottle">Şişe 420</div>
-          </div>
-        </div>
-    </div>
-    <div class="wine-category">
-      <div class="wine-cat-title">Tatlı Şaraplar</div>
-      
-        <div class="wine-item">
-          <div><div class="wine-name">Passito di Pantelleria Ben Ryé</div><div class="wine-info">DOC · Donnafugata · Sicilya · Zibibbo · 2021</div></div>
-          <div class="wine-prices">
-            <div class="glass">Kadeh 18</div>
-            <div class="bottle">Şişe 95</div>
-          </div>
-        </div>
-    </div></div>
+  <div id="d-vini"></div>
 </section>
 
 <!-- FOOTER -->
@@ -1204,11 +465,16 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   <div class="footer-logo" id="d-footerLogo">Essenza</div>
   <div class="footer-stars">✦ ✦ ✦</div>
   <div class="footer-socials" id="d-socials"></div>
-  <div class="footer-addr" id="d-footerAddr">Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur</div>
+  <div class="footer-addr" id="d-footerAddr">
+    Via Monte Napoleone 12, Milano 20121<br>
+    +39 02 1234 5678 · info@essenzaristorante.it<br><br>
+    Aperto Martedì — Sabato · 19:30 – 23:00<br>
+    Prenotazione obbligatoria
+  </div>
 </footer>
 
 <!-- REZERVASYON BUTONU -->
-<button class="reservation-btn active" id="reservationBtn" onclick="openReservation()">Rezervasyon</button>
+<button class="reservation-btn" id="reservationBtn" onclick="openReservation()"></button>
 
 <!-- PAIRING MODAL -->
 <div class="pairing-overlay" id="pairingOverlay">
@@ -1231,7 +497,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 
 <!-- ADMIN TRIGGER -->
 <div class="admin-trigger" onclick="openLogin()" title="Yönetici Girişi">
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
 </div>
 
 <!-- LOGIN MODAL -->
@@ -1247,7 +513,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 </div>
 
 <!-- ADMIN PANEL -->
-<div class="admin-panel open" id="adminPanel">
+<div class="admin-panel" id="adminPanel">
   <div class="admin-header">
     <div class="admin-logo">Essenza · Yönetici</div>
     <div class="admin-header-actions">
@@ -1260,9 +526,9 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   <div class="admin-body">
     <!-- TABS -->
     <div class="admin-tabs">
-      <button class="admin-tab" onclick="switchTab('tab-generale')">Genel</button>
+      <button class="admin-tab active" onclick="switchTab('tab-generale')">Genel</button>
       <button class="admin-tab" onclick="switchTab('tab-gorunum')">Görünüm</button>
-      <button class="admin-tab active" onclick="switchTab('tab-degu')">Tadım Menüsü</button>
+      <button class="admin-tab" onclick="switchTab('tab-degu')">Tadım Menüsü</button>
       <button class="admin-tab" onclick="switchTab('tab-antipasti')">Başlangıçlar</button>
       <button class="admin-tab" onclick="switchTab('tab-primi')">Birinci Yemekler</button>
       <button class="admin-tab" onclick="switchTab('tab-secondi')">Ana Yemekler</button>
@@ -1271,14 +537,14 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     </div>
 
     <!-- TAB: GENERALE -->
-    <div class="admin-section" id="tab-generale">
+    <div class="admin-section active" id="tab-generale">
       <div class="admin-group">
         <div class="admin-group-title">Para Birimi</div>
         <div class="field-row">
           <div>
             <label class="field-label">Para Birimi Sembolü</label>
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:4px;" id="a-currency-btns">
-              <button class="cur-btn selected" data-cur="€" onclick="selectCur(this)">€ Euro</button>
+              <button class="cur-btn" data-cur="€" onclick="selectCur(this)">€ Euro</button>
               <button class="cur-btn" data-cur="$" onclick="selectCur(this)">$ Dolar</button>
               <button class="cur-btn" data-cur="₺" onclick="selectCur(this)">₺ Lira</button>
               <button class="cur-btn" data-cur="£" onclick="selectCur(this)">£ Sterlin</button>
@@ -1338,13 +604,13 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
           <div><label class="field-label">Footer Logo Adı</label><input class="admin-input" id="a-footerLogo"></div>
         </div>
         <div class="field-row">
-          <div><label class="field-label">Adres &amp; İletişim (HTML kabul edilir, &lt;br&gt; ile satır atla)</label><textarea class="admin-textarea" id="a-footerAddr" style="min-height:90px"></textarea></div>
+          <div><label class="field-label">Adres & İletişim (HTML kabul edilir, &lt;br&gt; ile satır atla)</label><textarea class="admin-textarea" id="a-footerAddr" style="min-height:90px"></textarea></div>
         </div>
       </div>
     </div>
 
     <!-- TAB: DEGU -->
-    <div class="admin-section active" id="tab-degu">
+    <div class="admin-section" id="tab-degu">
       <div class="admin-group">
         <div class="admin-group-title">Tadım Menüsü — Genel Bilgiler</div>
         <div class="field-row cols-2">
@@ -1361,95 +627,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
       </div>
       <div class="admin-group">
         <div class="admin-group-title">Kurslar (Servis Sırası)</div>
-        <div id="a-courses">
-    <div class="admin-card" id="course-card-0">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 1</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(0)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-0" value="I"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-0" value="Şef'in Amuse-Bouche'u"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-0">Mutfaktan hoş geldin — dört mevsimlik küçük lokma</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-1">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 2</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(1)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-1" value="II"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-1" value="İstiridye ve Havyar"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-1">Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-2">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 3</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(2)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-2" value="III"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-2" value="Çiğ Sarı Kuyruk Balığı"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-2">Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-3">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 4</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(3)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-3" value="IV"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-3" value="Milanese Risotto"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-3">Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-4">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 5</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(4)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-4" value="V"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-4" value="Taze Makarna — Açık Raviolo"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-4">Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-5">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 6</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(5)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-5" value="VI"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-5" value="Bresse Güvercini"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-5">Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-6">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 7</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(6)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-6" value="VII"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-6" value="Ön Tatlı"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-6">Amalfi limon sorbesi, taze nane, gül suyu</textarea></div></div>
-    </div>
-    <div class="admin-card" id="course-card-7">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kurs 8</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delCourse(7)">Sil</button></div>
-      </div>
-      <div class="field-row cols-3">
-        <div><label class="field-label">Numara (Romen)</label><input class="admin-input" id="c-num-7" value="VIII"></div>
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="c-name-7" value="Tatlı — Çikolata &amp; Fındık"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="c-desc-7">Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması</textarea></div></div>
-    </div></div>
+        <div id="a-courses"></div>
         <button class="btn-add" onclick="addCourse()">+ Kurs Ekle</button>
       </div>
     </div>
@@ -1514,139 +692,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     <div class="admin-section" id="tab-antipasti">
       <div class="admin-group">
         <div class="admin-group-title">Başlangıç Yemekleri</div>
-        <div id="a-antipasti-items">
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 1</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('antipasti',0)">Gizle</button>
-          <button class="btn-del" onclick="delItem('antipasti',0)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="antipasti-name-0" value="Dana Carpaccio"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="antipasti-sub-0" value="Fassona"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="antipasti-desc-0">Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="antipasti-tags-0" value="İmza"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="antipasti-price-0" value="38"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="antipasti-allergens-0" value="Süt, Gluten" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="antipasti-calories-0" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-chefPick-0" checked="" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegetarian-0" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegan-0" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 2</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('antipasti',1)">Gizle</button>
-          <button class="btn-del" onclick="delItem('antipasti',1)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="antipasti-name-1" value="Mazara Kırmızı Karidesi"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="antipasti-sub-1" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="antipasti-desc-1">Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="antipasti-tags-1" value="Mevsimlik, Çiğ"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="antipasti-price-1" value="52"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="antipasti-allergens-1" value="Kabuklu deniz ürünleri" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="antipasti-calories-1" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-chefPick-1" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegetarian-1" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegan-1" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 3</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('antipasti',2)">Gizle</button>
-          <button class="btn-del" onclick="delItem('antipasti',2)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="antipasti-name-2" value="Foie Gras"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="antipasti-sub-2" value="Venedik Usulü"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="antipasti-desc-2">Ördek ciğeri terrinesi, Marsala'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="antipasti-tags-2" value="Klasik"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="antipasti-price-2" value="46"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="antipasti-allergens-2" value="Gluten, Süt, Yumurta" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="antipasti-calories-2" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-chefPick-2" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegetarian-2" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegan-2" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 4</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('antipasti',3)">Gizle</button>
-          <button class="btn-del" onclick="delItem('antipasti',3)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="antipasti-name-3" value="Andria Burratası"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="antipasti-sub-3" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="antipasti-desc-3">Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="antipasti-tags-3" value="Vejetaryen"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="antipasti-price-3" value="28"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="antipasti-allergens-3" value="Süt, Fındık" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="antipasti-calories-3" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-chefPick-3" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegetarian-3" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="antipasti-vegan-3" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div></div>
+        <div id="a-antipasti-items"></div>
         <button class="btn-add" onclick="addItem('antipasti')">+ Yemek Ekle</button>
       </div>
     </div>
@@ -1655,139 +701,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     <div class="admin-section" id="tab-primi">
       <div class="admin-group">
         <div class="admin-group-title">Birinci Yemekler</div>
-        <div id="a-primi-items">
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 1</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('primi',0)">Gizle</button>
-          <button class="btn-del" onclick="delItem('primi',0)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="primi-name-0" value="Safran Risotto"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="primi-sub-0" value="Şefin Yorumu"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="primi-desc-0">Carnaroli Riserva San Massimo, L'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="primi-tags-0" value="İmza, Glutensiz"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="primi-price-0" value="44"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="primi-allergens-0" value="Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="primi-calories-0" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-chefPick-0" checked="" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegetarian-0" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegan-0" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 2</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('primi',1)">Gizle</button>
-          <button class="btn-del" onclick="delItem('primi',1)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="primi-name-1" value="Beyaz Trüflü Tagliolini"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="primi-sub-1" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="primi-desc-1">Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="primi-tags-1" value="Mevsimlik"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="primi-price-1" value="68"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="primi-allergens-1" value="Gluten, Yumurta, Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="primi-calories-1" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-chefPick-1" checked="" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegetarian-1" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegan-1" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 3</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('primi',2)">Gizle</button>
-          <button class="btn-del" onclick="delItem('primi',2)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="primi-name-2" value="Açık Raviolo"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="primi-sub-2" value="Yumurtalı"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="primi-desc-2">İrmik raviolosu, 63°C confit yumurta sarısı, Val d'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="primi-tags-2" value="Vejetaryen"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="primi-price-2" value="38"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="primi-allergens-2" value="Gluten, Yumurta, Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="primi-calories-2" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-chefPick-2" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegetarian-2" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegan-2" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 4</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('primi',3)">Gizle</button>
-          <button class="btn-del" onclick="delItem('primi',3)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="primi-name-3" value="Deniz Kestaneli Spaghetti"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="primi-sub-3" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="primi-desc-3">Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="primi-tags-3" value="Deniz"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="primi-price-3" value="42"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="primi-allergens-3" value="Gluten, Balık" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="primi-calories-3" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-chefPick-3" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegetarian-3" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="primi-vegan-3" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div></div>
+        <div id="a-primi-items"></div>
         <button class="btn-add" onclick="addItem('primi')">+ Yemek Ekle</button>
       </div>
     </div>
@@ -1796,139 +710,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     <div class="admin-section" id="tab-secondi">
       <div class="admin-group">
         <div class="admin-group-title">Ana Yemekler</div>
-        <div id="a-secondi-items">
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 1</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('secondi',0)">Gizle</button>
-          <button class="btn-del" onclick="delItem('secondi',0)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="secondi-name-0" value="Bresse Güvercini"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="secondi-sub-0" value="İki Pişirme Tekniği"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="secondi-desc-0">Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="secondi-tags-0" value="İmza, Kara"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="secondi-price-0" value="62"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="secondi-allergens-0" value="Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="secondi-calories-0" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-chefPick-0" checked="" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegetarian-0" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegan-0" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 2</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('secondi',1)">Gizle</button>
-          <button class="btn-del" onclick="delItem('secondi',1)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="secondi-name-1" value="Tuzda Yabani Levrek"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="secondi-sub-1" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="secondi-desc-1">Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="secondi-tags-1" value="Deniz"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="secondi-price-1" value="58"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="secondi-allergens-1" value="Balık" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="secondi-calories-1" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-chefPick-1" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegetarian-1" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegan-1" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 3</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('secondi',2)">Gizle</button>
-          <button class="btn-del" onclick="delItem('secondi',2)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="secondi-name-2" value="Wagyu A4 Kontrfile"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="secondi-sub-2" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="secondi-desc-2">Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="secondi-tags-2" value="Premium"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="secondi-price-2" value="95"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="secondi-allergens-2" value="Süt, Gluten" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="secondi-calories-2" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-chefPick-2" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegetarian-2" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegan-2" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 4</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('secondi',3)">Gizle</button>
-          <button class="btn-del" onclick="delItem('secondi',3)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="secondi-name-3" value="Dana Uykuluğu"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="secondi-sub-3" value="Altın Rengi"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="secondi-desc-3">Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="secondi-tags-3" value="Klasik"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="secondi-price-3" value="48"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="secondi-allergens-3" value="Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="secondi-calories-3" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-chefPick-3" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegetarian-3" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="secondi-vegan-3" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div></div>
+        <div id="a-secondi-items"></div>
         <button class="btn-add" onclick="addItem('secondi')">+ Yemek Ekle</button>
       </div>
     </div>
@@ -1937,294 +719,22 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     <div class="admin-section" id="tab-dolci">
       <div class="admin-group">
         <div class="admin-group-title">Tatlılar</div>
-        <div id="a-dolci-items">
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 1</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('dolci',0)">Gizle</button>
-          <button class="btn-del" onclick="delItem('dolci',0)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="dolci-name-0" value="Tiramisu"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="dolci-sub-0" value="Yeniden Yorumlanan"></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="dolci-desc-0">Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="dolci-tags-0" value="İmza"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="dolci-price-0" value="24"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="dolci-allergens-0" value="Gluten, Yumurta, Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="dolci-calories-0" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-chefPick-0" checked="" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegetarian-0" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegan-0" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 2</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('dolci',1)">Gizle</button>
-          <button class="btn-del" onclick="delItem('dolci',1)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="dolci-name-1" value="Guanaja Çikolata &amp; Fındık"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="dolci-sub-1" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="dolci-desc-1">Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="dolci-tags-1" value="Glutensiz"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="dolci-price-1" value="22"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="dolci-allergens-1" value="Süt, Fındık" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="dolci-calories-1" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-chefPick-1" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegetarian-1" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegan-1" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 3</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('dolci',2)">Gizle</button>
-          <button class="btn-del" onclick="delItem('dolci',2)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="dolci-name-2" value="Limoncello Sufle"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="dolci-sub-2" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="dolci-desc-2">Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="dolci-tags-2" value="Siparişe Özel"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="dolci-price-2" value="26"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="dolci-allergens-2" value="Gluten, Yumurta, Süt" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="dolci-calories-2" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-chefPick-2" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegetarian-2" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegan-2" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div>
-    <div class="admin-card" style="">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Yemek 4</span>
-        <div class="admin-card-actions">
-          <button class="btn-del" style="border-color:rgba(193,160,98,0.3);color:var(--gold-dim)" onclick="toggleHideItem('dolci',3)">Gizle</button>
-          <button class="btn-del" onclick="delItem('dolci',3)">Sil</button>
-        </div>
-      </div>
-      <div class="field-row cols-3">
-        <div style="grid-column:span 2"><label class="field-label">Yemek Adı</label><input class="admin-input" id="dolci-name-3" value="Küçük Pastacılık Tabağı"></div>
-        <div><label class="field-label">İtalik ek ad</label><input class="admin-input" id="dolci-sub-3" value=""></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Açıklama</label><textarea class="admin-textarea" id="dolci-desc-3">Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları</textarea></div></div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Etiketler (virgülle ayır)</label><input class="admin-input" id="dolci-tags-3" value="İki Kişilik"></div>
-        <div><label class="field-label">Fiyat</label><input class="admin-input" id="dolci-price-3" value="18"></div>
-      </div>
-      <div class="field-row cols-2">
-        <div><label class="field-label">Alerjenler</label><input class="admin-input" id="dolci-allergens-3" value="Gluten, Süt, Fındık" placeholder="Gluten, Süt, Yumurta..."></div>
-        <div><label class="field-label">Kalori (kcal)</label><input class="admin-input" id="dolci-calories-3" value="" placeholder="420"></div>
-      </div>
-      <div style="display:flex;gap:20px;padding-top:8px;flex-wrap:wrap">
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-chefPick-3" style="accent-color:var(--gold)"> Şefin önerisi
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegetarian-3" checked="" style="accent-color:var(--gold)"> Vejetaryen
-        </label>
-        <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:var(--muted)">
-          <input type="checkbox" id="dolci-vegan-3" style="accent-color:var(--gold)"> Vegan
-        </label>
-      </div>
-    </div></div>
+        <div id="a-dolci-items"></div>
         <button class="btn-add" onclick="addItem('dolci')">+ Yemek Ekle</button>
       </div>
     </div>
 
     <!-- TAB: VINI -->
     <div class="admin-section" id="tab-vini">
-      <div id="a-wine-cats">
-    <div class="admin-card" style="margin-bottom:24px">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kategori 1</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delWineCat(0)">Kategoriyi Sil</button></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Kategori Başlığı</label><input class="admin-input" id="wcat-title-0" value="Şampanya &amp; Köpüklü"></div></div>
-      <div id="a-wines-0">
-        
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 1</span>
-              <button class="btn-del" onclick="delWine(0,0)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-0-0" value="Krug Grande Cuvée"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-0-0" value="Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-0-0" value="38"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-0-0" value="320"></div>
-            </div>
-          </div>
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 2</span>
-              <button class="btn-del" onclick="delWine(0,1)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-0-1" value="Franciacorta Riserva Vittorio Moretti"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-0-1" value="Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-0-1" value="22"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-0-1" value="165"></div>
-            </div>
-          </div>
-      </div>
-      <button class="btn-add" style="margin-top:8px" onclick="addWine(0)">+ Şarap Ekle</button>
-    </div>
-    <div class="admin-card" style="margin-bottom:24px">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kategori 2</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delWineCat(1)">Kategoriyi Sil</button></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Kategori Başlığı</label><input class="admin-input" id="wcat-title-1" value="Seçkin Beyazlar"></div></div>
-      <div id="a-wines-1">
-        
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 1</span>
-              <button class="btn-del" onclick="delWine(1,0)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-1-0" value="Gaia &amp; Rey Chardonnay"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-1-0" value="Langhe DOC · Gaja · Piemonte · 2020"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-1-0" value="28"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-1-0" value="210"></div>
-            </div>
-          </div>
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 2</span>
-              <button class="btn-del" onclick="delWine(1,1)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-1-1" value="Vernaccia di San Gimignano Riserva"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-1-1" value="DOCG · Montenidoli · Toskana · 2019"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-1-1" value="16"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-1-1" value="95"></div>
-            </div>
-          </div>
-      </div>
-      <button class="btn-add" style="margin-top:8px" onclick="addWine(1)">+ Şarap Ekle</button>
-    </div>
-    <div class="admin-card" style="margin-bottom:24px">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kategori 3</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delWineCat(2)">Kategoriyi Sil</button></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Kategori Başlığı</label><input class="admin-input" id="wcat-title-2" value="Önemli Kırmızılar"></div></div>
-      <div id="a-wines-2">
-        
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 1</span>
-              <button class="btn-del" onclick="delWine(2,0)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-2-0" value="Barolo Brunate"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-2-0" value="DOCG · Roberto Voerzio · Nebbiolo · 2018"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-2-0" value="42"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-2-0" value="380"></div>
-            </div>
-          </div>
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 2</span>
-              <button class="btn-del" onclick="delWine(2,1)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-2-1" value="Sassicaia"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-2-1" value="Bolgheri Sassicaia DOC · Tenuta San Guido · 2019"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-2-1" value="55"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-2-1" value="490"></div>
-            </div>
-          </div>
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 3</span>
-              <button class="btn-del" onclick="delWine(2,2)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-2-2" value="Amarone della Valpolicella"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-2-2" value="DOCG · Dal Forno Romano · Veneto · 2015"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-2-2" value="48"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-2-2" value="420"></div>
-            </div>
-          </div>
-      </div>
-      <button class="btn-add" style="margin-top:8px" onclick="addWine(2)">+ Şarap Ekle</button>
-    </div>
-    <div class="admin-card" style="margin-bottom:24px">
-      <div class="admin-card-header">
-        <span class="admin-card-num">Kategori 4</span>
-        <div class="admin-card-actions"><button class="btn-del" onclick="delWineCat(3)">Kategoriyi Sil</button></div>
-      </div>
-      <div class="field-row"><div><label class="field-label">Kategori Başlığı</label><input class="admin-input" id="wcat-title-3" value="Tatlı Şaraplar"></div></div>
-      <div id="a-wines-3">
-        
-          <div class="admin-card" style="margin-top:12px;background:rgba(255,255,255,0.02)">
-            <div class="admin-card-header">
-              <span class="admin-card-num">Şarap 1</span>
-              <button class="btn-del" onclick="delWine(3,0)">Sil</button>
-            </div>
-            <div class="field-row"><div><label class="field-label">Şarap Adı</label><input class="admin-input" id="w-name-3-0" value="Passito di Pantelleria Ben Ryé"></div></div>
-            <div class="field-row"><div><label class="field-label">Bilgi (bölge, üretici, yıl)</label><input class="admin-input" id="w-info-3-0" value="DOC · Donnafugata · Sicilya · Zibibbo · 2021"></div></div>
-            <div class="field-row cols-2">
-              <div><label class="field-label">Kadeh Fiyatı €</label><input class="admin-input" id="w-glass-3-0" value="18"></div>
-              <div><label class="field-label">Şişe Fiyatı €</label><input class="admin-input" id="w-bottle-3-0" value="95"></div>
-            </div>
-          </div>
-      </div>
-      <button class="btn-add" style="margin-top:8px" onclick="addWine(3)">+ Şarap Ekle</button>
-    </div></div>
+      <div id="a-wine-cats"></div>
       <button class="btn-add" onclick="addWineCategory()">+ Kategori Ekle</button>
     </div>
 
   </div>
-
+</div>
 
 <!-- TOAST -->
-<div class="toast show" id="toast">Değişiklikler kaydedildi ✓</div>
+<div class="toast" id="toast">Değişiklikler kaydedildi</div>
 
 <script>
 // ══════════════════════════════════════════════
@@ -2923,6 +1433,5 @@ document.getElementById('pairingOverlay').addEventListener('click', function(e){
 // ══════════════════════════════════════════════
 renderMenu();
 </script>
-
-
-</body></html>
+</body>
+</html>
