@@ -41,7 +41,7 @@ const MENU_DATA = {
   // WhatsApp için: 'https://wa.me/905001234567'
   reservationActive: true,
   reservationLabel:  'Rezervasyon',
-  reservationLink:   'https://wa.me/905001234567',
+  reservationLink:   'https://wa.me/905321590514',
 
   // ── SOSYAL MEDYA (boş bırakırsan görünmez) ──────────────────
   socialInstagram: '',
@@ -54,11 +54,11 @@ const MENU_DATA = {
   showCalories:   false,  // Kalori bilgisi
 
   // ── TADIM MENÜSÜ ────────────────────────────────────────────
-  deguBadge: '★ Şefin İmzası ★',
+  deguBadge: '★ Yasir Şefin İmzası ★',
   deguName:  'Terra & Mare',
   deguSub:   '8 kurs · Şarap eşleştirmesi mevcut',
   deguPrice: '240',
-  pairingBtn: '+ Şarap Eşleştirme · €120',
+  pairingBtn: 'YZ Destekli Şarap Önerisi',
 
   courses: [
     { num:'I',    name:'Şef\'in Amuse-Bouche\'u',   desc:'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
