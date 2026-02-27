@@ -34,7 +34,7 @@ const MENU_DATA = {
 
   // ── DUYURU BANDI ────────────────────────────────────────────
   // Aktif etmek için: bannerActive: true
-  bannerActive: false,
+  bannerActive: true,
   bannerText: 'Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.',
 
   // ── REZERVASYON BUTONU ──────────────────────────────────────
