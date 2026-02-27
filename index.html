@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0047)https://essenza-restaurant-antalya.netlify.app/ -->
+<html lang="tr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="theme-color" content="#080808">
 <title>Essenza — Restoran</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<link href="./index_files/css2" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -349,24 +349,19 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   .admin-trigger{width:52px;height:52px;bottom:16px;right:16px}
 }
 </style>
-</head>
+<style type="text/css" id="operaUserStyle"></style></head>
 <body>
 
 <!-- INTRO SCREEN -->
-<div class="intro" id="introScreen">
-  <div class="intro-logo"><span>Es</span>senza</div>
-  <div class="intro-line"></div>
-  <div class="intro-sub">Restaurant</div>
-  <div class="intro-stars">✦ &nbsp; ✦ &nbsp; ✦</div>
-</div>
+
 
 <!-- HERO -->
 <section class="hero" id="top">
   <div class="hero-ornament"></div>
   <div class="hero-stars"><span style="color:var(--gold);font-size:14px;letter-spacing:4px">✦ ✦ ✦</span></div>
-  <p class="hero-eyebrow" id="d-eyebrow">Ristorante</p>
+  <p class="hero-eyebrow" id="d-eyebrow">MUTFAĞIN ÖZÜ</p>
   <h1 class="hero-title" id="d-heroTitle"><span>Es</span>senza</h1>
-  <p class="hero-sub" id="d-heroSub">Milano · Dal 2019</p>
+  <p class="hero-sub" id="d-heroSub">Antalya - Lara</p>
   <div class="hero-divider"></div>
   <div class="scroll-hint" onclick="scrollToNav()">
     <span>Menü</span><div class="scroll-line"></div>
@@ -375,31 +370,85 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 
 <!-- BANNER -->
 <div class="site-banner" id="siteBanner">
-  <span class="site-banner-text" id="d-bannerText"></span>
+  <span class="site-banner-text" id="d-bannerText">Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi &amp; Salı geçerlidir.</span>
 </div>
 
 <!-- NAV -->
 <nav class="nav" id="menu-nav">
-  <div class="nav-inner" id="d-navInner">
-    <!-- rendered by JS -->
-  </div>
+  <div class="nav-inner" id="d-navInner"><button class="nav-btn active" onclick="scrollTo(&#39;degu&#39;)">Tadım Menüsü</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo(&#39;antipasti&#39;)">Başlangıçlar</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo(&#39;primi&#39;)">Birinci Yemekler</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo(&#39;secondi&#39;)">Ana Yemekler</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo(&#39;dolci&#39;)">Tatlılar</button><span class="nav-dot">◆</span><button class="nav-btn" onclick="scrollTo(&#39;vini&#39;)">Şaraplar</button></div>
 </nav>
 
 <!-- DEGU -->
 <section class="section" id="degu">
   <div class="section-header">
-    <span class="section-label" id="d-deguLabel">Esperienza Completa</span>
-    <h2 class="section-title" id="d-deguTitle">Degustazione</h2>
+    <span class="section-label" id="d-deguLabel">Tam Deneyim</span>
+    <h2 class="section-title" id="d-deguTitle">Tadım Menüsü</h2>
     <div class="section-line"></div>
   </div>
   <div class="degu-card">
-    <div class="degu-badge"><span id="d-deguBadge">★ Firma dello Chef ★</span></div>
-    <div class="degu-name" id="d-deguName">Terra & Mare</div>
-    <div class="degu-sub" id="d-deguSub">8 portate · Abbinamento vini disponibile</div>
-    <div class="degu-courses" id="d-courses"></div>
+    <div class="degu-badge"><span id="d-deguBadge">★ Yasir Şefin İmzası ★</span></div>
+    <div class="degu-name" id="d-deguName">Terra &amp; Mare</div>
+    <div class="degu-sub" id="d-deguSub">8 kurs · Şarap eşleştirmesi mevcut</div>
+    <div class="degu-courses" id="d-courses">
+    <div class="degu-course">
+      <div class="course-num">I</div>
+      <div class="course-info">
+        <div class="course-name">Şef'in Amuse-Bouche'u</div>
+        <div class="course-desc">Mutfaktan hoş geldin — dört mevsimlik küçük lokma</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">II</div>
+      <div class="course-info">
+        <div class="course-name">İstiridye ve Havyar</div>
+        <div class="course-desc">Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">III</div>
+      <div class="course-info">
+        <div class="course-name">Çiğ Sarı Kuyruk Balığı</div>
+        <div class="course-desc">Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">IV</div>
+      <div class="course-info">
+        <div class="course-name">Milanese Risotto</div>
+        <div class="course-desc">Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">V</div>
+      <div class="course-info">
+        <div class="course-name">Taze Makarna — Açık Raviolo</div>
+        <div class="course-desc">Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">VI</div>
+      <div class="course-info">
+        <div class="course-name">Bresse Güvercini</div>
+        <div class="course-desc">Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">VII</div>
+      <div class="course-info">
+        <div class="course-name">Ön Tatlı</div>
+        <div class="course-desc">Amalfi limon sorbesi, taze nane, gül suyu</div>
+      </div>
+    </div>
+    <div class="degu-course">
+      <div class="course-num">VIII</div>
+      <div class="course-info">
+        <div class="course-name">Tatlı — Çikolata &amp; Fındık</div>
+        <div class="course-desc">Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması</div>
+      </div>
+    </div></div>
     <div class="degu-footer">
       <div class="degu-price"><span id="d-deguPrice">240</span></div>
-      <button class="pairing-btn" id="d-pairingBtn" onclick="openPairing()">+ Şarap Eşleştirme · €120</button>
+      <button class="pairing-btn" id="d-pairingBtn" onclick="openPairing()">YZ Destekli Şarap Önerisi</button>
     </div>
   </div>
 </section>
@@ -409,55 +458,367 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 <!-- ANTIPASTI -->
 <section class="section" id="antipasti">
   <div class="section-header">
-    <span class="section-label" id="d-antipastiLabel">Per Iniziare</span>
-    <h2 class="section-title" id="d-antipastiTitle">Antipasti</h2>
+    <span class="section-label" id="d-antipastiLabel">Başlangıç İçin</span>
+    <h2 class="section-title" id="d-antipastiTitle">Başlangıçlar</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-antipasti"></div>
+  <div class="menu-grid" id="d-antipasti">
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Dana Carpaccio <em>Fassona</em>
+            <span class="badge-chef">★ Şef</span>
+            
+            
+          </div>
+          <div class="item-desc">Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf</div>
+          <div class="item-tags"><span class="tag">İmza</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Gluten</div>
+        </div>
+        <div class="item-price">38</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Mazara Kırmızı Karidesi
+            
+            
+            
+          </div>
+          <div class="item-desc">Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu</div>
+          <div class="item-tags"><span class="tag">Mevsimlik</span><span class="tag">Çiğ</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Kabuklu deniz ürünleri</div>
+        </div>
+        <div class="item-price">52</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Foie Gras <em>Venedik Usulü</em>
+            
+            
+            
+          </div>
+          <div class="item-desc">Ördek ciğeri terrinesi, Marsala'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi</div>
+          <div class="item-tags"><span class="tag">Klasik</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Süt, Yumurta</div>
+        </div>
+        <div class="item-price">46</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Andria Burratası
+            
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri</div>
+          <div class="item-tags"><span class="tag">Vejetaryen</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Fındık</div>
+        </div>
+        <div class="item-price">28</div>
+      </div></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- PRIMI -->
 <section class="section" id="primi">
   <div class="section-header">
-    <span class="section-label" id="d-primiLabel">I Primi Piatti</span>
+    <span class="section-label" id="d-primiLabel">Birinci Yemekler</span>
     <h2 class="section-title" id="d-primiTitle">Primi</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-primi"></div>
+  <div class="menu-grid" id="d-primi">
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Safran Risotto <em>Şefin Yorumu</em>
+            <span class="badge-chef">★ Şef</span>
+            
+            
+          </div>
+          <div class="item-desc">Carnaroli Riserva San Massimo, L'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın</div>
+          <div class="item-tags"><span class="tag">İmza</span><span class="tag">Glutensiz</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
+        </div>
+        <div class="item-price">44</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Beyaz Trüflü Tagliolini
+            <span class="badge-chef">★ Şef</span>
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut</div>
+          <div class="item-tags"><span class="tag">Mevsimlik</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
+        </div>
+        <div class="item-price">68</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Açık Raviolo <em>Yumurtalı</em>
+            
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">İrmik raviolosu, 63°C confit yumurta sarısı, Val d'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı</div>
+          <div class="item-tags"><span class="tag">Vejetaryen</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
+        </div>
+        <div class="item-price">38</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Deniz Kestaneli Spaghetti
+            
+            
+            
+          </div>
+          <div class="item-desc">Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon</div>
+          <div class="item-tags"><span class="tag">Deniz</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Balık</div>
+        </div>
+        <div class="item-price">42</div>
+      </div></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- SECONDI -->
 <section class="section" id="secondi">
   <div class="section-header">
-    <span class="section-label" id="d-secondiLabel">I Secondi Piatti</span>
+    <span class="section-label" id="d-secondiLabel">Ana Yemekler</span>
     <h2 class="section-title" id="d-secondiTitle">Secondi</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-secondi"></div>
+  <div class="menu-grid" id="d-secondi">
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Bresse Güvercini <em>İki Pişirme Tekniği</em>
+            <span class="badge-chef">★ Şef</span>
+            
+            
+          </div>
+          <div class="item-desc">Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı</div>
+          <div class="item-tags"><span class="tag">İmza</span><span class="tag">Kara</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
+        </div>
+        <div class="item-price">62</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Tuzda Yabani Levrek
+            
+            
+            
+          </div>
+          <div class="item-desc">Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı</div>
+          <div class="item-tags"><span class="tag">Deniz</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Balık</div>
+        </div>
+        <div class="item-price">58</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Wagyu A4 Kontrfile
+            
+            
+            
+          </div>
+          <div class="item-desc">Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak</div>
+          <div class="item-tags"><span class="tag">Premium</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Gluten</div>
+        </div>
+        <div class="item-price">95</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Dana Uykuluğu <em>Altın Rengi</em>
+            
+            
+            
+          </div>
+          <div class="item-desc">Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon</div>
+          <div class="item-tags"><span class="tag">Klasik</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt</div>
+        </div>
+        <div class="item-price">48</div>
+      </div></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- DOLCI -->
 <section class="section" id="dolci">
   <div class="section-header">
-    <span class="section-label" id="d-dolciLabel">Fine Pasto</span>
-    <h2 class="section-title" id="d-dolciTitle">Dolci</h2>
+    <span class="section-label" id="d-dolciLabel">Yemek Sonu</span>
+    <h2 class="section-title" id="d-dolciTitle">Tatlılar</h2>
     <div class="section-line"></div>
   </div>
-  <div class="menu-grid" id="d-dolci"></div>
+  <div class="menu-grid" id="d-dolci">
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Tiramisu <em>Yeniden Yorumlanan</em>
+            <span class="badge-chef">★ Şef</span>
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması</div>
+          <div class="item-tags"><span class="tag">İmza</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
+        </div>
+        <div class="item-price">24</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Guanaja Çikolata &amp; Fındık
+            
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül</div>
+          <div class="item-tags"><span class="tag">Glutensiz</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Süt, Fındık</div>
+        </div>
+        <div class="item-price">22</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Limoncello Sufle
+            
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir</div>
+          <div class="item-tags"><span class="tag">Siparişe Özel</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Yumurta, Süt</div>
+        </div>
+        <div class="item-price">26</div>
+      </div>
+      <div class="menu-item">
+        <div>
+          <div class="item-name">
+            Küçük Pastacılık Tabağı
+            
+            <span class="badge-v" title="Vejetaryen">V</span>
+            
+          </div>
+          <div class="item-desc">Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları</div>
+          <div class="item-tags"><span class="tag">İki Kişilik</span></div>
+          
+          <div class="item-allergens"><span class="item-allergen-label">Alerjenler:</span>Gluten, Süt, Fındık</div>
+        </div>
+        <div class="item-price">18</div>
+      </div></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
 <!-- VINI -->
 <section class="section" id="vini">
   <div class="section-header">
-    <span class="section-label" id="d-viniLabel">La Cantina</span>
-    <h2 class="section-title" id="d-viniTitle">Vini</h2>
+    <span class="section-label" id="d-viniLabel">Mahzenimiz</span>
+    <h2 class="section-title" id="d-viniTitle">Şaraplar</h2>
     <div class="section-line"></div>
   </div>
-  <div id="d-vini"></div>
+  <div id="d-vini">
+    <div class="wine-category">
+      <div class="wine-cat-title">Şampanya &amp; Köpüklü</div>
+      
+        <div class="wine-item">
+          <div><div class="wine-name">Krug Grande Cuvée</div><div class="wine-info">Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 38</div>
+            <div class="bottle">Şişe 320</div>
+          </div>
+        </div>
+        <div class="wine-item">
+          <div><div class="wine-name">Franciacorta Riserva Vittorio Moretti</div><div class="wine-info">Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 22</div>
+            <div class="bottle">Şişe 165</div>
+          </div>
+        </div>
+    </div>
+    <div class="wine-category">
+      <div class="wine-cat-title">Seçkin Beyazlar</div>
+      
+        <div class="wine-item">
+          <div><div class="wine-name">Gaia &amp; Rey Chardonnay</div><div class="wine-info">Langhe DOC · Gaja · Piemonte · 2020</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 28</div>
+            <div class="bottle">Şişe 210</div>
+          </div>
+        </div>
+        <div class="wine-item">
+          <div><div class="wine-name">Vernaccia di San Gimignano Riserva</div><div class="wine-info">DOCG · Montenidoli · Toskana · 2019</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 16</div>
+            <div class="bottle">Şişe 95</div>
+          </div>
+        </div>
+    </div>
+    <div class="wine-category">
+      <div class="wine-cat-title">Önemli Kırmızılar</div>
+      
+        <div class="wine-item">
+          <div><div class="wine-name">Barolo Brunate</div><div class="wine-info">DOCG · Roberto Voerzio · Nebbiolo · 2018</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 42</div>
+            <div class="bottle">Şişe 380</div>
+          </div>
+        </div>
+        <div class="wine-item">
+          <div><div class="wine-name">Sassicaia</div><div class="wine-info">Bolgheri Sassicaia DOC · Tenuta San Guido · 2019</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 55</div>
+            <div class="bottle">Şişe 490</div>
+          </div>
+        </div>
+        <div class="wine-item">
+          <div><div class="wine-name">Amarone della Valpolicella</div><div class="wine-info">DOCG · Dal Forno Romano · Veneto · 2015</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 48</div>
+            <div class="bottle">Şişe 420</div>
+          </div>
+        </div>
+    </div>
+    <div class="wine-category">
+      <div class="wine-cat-title">Tatlı Şaraplar</div>
+      
+        <div class="wine-item">
+          <div><div class="wine-name">Passito di Pantelleria Ben Ryé</div><div class="wine-info">DOC · Donnafugata · Sicilya · Zibibbo · 2021</div></div>
+          <div class="wine-prices">
+            <div class="glass">Kadeh 18</div>
+            <div class="bottle">Şişe 95</div>
+          </div>
+        </div>
+    </div></div>
 </section>
 
 <!-- FOOTER -->
@@ -465,16 +826,11 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   <div class="footer-logo" id="d-footerLogo">Essenza</div>
   <div class="footer-stars">✦ ✦ ✦</div>
   <div class="footer-socials" id="d-socials"></div>
-  <div class="footer-addr" id="d-footerAddr">
-    Via Monte Napoleone 12, Milano 20121<br>
-    +39 02 1234 5678 · info@essenzaristorante.it<br><br>
-    Aperto Martedì — Sabato · 19:30 – 23:00<br>
-    Prenotazione obbligatoria
-  </div>
+  <div class="footer-addr" id="d-footerAddr">Lara Caddesi No:12, Muratpaşa / Antalya 07160<br>+905321590514 · info@essenzarestaurant.com<br><br>Pazartesi — Cumartesi arası açık · Lunch:12:30 – 14:30 Dinner:19:30 – 23:00<br>Rezervasyon zorunludur</div>
 </footer>
 
 <!-- REZERVASYON BUTONU -->
-<button class="reservation-btn" id="reservationBtn" onclick="openReservation()"></button>
+<button class="reservation-btn active" id="reservationBtn" onclick="openReservation()">Rezervasyon</button>
 
 <!-- PAIRING MODAL -->
 <div class="pairing-overlay" id="pairingOverlay">
@@ -497,7 +853,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 
 <!-- ADMIN TRIGGER -->
 <div class="admin-trigger" onclick="openLogin()" title="Yönetici Girişi">
-  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+  <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>
 </div>
 
 <!-- LOGIN MODAL -->
@@ -506,7 +862,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     <button class="modal-close" onclick="closeLogin()">✕</button>
     <div class="modal-title">Yönetici Girişi</div>
     <div class="modal-sub">Yalnızca yetkili erişim</div>
-    <input class="modal-input" type="password" id="pwInput" placeholder="Şifre" onkeydown="if(event.key==='Enter')checkPw()">
+    <input class="modal-input" type="password" id="pwInput" placeholder="Şifre" onkeydown="if(event.key===&#39;Enter&#39;)checkPw()">
     <button class="modal-btn" onclick="checkPw()">Giriş Yap</button>
     <div class="modal-error" id="pwError"></div>
   </div>
@@ -526,14 +882,14 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
   <div class="admin-body">
     <!-- TABS -->
     <div class="admin-tabs">
-      <button class="admin-tab active" onclick="switchTab('tab-generale')">Genel</button>
-      <button class="admin-tab" onclick="switchTab('tab-gorunum')">Görünüm</button>
-      <button class="admin-tab" onclick="switchTab('tab-degu')">Tadım Menüsü</button>
-      <button class="admin-tab" onclick="switchTab('tab-antipasti')">Başlangıçlar</button>
-      <button class="admin-tab" onclick="switchTab('tab-primi')">Birinci Yemekler</button>
-      <button class="admin-tab" onclick="switchTab('tab-secondi')">Ana Yemekler</button>
-      <button class="admin-tab" onclick="switchTab('tab-dolci')">Tatlılar</button>
-      <button class="admin-tab" onclick="switchTab('tab-vini')">Şaraplar</button>
+      <button class="admin-tab active" onclick="switchTab(&#39;tab-generale&#39;)">Genel</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-gorunum&#39;)">Görünüm</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-degu&#39;)">Tadım Menüsü</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-antipasti&#39;)">Başlangıçlar</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-primi&#39;)">Birinci Yemekler</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-secondi&#39;)">Ana Yemekler</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-dolci&#39;)">Tatlılar</button>
+      <button class="admin-tab" onclick="switchTab(&#39;tab-vini&#39;)">Şaraplar</button>
     </div>
 
     <!-- TAB: GENERALE -->
@@ -604,7 +960,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
           <div><label class="field-label">Footer Logo Adı</label><input class="admin-input" id="a-footerLogo"></div>
         </div>
         <div class="field-row">
-          <div><label class="field-label">Adres & İletişim (HTML kabul edilir, &lt;br&gt; ile satır atla)</label><textarea class="admin-textarea" id="a-footerAddr" style="min-height:90px"></textarea></div>
+          <div><label class="field-label">Adres &amp; İletişim (HTML kabul edilir, &lt;br&gt; ile satır atla)</label><textarea class="admin-textarea" id="a-footerAddr" style="min-height:90px"></textarea></div>
         </div>
       </div>
     </div>
@@ -693,7 +1049,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
       <div class="admin-group">
         <div class="admin-group-title">Başlangıç Yemekleri</div>
         <div id="a-antipasti-items"></div>
-        <button class="btn-add" onclick="addItem('antipasti')">+ Yemek Ekle</button>
+        <button class="btn-add" onclick="addItem(&#39;antipasti&#39;)">+ Yemek Ekle</button>
       </div>
     </div>
 
@@ -702,7 +1058,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
       <div class="admin-group">
         <div class="admin-group-title">Birinci Yemekler</div>
         <div id="a-primi-items"></div>
-        <button class="btn-add" onclick="addItem('primi')">+ Yemek Ekle</button>
+        <button class="btn-add" onclick="addItem(&#39;primi&#39;)">+ Yemek Ekle</button>
       </div>
     </div>
 
@@ -711,7 +1067,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
       <div class="admin-group">
         <div class="admin-group-title">Ana Yemekler</div>
         <div id="a-secondi-items"></div>
-        <button class="btn-add" onclick="addItem('secondi')">+ Yemek Ekle</button>
+        <button class="btn-add" onclick="addItem(&#39;secondi&#39;)">+ Yemek Ekle</button>
       </div>
     </div>
 
@@ -720,7 +1076,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
       <div class="admin-group">
         <div class="admin-group-title">Tatlılar</div>
         <div id="a-dolci-items"></div>
-        <button class="btn-add" onclick="addItem('dolci')">+ Yemek Ekle</button>
+        <button class="btn-add" onclick="addItem(&#39;dolci&#39;)">+ Yemek Ekle</button>
       </div>
     </div>
 
@@ -731,7 +1087,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
     </div>
 
   </div>
-</div>
+
 
 <!-- TOAST -->
 <div class="toast" id="toast">Değişiklikler kaydedildi</div>
@@ -1433,5 +1789,5 @@ document.getElementById('pairingOverlay').addEventListener('click', function(e){
 // ══════════════════════════════════════════════
 renderMenu();
 </script>
-</body>
-</html>
+
+</body></html>
