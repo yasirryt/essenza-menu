@@ -7,8 +7,8 @@
 const MENU_DATA = {
 
   // ── GENEL BİLGİLER ─────────────────────────────────────────
-  eyebrow:  'Restoran',
-  heroSub:  'Milano · 2019\'dan beri',
+  eyebrow:  'Restaurant',
+  heroSub:  'Antalya · Lara',
   footerLogo: 'Essenza',
   footerAddr: 'Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
 
