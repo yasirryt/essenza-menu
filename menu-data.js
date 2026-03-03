@@ -170,7 +170,7 @@ const MENU_DATA = {
     },
   ],
 
-  // ── TATLILAR ─────────────────────────────────────────────────
+  // ── DOLCİ ─────────────────────────────────────────────────
   dolci: [
     {
       name: 'Tiramisu', sub: 'Yeniden Yorumlanan',
