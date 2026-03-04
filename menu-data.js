@@ -25,7 +25,7 @@ const MENU_DATA = {
   secondiLabel:   'Ana Yemekler',
   secondiTitle:   'Secondi',
   dolciLabel:     'Yemek Sonu',
-  dolciTitle:     'Tatlılar',
+  dolciTitle:     'Dolci',
   viniLabel:      'Mahzenimiz',
   viniTitle:      'Şaraplar',
 
