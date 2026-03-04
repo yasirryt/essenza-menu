@@ -61,7 +61,7 @@ const MENU_DATA = {
   deguBadge:  '★ Yasir Şefin İmzası ★',
   deguName:   'Terra & Mare',
   deguSub:    '8 kurs · Şarap eşleştirmesi mevcut',
-  deguPrice:  '240',
+  deguPrice:  '8500',
   pairingBtn: 'YZ Destekli Şarap Önerisi',
 
   courses: [
