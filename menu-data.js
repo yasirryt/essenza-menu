@@ -1,19 +1,19 @@
 // ============================================================
 //  ESSENZA — MENÜ VERİLERİ
 //  Bu dosyayı GitHub'dan düzenleyerek menüyü güncelleyebilirsin.
-//  index.html dosyasına dokunmana gerek yok.
+//  index.html dosyasına hiç dokunmana gerek yok.
 // ============================================================
 
 const MENU_DATA = {
 
   // ── GENEL BİLGİLER ─────────────────────────────────────────
-  eyebrow:  'Restoran',
-  heroSub:  'Milano · 2019\'dan beri',
+  eyebrow:    'Restaurant',
+  heroSub:    'Antalya · Lara',
   footerLogo: 'Essenza',
-  footerAddr: 'Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
+  footerAddr: 'Lara Caddesi, Antalya<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
 
   // ── NAV YAZILARI ────────────────────────────────────────────
-  navLabels: ['Tadım Menüsü','Başlangıçlar','Birinci Yemekler','Ana Yemekler','Tatlılar','Şaraplar'],
+  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Birinci Yemekler', 'Ana Yemekler', 'Tatlılar', 'Şaraplar'],
 
   // ── BÖLÜM BAŞLIKLARI ────────────────────────────────────────
   deguLabel:      'Tam Deneyim',
@@ -29,52 +29,59 @@ const MENU_DATA = {
   viniLabel:      'Mahzenimiz',
   viniTitle:      'Şaraplar',
 
-  // ── PARA BİRİMİ (€ $ ₺ £) ───────────────────────────────────
+  // ── PARA BİRİMİ ─────────────────────────────────────────────
+  // Seçenekler: '€'  '$'  '₺'  '£'
   currency: '€',
 
   // ── DUYURU BANDI ────────────────────────────────────────────
   // Aktif etmek için: bannerActive: true
+  // Kapatmak için:   bannerActive: false
   bannerActive: false,
-  bannerText: 'Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.',
+  bannerText:   'Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.',
 
   // ── REZERVASYON BUTONU ──────────────────────────────────────
-  // WhatsApp için: 'https://wa.me/905001234567'
+  // WhatsApp linki: 'https://wa.me/90XXXXXXXXXX' (başında 0 olmadan)
+  // Kapatmak için:  reservationActive: false
   reservationActive: true,
   reservationLabel:  'Rezervasyon',
-  reservationLink:   'https://wa.me/905001234567',
+  reservationLink:   'https://wa.me/905321590514',
 
-  // ── SOSYAL MEDYA (boş bırakırsan görünmez) ──────────────────
+  // ── SOSYAL MEDYA ────────────────────────────────────────────
+  // Boş bırakırsan footer'da görünmez
   socialInstagram: '',
   socialFacebook:  '',
 
-  // ── MENÜ ROZET / BİLGİ AYARLARI ────────────────────────────
-  showChefBadge:  true,   // ★ Şef rozeti
-  showVeganIcons: true,   // V / VG ikonları
-  showAllergens:  true,   // Alerjen bilgisi
-  showCalories:   false,  // Kalori bilgisi
+  // ── MENÜ ROZET VE BİLGİ GÖSTERİMİ ─────────────────────────
+  showChefBadge:  true,   // true = ★ Şef rozeti görünür
+  showVeganIcons: true,   // true = V / VG ikonları görünür
+  showAllergens:  true,   // true = Alerjen bilgisi görünür
+  showCalories:   false,  // true = Kalori bilgisi görünür
 
   // ── TADIM MENÜSÜ ────────────────────────────────────────────
-  deguBadge: '★ Şefin İmzası ★',
-  deguName:  'Terra & Mare',
-  deguSub:   '8 kurs · Şarap eşleştirmesi mevcut',
-  deguPrice: '240',
-  pairingBtn: '+ Şarap Eşleştirme · €120',
+  deguBadge:  '★ Yasir Şefin İmzası ★',
+  deguName:   'Terra & Mare',
+  deguSub:    '8 kurs · Şarap eşleştirmesi mevcut',
+  deguPrice:  '240',
+  pairingBtn: 'YZ Destekli Şarap Önerisi',
 
   courses: [
-    { num:'I',    name:'Şef\'in Amuse-Bouche\'u',   desc:'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
-    { num:'II',   name:'İstiridye ve Havyar',        desc:'Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu' },
-    { num:'III',  name:'Çiğ Sarı Kuyruk Balığı',    desc:'Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler' },
-    { num:'IV',   name:'Milanese Risotto',           desc:'Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın' },
-    { num:'V',    name:'Taze Makarna — Açık Raviolo',desc:'Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı' },
-    { num:'VI',   name:'Bresse Güvercini',           desc:'Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan' },
-    { num:'VII',  name:'Ön Tatlı',                   desc:'Amalfi limon sorbesi, taze nane, gül suyu' },
-    { num:'VIII', name:'Tatlı — Çikolata & Fındık',  desc:'Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması' },
+    { num: 'I',    name: 'Şef\'in Amuse-Bouche\'u',    desc: 'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
+    { num: 'II',   name: 'İstiridye ve Havyar',         desc: 'Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu' },
+    { num: 'III',  name: 'Çiğ Sarı Kuyruk Balığı',     desc: 'Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler' },
+    { num: 'IV',   name: 'Milanese Risotto',            desc: 'Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın' },
+    { num: 'V',    name: 'Taze Makarna — Açık Raviolo', desc: 'Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı' },
+    { num: 'VI',   name: 'Bresse Güvercini',            desc: 'Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan' },
+    { num: 'VII',  name: 'Ön Tatlı',                    desc: 'Amalfi limon sorbesi, taze nane, gül suyu' },
+    { num: 'VIII', name: 'Tatlı — Çikolata & Fındık',   desc: 'Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması' },
   ],
 
   // ── BAŞLANGIÇLAR ────────────────────────────────────────────
-  // hidden: true  → yemek menüde görünmez (silmeden gizler)
+  // hidden: true  → yemek menüde görünmez (silmeden geçici gizler)
   // chefPick: true → ★ Şef rozeti çıkar
-  // vegetarian/vegan: true → V / VG ikonu çıkar
+  // vegetarian: true → V ikonu çıkar
+  // vegan: true → VG ikonu çıkar
+  // allergens: alerjen listesi (virgülle ayır)
+  // calories: kalori (kcal) — showCalories: true yapılınca görünür
   antipasti: [
     {
       name: 'Dana Carpaccio', sub: 'Fassona',
@@ -138,7 +145,9 @@ const MENU_DATA = {
     },
   ],
 
-  // ── ANA YEMEKLER ─────────────────────────────────────────────
+  // ── ANA YEMEKLER ────────────────────────────────────────────
+  // YENİ YEMEK EKLEMEK İÇİN: alttaki bloğu kopyalayıp yapıştır
+  // Asistan otomatik olarak bu listeyi okur ve seçenek olarak sunar
   secondi: [
     {
       name: 'Bresse Güvercini', sub: 'İki Pişirme Tekniği',
@@ -170,7 +179,7 @@ const MENU_DATA = {
     },
   ],
 
-  // ── TATLILAR ─────────────────────────────────────────────────
+  // ── DOLCİ ───────────────────────────────────────────────────
   dolci: [
     {
       name: 'Tiramisu', sub: 'Yeniden Yorumlanan',
@@ -202,30 +211,30 @@ const MENU_DATA = {
     },
   ],
 
-  // ── ŞARAPLAR ─────────────────────────────────────────────────
-  // glass: kadeh fiyatı (boş bırakırsan kadeh seçeneği çıkmaz)
+  // ── ŞARAPLAR ────────────────────────────────────────────────
+  // glass: kadeh fiyatı — boş bırakırsan kadeh seçeneği çıkmaz
   // bottle: şişe fiyatı
   wineCats: [
     {
       title: 'Şampanya & Köpüklü',
       wines: [
-        { name: 'Krug Grande Cuvée',                   info: 'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass: '38', bottle: '320' },
-        { name: 'Franciacorta Riserva Vittorio Moretti', info: 'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015',                   glass: '22', bottle: '165' },
+        { name: 'Krug Grande Cuvée',                    info: 'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass: '38', bottle: '320' },
+        { name: 'Franciacorta Riserva Vittorio Moretti', info: 'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015',                    glass: '22', bottle: '165' },
       ],
     },
     {
       title: 'Seçkin Beyazlar',
       wines: [
-        { name: 'Gaia & Rey Chardonnay',              info: 'Langhe DOC · Gaja · Piemonte · 2020',           glass: '28', bottle: '210' },
-        { name: 'Vernaccia di San Gimignano Riserva',  info: 'DOCG · Montenidoli · Toskana · 2019',           glass: '16', bottle: '95'  },
+        { name: 'Gaia & Rey Chardonnay',             info: 'Langhe DOC · Gaja · Piemonte · 2020',  glass: '28', bottle: '210' },
+        { name: 'Vernaccia di San Gimignano Riserva', info: 'DOCG · Montenidoli · Toskana · 2019',  glass: '16', bottle: '95'  },
       ],
     },
     {
       title: 'Önemli Kırmızılar',
       wines: [
-        { name: 'Barolo Brunate',             info: 'DOCG · Roberto Voerzio · Nebbiolo · 2018',           glass: '42', bottle: '380' },
-        { name: 'Sassicaia',                  info: 'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019',    glass: '55', bottle: '490' },
-        { name: 'Amarone della Valpolicella', info: 'DOCG · Dal Forno Romano · Veneto · 2015',             glass: '48', bottle: '420' },
+        { name: 'Barolo Brunate',             info: 'DOCG · Roberto Voerzio · Nebbiolo · 2018',        glass: '42', bottle: '380' },
+        { name: 'Sassicaia',                  info: 'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019', glass: '55', bottle: '490' },
+        { name: 'Amarone della Valpolicella', info: 'DOCG · Dal Forno Romano · Veneto · 2015',          glass: '48', bottle: '420' },
       ],
     },
     {
@@ -235,5 +244,53 @@ const MENU_DATA = {
       ],
     },
   ],
+
+  // ── ASİSTAN ÖNERİLERİ ───────────────────────────────────────
+  // Asistan sağ alttaki chat balonundan açılır.
+  // Kullanıcı ana yemek seçer, asistan başlangıç önerir.
+  //
+  // KULLANIM:
+  //   'Yemek Adı' — secondi listesindeki name ile BİREBİR aynı olmalı
+  //   intro  → asistanın ilk söylediği cümle
+  //   starter → önerilen başlangıç adı (antipasti listesinden)
+  //   reason  → neden bu eşleşme açıklaması
+  //
+  // YENİ ANA YEMEK EKLEYİNCE: buraya da aynı formatta bir blok ekle
+  assistantSuggestions: {
+
+    'Wagyu A4 Kontrfile': {
+      intro:   'Wagyu A4 yoğun ve derin aromalarıyla akşamın en güçlü kursu — başlangıcın hafif ve temiz olması şart.',
+      starter: 'Dana Carpaccio',
+      reason:  'Carpaccionun ince dilimleri ve parmesan ferahlığı, Wagyu\'nun zengin yağlılığına mükemmel bir kontrast oluşturur.',
+    },
+
+    'Bresse Güvercini': {
+      intro:   'İki teknikle pişirilmiş Bresse Güvercini kompleks aromalara sahip — başlangıcın umami notlarını desteklemesi gerekir.',
+      starter: 'Foie Gras',
+      reason:  'Foie Gras\'ın zengin kadifemsi yapısı, güvercinin derin et aromalarına açılan en zarif kapıdır.',
+    },
+
+    'Tuzda Yabani Levrek': {
+      intro:   'Tuzda pişen yabani levrek saf ve temiz bir deniz lezzeti — başlangıcın da aynı ferahlıkta olması gerekir.',
+      starter: 'Mazara Kırmızı Karidesi',
+      reason:  'Çiğ karidesın iyot notaları ve taze deniz aroması, levreğin narin lezzetini önceden hazırlar.',
+    },
+
+    'Dana Uykuluğu': {
+      intro:   'Altın rengi dana uykuluğu narin ama belirgin bir lezzet — başlangıcın damağı nazikçe uyandırması gerekir.',
+      starter: 'Andria Burratası',
+      reason:  'Burratanın kremalı yapısı, uykuluğun nüanslı aromasını bastırmadan damağı mükemmel biçimde hazırlar.',
+    },
+
+    // ── YENİ ANA YEMEK ŞABLONU ──────────────────────────────
+    // Yeni yemek ekleyince aşağıdaki bloğu kopyalayıp düzenle:
+    //
+    // 'Yemek Adı': {
+    //   intro:   'Asistanın ilk cümlesi',
+    //   starter: 'Önerilen Başlangıç Adı',
+    //   reason:  'Neden bu eşleşme açıklaması',
+    // },
+
+  },
 
 };

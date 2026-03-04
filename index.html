@@ -12,6 +12,308 @@
 <title>Essenza — Restoran</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600&family=Jost:wght@300;400&display=swap" rel="stylesheet">
 <script src="menu-data.js"></script>
+<script>
+// Eğer menu-data.js yüklenemezse (local açılış vb.) inline veri kullanılır
+if(typeof MENU_DATA === 'undefined'){
+// ============================================================
+//  ESSENZA — MENÜ VERİLERİ
+//  Bu dosyayı GitHub'dan düzenleyerek menüyü güncelleyebilirsin.
+//  index.html dosyasına hiç dokunmana gerek yok.
+// ============================================================
+
+window.MENU_DATA = {
+
+  // ── GENEL BİLGİLER ─────────────────────────────────────────
+  eyebrow:    'Restaurant',
+  heroSub:    'Antalya · Lara',
+  footerLogo: 'Essenza',
+  footerAddr: 'Lara Caddesi, Antalya<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
+
+  // ── NAV YAZILARI ────────────────────────────────────────────
+  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Birinci Yemekler', 'Ana Yemekler', 'Tatlılar', 'Şaraplar'],
+
+  // ── BÖLÜM BAŞLIKLARI ────────────────────────────────────────
+  deguLabel:      'Tam Deneyim',
+  deguTitle:      'Tadım Menüsü',
+  antipastiLabel: 'Başlangıç İçin',
+  antipastiTitle: 'Başlangıçlar',
+  primiLabel:     'Birinci Yemekler',
+  primiTitle:     'Primi',
+  secondiLabel:   'Ana Yemekler',
+  secondiTitle:   'Secondi',
+  dolciLabel:     'Yemek Sonu',
+  dolciTitle:     'Dolci',
+  viniLabel:      'Mahzenimiz',
+  viniTitle:      'Şaraplar',
+
+  // ── PARA BİRİMİ ─────────────────────────────────────────────
+  // Seçenekler: '€'  '$'  '₺'  '£'
+  currency: '€',
+
+  // ── DUYURU BANDI ────────────────────────────────────────────
+  // Aktif etmek için: bannerActive: true
+  // Kapatmak için:   bannerActive: false
+  bannerActive: false,
+  bannerText:   'Bu hafta özel: Şefin degustasyon menüsünde %10 indirim — Pazartesi & Salı geçerlidir.',
+
+  // ── REZERVASYON BUTONU ──────────────────────────────────────
+  // WhatsApp linki: 'https://wa.me/90XXXXXXXXXX' (başında 0 olmadan)
+  // Kapatmak için:  reservationActive: false
+  reservationActive: true,
+  reservationLabel:  'Rezervasyon',
+  reservationLink:   'https://wa.me/905321590514',
+
+  // ── SOSYAL MEDYA ────────────────────────────────────────────
+  // Boş bırakırsan footer'da görünmez
+  socialInstagram: '',
+  socialFacebook:  '',
+
+  // ── MENÜ ROZET VE BİLGİ GÖSTERİMİ ─────────────────────────
+  showChefBadge:  true,   // true = ★ Şef rozeti görünür
+  showVeganIcons: true,   // true = V / VG ikonları görünür
+  showAllergens:  true,   // true = Alerjen bilgisi görünür
+  showCalories:   false,  // true = Kalori bilgisi görünür
+
+  // ── TADIM MENÜSÜ ────────────────────────────────────────────
+  deguBadge:  '★ Yasir Şefin İmzası ★',
+  deguName:   'Terra & Mare',
+  deguSub:    '8 kurs · Şarap eşleştirmesi mevcut',
+  deguPrice:  '240',
+  pairingBtn: 'YZ Destekli Şarap Önerisi',
+
+  courses: [
+    { num: 'I',    name: 'Şef\'in Amuse-Bouche\'u',    desc: 'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
+    { num: 'II',   name: 'İstiridye ve Havyar',         desc: 'Fine de Claire istiridye, Oscietra havyarı, şampanya jeli, dereotu' },
+    { num: 'III',  name: 'Çiğ Sarı Kuyruk Balığı',     desc: 'Yabani sarı kuyruk balığı, Sicilya narenciyesi, fesleğen yağı, yenilebilir çiçekler' },
+    { num: 'IV',   name: 'Milanese Risotto',            desc: 'Safran DOP, ilik, 36 aylık parmesan, yenilebilir altın' },
+    { num: 'V',    name: 'Taze Makarna — Açık Raviolo', desc: 'Confit yumurta sarısı, siyah trüf, çiftlik tereyağı, adaçayı' },
+    { num: 'VI',   name: 'Bresse Güvercini',            desc: 'Pembemsi göğüs, çıtır but confit, kırmızı şarap sosu, karamelize soğan' },
+    { num: 'VII',  name: 'Ön Tatlı',                    desc: 'Amalfi limon sorbesi, taze nane, gül suyu' },
+    { num: 'VIII', name: 'Tatlı — Çikolata & Fındık',   desc: 'Valrhona Guanaja %70, Piemonte IGP fındığı, tuzlu karamel, süt dondurması' },
+  ],
+
+  // ── BAŞLANGIÇLAR ────────────────────────────────────────────
+  // hidden: true  → yemek menüde görünmez (silmeden geçici gizler)
+  // chefPick: true → ★ Şef rozeti çıkar
+  // vegetarian: true → V ikonu çıkar
+  // vegan: true → VG ikonu çıkar
+  // allergens: alerjen listesi (virgülle ayır)
+  // calories: kalori (kcal) — showCalories: true yapılınca görünür
+  antipasti: [
+    {
+      name: 'Dana Carpaccio', sub: 'Fassona',
+      desc: 'Bıçakla dövülmüş Fassona Piemontese, parmesan jeli, yabani roka, 24 aylık Grana Padano dilimleri, rendelenmiş siyah trüf',
+      tags: 'İmza', price: '38',
+      hidden: false, chefPick: true, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Süt, Gluten',
+    },
+    {
+      name: 'Mazara Kırmızı Karidesi', sub: '',
+      desc: 'Çiğ, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu',
+      tags: 'Mevsimlik, Çiğ', price: '52',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Kabuklu deniz ürünleri',
+    },
+    {
+      name: 'Foie Gras', sub: 'Venedik Usulü',
+      desc: 'Ördek ciğeri terrinesi, Marsala\'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi',
+      tags: 'Klasik', price: '46',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Yumurta',
+    },
+    {
+      name: 'Andria Burratası', sub: '',
+      desc: 'Taze burrata, közlenmiş hurma domates, Bronte Antep fıstığı pestu, Taggiasca sızma zeytinyağı, hodan çiçekleri',
+      tags: 'Vejetaryen', price: '28',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Süt, Fındık',
+    },
+  ],
+
+  // ── BİRİNCİ YEMEKLER ────────────────────────────────────────
+  primi: [
+    {
+      name: 'Safran Risotto', sub: 'Şefin Yorumu',
+      desc: 'Carnaroli Riserva San Massimo, L\'Aquila DOP safranı, dana ilik, monte tereyağı, yenilebilir altın',
+      tags: 'İmza, Glutensiz', price: '44',
+      hidden: false, chefPick: true, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Süt',
+    },
+    {
+      name: 'Beyaz Trüflü Tagliolini', sub: '',
+      desc: 'Taze yumurtalı makarna, çiftlik tereyağı, Alba beyaz trüfü (anında), 36 aylık parmesan — Ekim/Ocak arası mevcut',
+      tags: 'Mevsimlik', price: '68',
+      hidden: false, chefPick: true, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Yumurta, Süt',
+    },
+    {
+      name: 'Açık Raviolo', sub: 'Yumurtalı',
+      desc: 'İrmik raviolosu, 63°C confit yumurta sarısı, Val d\'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı',
+      tags: 'Vejetaryen', price: '38',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Yumurta, Süt',
+    },
+    {
+      name: 'Deniz Kestaneli Spaghetti', sub: '',
+      desc: 'Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon',
+      tags: 'Deniz', price: '42',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Balık',
+    },
+  ],
+
+  // ── ANA YEMEKLER ────────────────────────────────────────────
+  // YENİ YEMEK EKLEMEK İÇİN: alttaki bloğu kopyalayıp yapıştır
+  // Asistan otomatik olarak bu listeyi okur ve seçenek olarak sunar
+  secondi: [
+    {
+      name: 'Bresse Güvercini', sub: 'İki Pişirme Tekniği',
+      desc: 'Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı',
+      tags: 'İmza, Kara', price: '62',
+      hidden: false, chefPick: true, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Süt',
+    },
+    {
+      name: 'Tuzda Yabani Levrek', sub: '',
+      desc: 'Adriyatik levrekleri, deniz tuzu ve narenciye kabuğu kıtırı, salsa vierge, çiğ ve közlenmiş rezene, tarhun yağı',
+      tags: 'Deniz', price: '58',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Balık',
+    },
+    {
+      name: 'Wagyu A4 Kontrfile', sub: '',
+      desc: 'Japon Wagyu A4, kavrulmuş Wagyu yağı, ilik, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak',
+      tags: 'Premium', price: '95',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Süt, Gluten',
+    },
+    {
+      name: 'Dana Uykuluğu', sub: 'Altın Rengi',
+      desc: 'Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kaperi, azaltılmış dana suyu, şekerlenmiş limon',
+      tags: 'Klasik', price: '48',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Süt',
+    },
+  ],
+
+  // ── DOLCİ ───────────────────────────────────────────────────
+  dolci: [
+    {
+      name: 'Tiramisu', sub: 'Yeniden Yorumlanan',
+      desc: 'Trevisano maskarponesi kreması, specialty kahve köpüğü, ev yapımı savoiardo, São Tomé %100 kakao, rom dondurması',
+      tags: 'İmza', price: '24',
+      hidden: false, chefPick: true, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Yumurta, Süt',
+    },
+    {
+      name: 'Guanaja Çikolata & Fındık', sub: '',
+      desc: 'Valrhona %70 bitter, Piemonte IGP fındık pralinesi, tereyağlı tuzlu karamel, süt dondurması, altın granül',
+      tags: 'Glutensiz', price: '22',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Süt, Fındık',
+    },
+    {
+      name: 'Limoncello Sufle', sub: '',
+      desc: 'Sıcak sufle, Sorrento limoncellosu, Yunan fesleğeni sorbesi, limon yağı, verbena çiçekleri — yemeğin başında sipariş edilmelidir',
+      tags: 'Siparişe Özel', price: '26',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Yumurta, Süt',
+    },
+    {
+      name: 'Küçük Pastacılık Tabağı', sub: '',
+      desc: 'Şefin mignardises seçkisi: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları',
+      tags: 'İki Kişilik', price: '18',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Fındık',
+    },
+  ],
+
+  // ── ŞARAPLAR ────────────────────────────────────────────────
+  // glass: kadeh fiyatı — boş bırakırsan kadeh seçeneği çıkmaz
+  // bottle: şişe fiyatı
+  wineCats: [
+    {
+      title: 'Şampanya & Köpüklü',
+      wines: [
+        { name: 'Krug Grande Cuvée',                    info: 'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass: '38', bottle: '320' },
+        { name: 'Franciacorta Riserva Vittorio Moretti', info: 'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015',                    glass: '22', bottle: '165' },
+      ],
+    },
+    {
+      title: 'Seçkin Beyazlar',
+      wines: [
+        { name: 'Gaia & Rey Chardonnay',             info: 'Langhe DOC · Gaja · Piemonte · 2020',  glass: '28', bottle: '210' },
+        { name: 'Vernaccia di San Gimignano Riserva', info: 'DOCG · Montenidoli · Toskana · 2019',  glass: '16', bottle: '95'  },
+      ],
+    },
+    {
+      title: 'Önemli Kırmızılar',
+      wines: [
+        { name: 'Barolo Brunate',             info: 'DOCG · Roberto Voerzio · Nebbiolo · 2018',        glass: '42', bottle: '380' },
+        { name: 'Sassicaia',                  info: 'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019', glass: '55', bottle: '490' },
+        { name: 'Amarone della Valpolicella', info: 'DOCG · Dal Forno Romano · Veneto · 2015',          glass: '48', bottle: '420' },
+      ],
+    },
+    {
+      title: 'Tatlı Şaraplar',
+      wines: [
+        { name: 'Passito di Pantelleria Ben Ryé', info: 'DOC · Donnafugata · Sicilya · Zibibbo · 2021', glass: '18', bottle: '95' },
+      ],
+    },
+  ],
+
+  // ── ASİSTAN ÖNERİLERİ ───────────────────────────────────────
+  // Asistan sağ alttaki chat balonundan açılır.
+  // Kullanıcı ana yemek seçer, asistan başlangıç önerir.
+  //
+  // KULLANIM:
+  //   'Yemek Adı' — secondi listesindeki name ile BİREBİR aynı olmalı
+  //   intro  → asistanın ilk söylediği cümle
+  //   starter → önerilen başlangıç adı (antipasti listesinden)
+  //   reason  → neden bu eşleşme açıklaması
+  //
+  // YENİ ANA YEMEK EKLEYİNCE: buraya da aynı formatta bir blok ekle
+  assistantSuggestions: {
+
+    'Wagyu A4 Kontrfile': {
+      intro:   'Wagyu A4 yoğun ve derin aromalarıyla akşamın en güçlü kursu — başlangıcın hafif ve temiz olması şart.',
+      starter: 'Dana Carpaccio',
+      reason:  'Carpaccionun ince dilimleri ve parmesan ferahlığı, Wagyu\'nun zengin yağlılığına mükemmel bir kontrast oluşturur.',
+    },
+
+    'Bresse Güvercini': {
+      intro:   'İki teknikle pişirilmiş Bresse Güvercini kompleks aromalara sahip — başlangıcın umami notlarını desteklemesi gerekir.',
+      starter: 'Foie Gras',
+      reason:  'Foie Gras\'ın zengin kadifemsi yapısı, güvercinin derin et aromalarına açılan en zarif kapıdır.',
+    },
+
+    'Tuzda Yabani Levrek': {
+      intro:   'Tuzda pişen yabani levrek saf ve temiz bir deniz lezzeti — başlangıcın da aynı ferahlıkta olması gerekir.',
+      starter: 'Mazara Kırmızı Karidesi',
+      reason:  'Çiğ karidesın iyot notaları ve taze deniz aroması, levreğin narin lezzetini önceden hazırlar.',
+    },
+
+    'Dana Uykuluğu': {
+      intro:   'Altın rengi dana uykuluğu narin ama belirgin bir lezzet — başlangıcın damağı nazikçe uyandırması gerekir.',
+      starter: 'Andria Burratası',
+      reason:  'Burratanın kremalı yapısı, uykuluğun nüanslı aromasını bastırmadan damağı mükemmel biçimde hazırlar.',
+    },
+
+    // ── YENİ ANA YEMEK ŞABLONU ──────────────────────────────
+    // Yeni yemek ekleyince aşağıdaki bloğu kopyalayıp düzenle:
+    //
+    // 'Yemek Adı': {
+    //   intro:   'Asistanın ilk cümlesi',
+    //   starter: 'Önerilen Başlangıç Adı',
+    //   reason:  'Neden bu eşleşme açıklaması',
+    // },
+
+  },
+
+};
+
+}
+</script>
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
@@ -204,6 +506,82 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 .footer-social-link { font-family:'Cinzel',serif;font-size:8px;letter-spacing:3px;color:var(--gold-dim);text-decoration:none;text-transform:uppercase;transition:color .2s; }
 .footer-social-link:hover { color:var(--gold); }
 
+
+/* ── ASİSTAN ──────────────────────────────────────────────────────────── */
+.asst-btn {
+  position: fixed; bottom: 20px; right: 20px; z-index: 998;
+  width: 52px; height: 52px; border-radius: 50%;
+  background: var(--card); border: 1px solid var(--gold-dim);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: border-color .3s, transform .3s;
+}
+.asst-btn:hover { border-color: var(--gold); transform: scale(1.08); }
+.asst-btn svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+
+.asst-overlay {
+  position: fixed; inset: 0; z-index: 1400;
+  display: none; align-items: flex-end; justify-content: flex-end;
+  padding: 20px; pointer-events: none;
+}
+.asst-overlay.open { display: flex; }
+
+.asst-window {
+  width: 100%; max-width: 360px; max-height: 80vh;
+  background: var(--dark); border: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  pointer-events: all;
+  animation: fadeSlideUp .3s ease forwards;
+  position: relative;
+}
+.asst-window::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+.asst-head {
+  padding: 16px 20px; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+}
+.asst-head-title { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 4px; color: var(--gold); text-transform: uppercase; }
+.asst-head-sub { font-size: 10px; color: var(--muted); margin-top: 2px; letter-spacing: .5px; }
+.asst-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 18px; line-height: 1; transition: color .2s; }
+.asst-close:hover { color: var(--white); }
+
+.asst-body { padding: 20px; overflow-y: auto; flex: 1; display: flex; flex-direction: column; gap: 12px; }
+
+.asst-bubble {
+  max-width: 88%; padding: 12px 16px;
+  font-size: 13px; line-height: 1.6; font-weight: 300;
+}
+.asst-bubble.asst { background: rgba(193,160,98,0.07); border: 1px solid rgba(193,160,98,0.12); align-self: flex-start; color: var(--white); }
+.asst-bubble.user { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); align-self: flex-end; color: var(--muted); }
+
+.asst-typing { display: flex; gap: 4px; align-items: center; padding: 14px 16px; }
+.asst-typing span { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-dim); animation: typingDot 1.2s ease-in-out infinite; }
+.asst-typing span:nth-child(2) { animation-delay: .2s; }
+.asst-typing span:nth-child(3) { animation-delay: .4s; }
+@keyframes typingDot { 0%,60%,100%{opacity:.3;transform:scale(1)} 30%{opacity:1;transform:scale(1.3)} }
+
+.asst-choices { display: flex; flex-direction: column; gap: 6px; margin-top: 4px; }
+.asst-choice {
+  background: none; border: 1px solid var(--border); color: var(--white);
+  font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 300;
+  padding: 10px 14px; text-align: left; cursor: pointer; letter-spacing: .3px;
+  transition: border-color .2s, color .2s;
+}
+.asst-choice:hover { border-color: var(--gold-dim); color: var(--gold); }
+
+.asst-reset {
+  margin: 12px 20px 16px; background: none; border: none;
+  font-family: 'Cinzel', serif; font-size: 7px; letter-spacing: 3px;
+  color: var(--muted); cursor: pointer; text-transform: uppercase;
+  text-align: center; width: calc(100% - 40px); transition: color .2s;
+}
+.asst-reset:hover { color: var(--gold-dim); }
+
+@media(max-width:600px){
+  .asst-overlay { padding: 0; align-items: flex-end; }
+  .asst-window { max-width: 100%; border-left: none; border-right: none; border-bottom: none; }
+}
 
 .toast { position:fixed;bottom:80px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--card);border:1px solid var(--gold-dim);padding:14px 28px;font-family:'Cinzel',serif;font-size:9px;letter-spacing:3px;color:var(--gold);text-transform:uppercase;opacity:0;transition:all .4s;z-index:9999;white-space:nowrap; }
 .toast.show { opacity:1;transform:translateX(-50%) translateY(0); }
@@ -400,6 +778,25 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 <!-- REZERVASYON BUTONU -->
 <button class="reservation-btn" id="reservationBtn" onclick="openReservation()"></button>
 
+<!-- ASİSTAN -->
+<button class="asst-btn" onclick="openAsst()" aria-label="Öneri asistanı">
+  <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+</button>
+
+<div class="asst-overlay" id="asstOverlay">
+  <div class="asst-window" id="asstWindow">
+    <div class="asst-head">
+      <div>
+        <div class="asst-head-title">Essenza Asistan</div>
+        <div class="asst-head-sub">Akşamınıza özel öneri</div>
+      </div>
+      <button class="asst-close" onclick="closeAsst()">✕</button>
+    </div>
+    <div class="asst-body" id="asstBody"></div>
+    <button class="asst-reset" onclick="resetAsst()">↺ Yeniden Başla</button>
+  </div>
+</div>
+
 <!-- PAIRING MODAL -->
 <div class="pairing-overlay" id="pairingOverlay">
   <div class="pairing-modal">
@@ -424,7 +821,21 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 // DATA
 // ══════════════════════════════════════════════
 // Veriler menu-data.js'den geliyor
-const defaultData = (typeof MENU_DATA !== 'undefined') ? MENU_DATA : {};
+const defaultData = (typeof MENU_DATA !== 'undefined') ? MENU_DATA : (typeof window.MENU_DATA !== 'undefined') ? window.MENU_DATA : {
+  eyebrow:'Restaurant', heroSub:'', footerLogo:'Essenza', footerAddr:'',
+  navLabels:['Tadım Menüsü','Başlangıçlar','Birinci Yemekler','Ana Yemekler','Tatlılar','Şaraplar'],
+  deguLabel:'', deguTitle:'Tadım Menüsü', deguBadge:'', deguName:'', deguSub:'', deguPrice:'', pairingBtn:'',
+  antipastiLabel:'', antipastiTitle:'Başlangıçlar',
+  primiLabel:'', primiTitle:'Primi',
+  secondiLabel:'', secondiTitle:'Secondi',
+  dolciLabel:'', dolciTitle:'Dolci',
+  viniLabel:'', viniTitle:'Şaraplar',
+  currency:'€', courses:[], antipasti:[], primi:[], secondi:[], dolci:[], wineCats:[],
+  bannerActive:false, bannerText:'', reservationActive:false, reservationLabel:'Rezervasyon', reservationLink:'',
+  socialInstagram:'', socialFacebook:'',
+  showChefBadge:true, showVeganIcons:true, showAllergens:true, showCalories:false,
+  assistantSuggestions:{},
+};
 
 let D = JSON.parse(JSON.stringify(defaultData));
 
@@ -432,6 +843,7 @@ let D = JSON.parse(JSON.stringify(defaultData));
 // RENDER MENU
 // ══════════════════════════════════════════════
 function renderMenu() {
+  if(!D || !D.navLabels) return; // menu-data.js henüz yüklenmediyse dur
   setText('d-eyebrow', D.eyebrow);
   setText('d-heroSub', D.heroSub);
   setText('d-deguLabel', D.deguLabel); setText('d-deguTitle', D.deguTitle);
@@ -485,7 +897,7 @@ function renderMenu() {
 
   // COURSES
   const cc = document.getElementById('d-courses');
-  cc.innerHTML = D.courses.map(c=>`
+  cc.innerHTML = (D.courses||[]).map(c=>`
     <div class="degu-course">
       <div class="course-num">${esc(c.num)}</div>
       <div class="course-info">
@@ -497,7 +909,7 @@ function renderMenu() {
   // MENU SECTIONS
   ['antipasti','primi','secondi','dolci'].forEach(sec=>{
     const secCur = D.currency || '€';
-    document.getElementById('d-'+sec).innerHTML = D[sec]
+    document.getElementById('d-'+sec).innerHTML = (D[sec]||[])
       .filter(item => !item.hidden)
       .map(item=>`
       <div class="menu-item">
@@ -519,7 +931,7 @@ function renderMenu() {
 
   // VINI
   const wineCur = D.currency || '€';
-  document.getElementById('d-vini').innerHTML = D.wineCats.map(cat=>`
+  document.getElementById('d-vini').innerHTML = (D.wineCats||[]).map(cat=>`
     <div class="wine-category">
       <div class="wine-cat-title">${esc(cat.title)}</div>
       ${cat.wines.map(w=>`
@@ -635,10 +1047,10 @@ function fetchPairings(){
 
   // Tüm şarapları düz listeye çek
   const allWines = [];
-  D.wineCats.forEach(cat => cat.wines.forEach(w => allWines.push(w)));
+  (D.wineCats||[]).forEach(cat => cat.wines.forEach(w => allWines.push(w)));
 
   // Her kurs için eşleştir
-  const pairings = D.courses.map(course => {
+  const pairings = (D.courses||[]).map(course => {
     const text = (course.name + ' ' + course.desc).toLowerCase();
 
     // Hangi profile uyuyor?
@@ -722,6 +1134,111 @@ function renderPairings(pairings){
 document.getElementById('pairingOverlay').addEventListener('click', function(e){
   if(e.target === this) closePairing();
 });
+
+// ══════════════════════════════════════════════
+// ASİSTAN
+// ══════════════════════════════════════════════
+function openAsst(){
+  document.getElementById('asstOverlay').classList.add('open');
+  if(!document.querySelector('.asst-bubble')) startAsst();
+}
+function closeAsst(){ document.getElementById('asstOverlay').classList.remove('open'); }
+function resetAsst(){ document.getElementById('asstBody').innerHTML=''; startAsst(); }
+
+function asstBubble(text, type='asst', delay=0){
+  return new Promise(resolve => {
+    const body = document.getElementById('asstBody');
+    if(type==='asst'){
+      // Typing indicator
+      const typing = document.createElement('div');
+      typing.className = 'asst-bubble asst asst-typing';
+      typing.innerHTML = '<span></span><span></span><span></span>';
+      body.appendChild(typing);
+      body.scrollTop = body.scrollHeight;
+      setTimeout(()=>{
+        typing.remove();
+        const b = document.createElement('div');
+        b.className = 'asst-bubble asst';
+        b.textContent = text;
+        body.appendChild(b);
+        body.scrollTop = body.scrollHeight;
+        resolve();
+      }, delay || 900 + text.length * 18);
+    } else {
+      const b = document.createElement('div');
+      b.className = 'asst-bubble user';
+      b.textContent = text;
+      body.appendChild(b);
+      body.scrollTop = body.scrollHeight;
+      resolve();
+    }
+  });
+}
+
+function asstChoices(items){
+  return new Promise(resolve => {
+    const body = document.getElementById('asstBody');
+    const wrap = document.createElement('div');
+    wrap.className = 'asst-choices';
+    items.forEach(item => {
+      const btn = document.createElement('button');
+      btn.className = 'asst-choice';
+      btn.textContent = item.label;
+      btn.onclick = () => { wrap.remove(); resolve(item); };
+      wrap.appendChild(btn);
+    });
+    body.appendChild(wrap);
+    body.scrollTop = body.scrollHeight;
+  });
+}
+
+async function startAsst(){
+  await asstBubble('Merhaba, hoş geldiniz. Akşamınızı daha özel kılmak için size yardımcı olmak isterim.');
+  await asstBubble('Ana yemeğiniz olarak ne düşünüyorsunuz?');
+
+  // Secondi listesini menu-data.js'den al
+  const secondiItems = (D.secondi || [])
+    .filter(i => !i.hidden)
+    .map(i => ({ label: i.name, item: i }));
+
+  secondiItems.push({ label: 'Henüz karar vermedim', item: null });
+
+  const chosen = await asstChoices(secondiItems);
+  await asstBubble(chosen.label, 'user');
+
+  if(!chosen.item){
+    await asstBubble('Sorun değil — bugün menümüzdeki tüm seçenekler birbirini tamamlar nitelikte.');
+    await asstBubble('Hafif bir başlangıç için Andria Burratası veya Mazara Kırmızı Karidesi zarif bir giriş olur.');
+    return;
+  }
+
+  // Öneriyi menu-data.js'deki suggestions'dan bul
+  const suggestions = D.assistantSuggestions || {};
+  const suggestion = suggestions[chosen.item.name];
+
+  if(suggestion){
+    await asstBubble(suggestion.intro || `${chosen.item.name} seçiminiz için harika bir tercih.`);
+    if(suggestion.starter){
+      await asstBubble(`Başlangıç olarak ${suggestion.starter} öneriyorum.`);
+    }
+    if(suggestion.reason){
+      await asstBubble(suggestion.reason);
+    }
+  } else {
+    // Fallback — genel öneri
+    await asstBubble(`${chosen.item.name} için mükemmel bir seçim.`);
+    await asstBubble('Başlangıç olarak menümüzdeki hafif seçeneklerden biri damağınızı hazırlar — Carpaccio veya Burrata idealdir.');
+  }
+
+  await asstBubble('Afiyet olsun. Başka bir konuda yardımcı olabilir miyim?');
+  const next = await asstChoices([
+    { label: 'Hayır, teşekkürler', val: 'no' },
+    { label: 'Yeniden başla', val: 'restart' },
+  ]);
+  await asstBubble(next.label, 'user');
+  if(next.val === 'restart'){ resetAsst(); }
+  else { await asstBubble('İyi akşamlar, keyifli bir yemek dilerim.'); }
+}
 
 // ══════════════════════════════════════════════
 // INIT
