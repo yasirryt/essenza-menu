@@ -245,6 +245,110 @@ const MENU_DATA = {
     },
   ],
 
+  // ── ŞARAP EŞLEŞTİRME KURALLARI ─────────────────────────────
+  // "YZ Destekli Şarap Önerisi" butonu bu kuralları kullanır.
+  //
+  // Her kural:
+  //   keywords    → yemek adı veya açıklamasında bu kelimelerden biri geçerse bu kural tetiklenir
+  //   wineProfile → hangi şarap profiline yönlendirilsin (aşağıdaki wineProfiles ile eşleşmeli)
+  //   reasons     → ekranda gösterilecek açıklama cümleleri (rastgele biri seçilir)
+  //
+  // YENİ KURAL EKLEMEK: alttaki bloklardan birini kopyala, düzenle
+  pairingRules: [
+
+    {
+      // Köpüklü — deniz ürünleri, çiğ, hafif başlangıçlar
+      keywords: ['istiridye','ostrica','kabuk','deniz','caviale','havyar','crudo','çiğ','karides','gambero','hamsi','ton'],
+      wineProfile: 'sparkling',
+      reasons: [
+        'Deniz ürünlerinin iyot ve mineral notaları köpüklü şarapların asidik yapısıyla mükemmel denge kuruyor.',
+        'Kabukluların tuzlu deniz aroması, köpüklü şarabın ince balonlarıyla zarif bir uyum sağlıyor.',
+        'Şampanyanın mineralli ve asidik karakteri bu hafif deniz lezzetini taze tutuyor.',
+      ],
+    },
+
+    {
+      // Beyaz mineral — balık, deniz ürünleri
+      keywords: ['balık','branzino','levrek','ricciola','salmone','sogliola','orata','calamari','polpo','ahtapot','ıstakoz'],
+      wineProfile: 'white_mineral',
+      reasons: [
+        'Balığın narin yapısı, beyaz şarabın mineral ve asidik notalarıyla harika bir armoni oluşturuyor.',
+        'Bu deniz yemeğinin yumuşak dokusu, beyaz şarabın ferahlığıyla mükemmel eşleşiyor.',
+        'Beyaz şarabın asidik karakteri balığın yağlılığını dengeleyen ideal bir tamamlayıcı.',
+      ],
+    },
+
+    {
+      // Beyaz dolgun — risotto, makarna, trüf, kremamsı yemekler
+      keywords: ['risotto','pasta','makarna','raviolo','tagliolini','spaghetti','uovo','yumurta','burro','tereyağ','parmigiano','parmesan','fonduta','fondü','trüf','tartufo'],
+      wineProfile: 'white_full',
+      reasons: [
+        'Yemekteki kremamsı doku ve zengin aromalar, tam gövdeli beyaz şarabın yağlı yapısıyla uyum içinde.',
+        'Şarabın mineral notaları makarna ve risottodaki nişastalı yapıyı dengelerken lezzeti tamamlıyor.',
+        'Bu zengin kursu hafifletmek için ferah asidiyetli bir beyaz ideal tercih.',
+      ],
+    },
+
+    {
+      // Rosé veya hafif kırmızı — kümes, uykuluk, hafif etler
+      keywords: ['kümes','ördek','anatra','piccione','güvercin','quaglia','bıldırcın','animelle','uykuluk','prosciutto'],
+      wineProfile: 'rose_or_light_red',
+      reasons: [
+        'Kümes hayvanlarının yumuşak etli yapısı hem rosé hem de hafif kırmızı şaraplarla dengeleniyor.',
+        'Bu yemeğin narin protein yapısı, çok ağır olmayan kırmızı şarapların meyveli tanenleriyle uyum sağlıyor.',
+        'Ettin yağlılığı şarabın tanenli yapısıyla temizlenirken aromalar birbirini tamamlıyor.',
+      ],
+    },
+
+    {
+      // Tam gövdeli kırmızı — dana, sığır, wagyu, kuzu, av etleri
+      keywords: ['manzo','dana','sığır','bistecca','biftek','wagyu','kontrfile','fiorentina','agnello','kuzu','cinghiale','yaban domuzu','selvaggina','av'],
+      wineProfile: 'red_full',
+      reasons: [
+        'Etin güçlü protein yapısı ve yağlılığı, Barolo\'nun ağır tanen yapısıyla mükemmel denge kuruyor.',
+        'Bu zengin et yemeği, tam gövdeli kırmızıların kompleks meyve ve toprak notalarını en iyi şekilde ortaya çıkarıyor.',
+        'Şarabın uzun bitiş süresi ve tanenleri etin yoğunluğunu dengeleyerek olağanüstü bir kombinasyon oluşturuyor.',
+      ],
+    },
+
+    {
+      // Tatlı şarap — tatlılar, çikolata, karamel
+      keywords: ['dolce','tatlı','dessert','cioccolato','çikolata','tiramisù','tiramisu','panna cotta','gelato','dondurma','nocciola','fındık','caramello','karamel','soufflé','sufle','pasticceria'],
+      wineProfile: 'sweet',
+      reasons: [
+        'Tatlı şarabın bal ve kuru meyve notaları tatlının zengin lezzetini zarif biçimde tamamlıyor.',
+        'Bu tatlının yoğun aroması, şarabın doğal tatlılığıyla aynı yoğunlukta buluşup mükemmel uyum sağlıyor.',
+        'Şarabın asidiyeti tatlının şekerliğini dengeleyerek son kursu ferah bir notayla tamamlıyor.',
+      ],
+    },
+
+    {
+      // Beyaz dolgun — foie gras, burrata, carpaccio gibi zengin başlangıçlar
+      keywords: ['foie','ciğer','terrine','burrata','carpaccio'],
+      wineProfile: 'white_full',
+      reasons: [
+        'Zengin ve yağlı yapı, beyaz şarabın asidiyeti ile dengeleniyor.',
+        'Şarabın mineral notaları zengin başlangıcın ağırlığını hafifletiyor.',
+        'Bu lüks başlangıç için şarabın karmaşık aromatik yapısı ideal eşlikçi.',
+      ],
+    },
+
+  ],
+
+  // ── ŞARAP PROFİLLERİ ────────────────────────────────────────
+  // Her profil için hangi şarapların eşleştirileceğini belirler.
+  // Şarap listenizdeki şarap adı veya bilgisinde bu kelimelerden
+  // biri geçiyorsa o şarap önerilir.
+  // Sıralama önemlidir — listede önce gelen öncelikli eşleşir.
+  wineProfiles: {
+    sparkling:         ['Şampanya', 'Köpüklü', 'Bollicine', 'Franciacorta', 'Prosecco', 'Cava', 'Crémant', 'Krug'],
+    white_mineral:     ['Vernaccia', 'Soave', 'Greco', 'Fiano', 'Vermentino', 'Pinot Grigio', 'Gavi', 'Sauvignon', 'Chablis', 'Riesling'],
+    white_full:        ['Chardonnay', 'Gaia', 'Viognier', 'White Burgundy', 'Beyaz'],
+    rose_or_light_red: ['Rosé', 'Rosato', 'Pinot Nero', 'Pinot Noir', 'Bardolino', 'Valpolicella'],
+    red_full:          ['Barolo', 'Barbaresco', 'Brunello', 'Amarone', 'Sassicaia', 'Bolgheri', 'Chianti', 'Nebbiolo', 'Cabernet', 'Syrah', 'Primitivo', 'Montepulciano'],
+    sweet:             ['Passito', 'Vin Santo', 'Moscato', 'Sauternes', 'Dessert', 'Tatlı', 'Recioto'],
+  },
+
   // ── ASİSTAN ÖNERİLERİ ───────────────────────────────────────
   // Asistan sağ alttaki chat balonundan açılır.
   // Kullanıcı ana yemek seçer, asistan başlangıç önerir.
