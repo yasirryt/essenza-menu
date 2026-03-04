@@ -7,8 +7,8 @@
 const MENU_DATA = {
 
   // ── GENEL BİLGİLER ─────────────────────────────────────────
-  eyebrow:  'Restaurant',
-  heroSub:  'Antalya · Lara',
+  eyebrow:  'Restoran',
+  heroSub:  'Milano · 2019\'dan beri',
   footerLogo: 'Essenza',
   footerAddr: 'Via Monte Napoleone 12, Milano 20121<br>+39 02 1234 5678 · info@essenzaristorante.it<br><br>Salı — Cumartesi arası açık · 19:30 – 23:00<br>Rezervasyon zorunludur',
 
@@ -25,7 +25,7 @@ const MENU_DATA = {
   secondiLabel:   'Ana Yemekler',
   secondiTitle:   'Secondi',
   dolciLabel:     'Yemek Sonu',
-  dolciTitle:     'Dolci',
+  dolciTitle:     'Tatlılar',
   viniLabel:      'Mahzenimiz',
   viniTitle:      'Şaraplar',
 
@@ -41,7 +41,7 @@ const MENU_DATA = {
   // WhatsApp için: 'https://wa.me/905001234567'
   reservationActive: true,
   reservationLabel:  'Rezervasyon',
-  reservationLink:   'https://wa.me/905321590514',
+  reservationLink:   'https://wa.me/905001234567',
 
   // ── SOSYAL MEDYA (boş bırakırsan görünmez) ──────────────────
   socialInstagram: '',
@@ -54,11 +54,11 @@ const MENU_DATA = {
   showCalories:   false,  // Kalori bilgisi
 
   // ── TADIM MENÜSÜ ────────────────────────────────────────────
-  deguBadge: '★ Yasir Şefin İmzası ★',
+  deguBadge: '★ Şefin İmzası ★',
   deguName:  'Terra & Mare',
   deguSub:   '8 kurs · Şarap eşleştirmesi mevcut',
   deguPrice: '240',
-  pairingBtn: 'YZ Destekli Şarap Önerisi',
+  pairingBtn: '+ Şarap Eşleştirme · €120',
 
   courses: [
     { num:'I',    name:'Şef\'in Amuse-Bouche\'u',   desc:'Mutfaktan hoş geldin — dört mevsimlik küçük lokma' },
@@ -170,7 +170,7 @@ const MENU_DATA = {
     },
   ],
 
-  // ── DOLCİ ─────────────────────────────────────────────────
+  // ── TATLILAR ─────────────────────────────────────────────────
   dolci: [
     {
       name: 'Tiramisu', sub: 'Yeniden Yorumlanan',
