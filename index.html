@@ -880,7 +880,7 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 </footer>
 
 <!-- REZERVASYON BUTONU -->
-<button class="reservation-btn" id="reservationBtn" onclick="openReservation()"></button>
+<button class="reservation-btn" id="reservationBtn" onclick="if(D.reservationLink) window.open(D.reservationLink,'_blank')"></button>
 
 <!-- ASİSTAN -->
 <button class="asst-btn" onclick="openAsst()" aria-label="Öneri asistanı">
@@ -935,7 +935,7 @@ const defaultData = (typeof MENU_DATA !== 'undefined') ? MENU_DATA : (typeof win
   dolciLabel:'', dolciTitle:'Dolci',
   viniLabel:'', viniTitle:'Şaraplar',
   currency:'€', courses:[], antipasti:[], primi:[], secondi:[], dolci:[], wineCats:[],
-  bannerActive:false, bannerText:'', reservationActive:false, reservationLabel:'Rezervasyon', reservationLink:'',
+  bannerActive:false, bannerText:'', reservationActive:true, reservationLabel:'Rezervasyon', reservationLink:'https://wa.me/905321590514',
   socialInstagram:'', socialFacebook:'',
   showChefBadge:true, showVeganIcons:true, showAllergens:true, showCalories:false,
   assistantSuggestions:{},
