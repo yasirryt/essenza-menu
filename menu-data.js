@@ -7,7 +7,7 @@
 const MENU_DATA = {
 
   // ── GENEL BİLGİLER ─────────────────────────────────────────
-  eyebrow:    'Restaurant',
+  eyebrow:    'MUTFAĞIN ÖZÜ',
   heroSub:    'Antalya · Lara',
   footerLogo: 'Essenza',
   footerAddr: 'Lara Sahil Caddesi, Antalya<br><br>Salı — Pazar arası açık · 19:30 – 23:30<br>Rezervasyon zorunludur',
