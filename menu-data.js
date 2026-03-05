@@ -13,23 +13,24 @@ const MENU_DATA = {
   footerAddr: 'Lara Sahil Caddesi, Antalya<br><br>Salı — Pazar arası açık · 19:30 – 23:30<br>Rezervasyon zorunludur',
 
   // ── NAV YAZILARI ────────────────────────────────────────────
-  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Birinci Yemekler', 'Ana Yemekler', 'Tatlılar', 'İçecekler'],
+  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Pizza', 'Birinci Yemekler', 'Ana Yemekler', 'Tatlılar', 'İçecekler'],
 
   // ── BÖLÜM BAŞLIKLARI ────────────────────────────────────────
   deguLabel:      'Tam Deneyim',
   deguTitle:      'Tadım Menüsü',
   antipastiLabel: 'Başlangıç İçin',
   antipastiTitle: 'Başlangıçlar',
-  primiLabel:     'Birinci Yemekler',
-  primiTitle:     'Primi',
-  secondiLabel:   'Ana Yemekler',
-  secondiTitle:   'Secondi',
+  primiLabel:     'Forno a Legna · 72 Saat Fermentasyon',
+  primiTitle:     'Pizza Napoletana',
+  secondiLabel:   'Birinci Yemekler',
+  secondiTitle:   'Primi',
   dolciLabel:     'Yemek Sonu',
   dolciTitle:     'Dolci',
   viniLabel:      'Mahzenimiz',
   viniTitle:      'İçecekler',
 
   // ── PARA BİRİMİ ─────────────────────────────────────────────
+  // Seçenekler: '€'  '$'  '₺'  '£'
   currency: '₺',
 
   // ── DUYURU BANDI ────────────────────────────────────────────
@@ -59,17 +60,17 @@ const MENU_DATA = {
   pairingBtn: 'YZ Destekli Şarap Önerisi',
 
   courses: [
-    { num: 'I',    name: 'Şefin Amuse-Bouche\'u',       desc: 'Mutfaktan hoş geldin — dört unsurlu küçük lokma: kefir köpüğü, bottarga, zeytin jeli, narenciye kabuğu' },
+    { num: 'I',    name: 'Şefin Amuse-Bouche\'u',              desc: 'Mutfaktan hoş geldin — dört unsurlu küçük lokma: kefir köpüğü, bottarga, zeytin jeli, narenciye kabuğu' },
     { num: 'II',   name: 'Fine de Claire İstiridye & Oscietra Havyarı', desc: 'Canlı istiridye, Oscietra havyarı, şampanya granitas, dereotu yağı, deniz tuzu köpüğü' },
-    { num: 'III',  name: 'Mazara Kırmızı Karidesi Crudo', desc: 'Çiğ Mazara karidesi, Sicilya narenciyesi, yuzu dressing, taze wasabi, yenilebilir çiçekler' },
-    { num: 'IV',   name: 'Milanese Risotto',              desc: 'Carnaroli, L\'Aquila DOP safranı, dana ilik, monte tereyağı, 36 aylık parmesan, yenilebilir altın' },
-    { num: 'V',    name: 'Açık Raviolo — Trüf & Yumurta', desc: '63°C confit yumurta sarısı, Val d\'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı yağı' },
-    { num: 'VI',   name: 'Tuzda Yabani Levrek',           desc: 'Akdeniz yabani levrekleri, deniz tuzu & narenciye kabuğu kıtırı, salsa vierge, tarhun yağı' },
-    { num: 'VII',  name: 'Ön Tatlı',                      desc: 'Amalfi limon sorbesi, taze nane granitas, gül suyu, verbena çiçekleri' },
-    { num: 'VIII', name: 'Çikolata & Fındık',             desc: 'Valrhona Guanaja %70, Piemonte IGP fındık pralinesi, tuzlu karamel, süt dondurması, altın granül' },
+    { num: 'III',  name: 'Mazara Kırmızı Karidesi Crudo',       desc: 'Çiğ Mazara karidesi, Sicilya narenciyesi, yuzu dressing, taze wasabi, yenilebilir çiçekler' },
+    { num: 'IV',   name: 'Milanese Risotto',                    desc: 'Carnaroli, L\'Aquila DOP safranı, dana ilik, monte tereyağı, 36 aylık parmesan, yenilebilir altın' },
+    { num: 'V',    name: 'Açık Raviolo — Trüf & Yumurta',       desc: '63°C confit yumurta sarısı, Val d\'Aosta fontina fondüsü, Norcia siyah trüfü, frenk soğanı yağı' },
+    { num: 'VI',   name: 'Tuzda Yabani Levrek',                 desc: 'Akdeniz yabani levrekleri, deniz tuzu & narenciye kabuğu kıtırı — masada kırılır. Salsa vierge, tarhun yağı' },
+    { num: 'VII',  name: 'Ön Tatlı',                            desc: 'Amalfi limon sorbesi, taze nane granitas, gül suyu, verbena çiçekleri' },
+    { num: 'VIII', name: 'Çikolata & Fındık',                   desc: 'Valrhona Guanaja %70, Piemonte IGP fındık pralinesi, tuzlu karamel, süt dondurması, altın granül' },
   ],
 
-  // ── BAŞLANGIÇLAR — 5 ÇEŞIT ──────────────────────────────────
+  // ── BAŞLANGIÇLAR ─────────────────────────────────────────────
   antipasti: [
     {
       name: 'Dana Carpaccio', sub: 'Fassona Piemontese',
@@ -81,14 +82,14 @@ const MENU_DATA = {
     {
       name: 'Mazara Kırmızı Karidesi', sub: 'Crudo',
       desc: 'Çiğ Mazara karidesi, tütsülenmiş tereyağı, San Marzano domates granitas, Pantelleria kapari tozu, limon kabuğu yağı',
-      tags: 'Mevsimlik, Çiğ', price: '1.100',
+      tags: 'Mevsimlik, Çiğ', price: '1100',
       hidden: false, chefPick: false, vegetarian: false, vegan: false,
       calories: '', allergens: 'Kabuklu deniz ürünleri',
     },
     {
       name: 'Foie Gras', sub: 'Venedik Usulü',
       desc: 'Ördek ciğeri terrinesi, Marsala\'lı karamelize soğan, tereyağlı brioche, Modena geleneksel balzamik sirkesi, portakal konfiti',
-      tags: 'Klasik', price: '1.200',
+      tags: 'Klasik', price: '1200',
       hidden: false, chefPick: false, vegetarian: false, vegan: false,
       calories: '', allergens: 'Gluten, Süt, Yumurta',
     },
@@ -106,21 +107,90 @@ const MENU_DATA = {
       hidden: false, chefPick: false, vegetarian: false, vegan: false,
       calories: '', allergens: 'Yumuşakça',
     },
+    {
+      name: 'Zuppa di Frutti di Mare', sub: '',
+      desc: 'Akdeniz deniz ürünleri çorbası, safran, confit domates, taze kekik, kızarmış sourdough ekmeği ile',
+      tags: 'Deniz', price: '680',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Kabuklu deniz ürünleri, Gluten, Balık',
+    },
   ],
 
-  // ── BİRİNCİ YEMEKLER — 5 ÇEŞIT ──────────────────────────────
+  // ── PİZZA — primi alanını kullanıyoruz ───────────────────────
+  // primiLabel ve primiTitle yukarıda Pizza olarak ayarlandı
   primi: [
+    {
+      name: 'Margherita DOP', sub: '',
+      desc: 'San Marzano DOP domates, Fior di Latte, taze fesleğen, sızma zeytinyağı — 72 saatlik fermentasyon, 485°C odun fırını, 90 saniye',
+      tags: 'Klasik, Vejetaryen', price: '480',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt',
+    },
+    {
+      name: 'Tartufo e Porcini', sub: '',
+      desc: 'Beyaz truffle krem, porcini mantarı, Taleggio, fındık, taze maydanoz — servis sonrası taze truffle rendesi',
+      tags: 'Vejetaryen', price: '880',
+      hidden: false, chefPick: true, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Fındık',
+    },
+    {
+      name: 'Salmone Affumicato', sub: '',
+      desc: 'Domates krem, Fior di Latte, füme somon, kırmızı soğan, kapari, mascarpone, taze dereotu',
+      tags: 'Deniz', price: '680',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Balık',
+    },
+    {
+      name: 'Quattro Formaggi', sub: 'di Stagione',
+      desc: 'Fior di Latte, Gorgonzola Dolce, Taleggio, 36 aylık Parmigiano — kestane balı ile servis',
+      tags: 'Vejetaryen', price: '620',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt',
+    },
+    {
+      name: 'Gamberoni e Zucchine', sub: '',
+      desc: 'Jumbo karides, kabak, sarımsak, cherry domates, Fior di Latte, taze fesleğen yağı',
+      tags: 'Deniz', price: '720',
+      hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Kabuklu deniz ürünleri',
+    },
+    {
+      name: 'Burrata e Pomodori', sub: 'Bianca',
+      desc: 'Beyaz sos, taze Andria burratası, cherry domates konfiti, Taggiasca zeytini, kapari, fesleğen — fırın sonrası burrata eklenir',
+      tags: 'Vejetaryen', price: '640',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt',
+    },
+    {
+      name: 'Manzo e Rucola', sub: '',
+      desc: 'Domates, Fior di Latte, ince dilim dana bonfile, taze roka, 24 aylık Parmigiano Reggiano, limon yağı — et fırın sonrası',
+      tags: 'İmza', price: '780',
+      hidden: false, chefPick: true, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Süt',
+    },
+    {
+      name: 'Ortolana', sub: 'Mevsim Sebzeleri',
+      desc: 'San Marzano domates, Fior di Latte, közlenmiş patlıcan, dolmalık biber, enginar kalbi, kurutulmuş domates, kekik',
+      tags: 'Vegan', price: '520',
+      hidden: false, chefPick: false, vegetarian: true, vegan: true,
+      calories: '', allergens: 'Gluten',
+    },
+  ],
+
+  // ── BİRİNCİ YEMEKLER (PASTA & RİSOTTO) — secondi alanını kullanıyoruz
+  // secondiLabel ve secondiTitle yukarıda Birinci Yemekler / Primi olarak ayarlandı
+  secondi: [
     {
       name: 'Safran Risotto', sub: 'Şefin Yorumu',
       desc: 'Carnaroli Riserva San Massimo, L\'Aquila DOP safranı, dana ilik, monte tereyağı, 36 aylık parmesan, yenilebilir altın',
-      tags: 'İmza, Glutensiz', price: '1.100',
+      tags: 'İmza, Glutensiz', price: '1100',
       hidden: false, chefPick: true, vegetarian: false, vegan: false,
       calories: '', allergens: 'Süt',
     },
     {
       name: 'Beyaz Trüflü Tagliolini', sub: 'Alba',
       desc: 'Taze yumurtalı tagliolini, çiftlik tereyağı, Alba beyaz trüfü masada rendelenir, 36 aylık parmesan — Ekim–Ocak arası',
-      tags: 'Mevsimlik', price: '1.800',
+      tags: 'Mevsimlik', price: '1800',
       hidden: false, chefPick: true, vegetarian: true, vegan: false,
       calories: '', allergens: 'Gluten, Yumurta, Süt',
     },
@@ -134,59 +204,34 @@ const MENU_DATA = {
     {
       name: 'Deniz Kestaneli Spaghetti', sub: '',
       desc: 'Bronz kalıplı spaghetti, Sardunya deniz kestanesi kreması, kefal balığı bottargası, confit kiraz domates, rendelenmiş limon',
-      tags: 'Deniz', price: '1.050',
+      tags: 'Deniz', price: '1050',
       hidden: false, chefPick: false, vegetarian: false, vegan: false,
       calories: '', allergens: 'Gluten, Balık',
     },
     {
-      name: 'Pappardelle al Ragù', sub: 'Yabani Domuz',
-      desc: 'El açması geniş pappardelle, 6 saat pişen yabani domuz ragùsu, kırmızı şarap redüksiyonu, taze biberiye, pecorino romano',
-      tags: 'Ev Yapımı', price: '920',
+      name: 'Spaghetti alle Vongole', sub: '',
+      desc: 'Bronz kalıplı spaghetti, canlı vongole midyesi, sarımsak, beyaz şarap, sızma zeytinyağı, taze maydanoz',
+      tags: 'Deniz, Klasik', price: '920',
       hidden: false, chefPick: false, vegetarian: false, vegan: false,
+      calories: '', allergens: 'Gluten, Yumuşakça',
+    },
+    {
+      name: 'Gnocchi al Gorgonzola', sub: 'Pere e Noci',
+      desc: 'El yapımı patates gnocchi, gorgonzola dolce kreması, karamelize armut, kavrulmuş ceviz, kestane balı sırması',
+      tags: 'Vejetaryen', price: '860',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Fındık',
+    },
+    {
+      name: 'Cacio e Pepe', sub: 'Romana',
+      desc: 'Tonnarelli, Pecorino Romano DOP, taze çekilmiş karabiber — sadeliğin en lüks hali, Roma\'nın ruhu',
+      tags: 'Vejetaryen, Klasik Roma', price: '780',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
       calories: '', allergens: 'Gluten, Süt',
     },
   ],
 
-  // ── ANA YEMEKLER — 5 ÇEŞIT ───────────────────────────────────
-  secondi: [
-    {
-      name: 'Bresse Güvercini', sub: 'İki Pişirme Tekniği',
-      desc: 'Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı',
-      tags: 'İmza', price: '1.600',
-      hidden: false, chefPick: true, vegetarian: false, vegan: false,
-      calories: '', allergens: 'Süt',
-    },
-    {
-      name: 'Tuzda Yabani Levrek', sub: '',
-      desc: 'Akdeniz yabani levrekleri, deniz tuzu ve narenciye kabuğu kıtırı — masada kırılır. Salsa vierge, közlenmiş rezene, tarhun yağı',
-      tags: 'Deniz', price: '1.500',
-      hidden: false, chefPick: false, vegetarian: false, vegan: false,
-      calories: '', allergens: 'Balık',
-    },
-    {
-      name: 'Wagyu A4 Kontrfile', sub: '',
-      desc: 'Japon Wagyu A4 kontrfile, kavrulmuş Wagyu yağı, kemik iliği, Périgueux sosu, Robuchon usulü patates püresi, bebek ıspanak',
-      tags: 'Premium', price: '2.400',
-      hidden: false, chefPick: false, vegetarian: false, vegan: false,
-      calories: '', allergens: 'Süt, Gluten',
-    },
-    {
-      name: 'Dana Uykuluğu', sub: 'Altın Rengi',
-      desc: 'Kahverengi tereyağında sote uykuluk, ilkbahar bezelyeleri, kızarmış kapari, azaltılmış dana suyu, şekerlenmiş limon',
-      tags: 'Klasik', price: '1.350',
-      hidden: false, chefPick: false, vegetarian: false, vegan: false,
-      calories: '', allergens: 'Süt',
-    },
-    {
-      name: 'Costata Fiorentina', sub: 'Chianina IGP · ~600g',
-      desc: 'Chianina T-bone, sadece kor ateş ve kaya tuzu. Rosmarino-sarımsak yağı, ızgara kuşkonmaz, cannellini fasulyesi',
-      tags: 'Paylaşımlık', price: '3.200',
-      hidden: false, chefPick: false, vegetarian: false, vegan: false,
-      calories: '', allergens: 'Süt',
-    },
-  ],
-
-  // ── DOLCİ — 5 ÇEŞIT ──────────────────────────────────────────
+  // ── DOLCİ ────────────────────────────────────────────────────
   dolci: [
     {
       name: 'Tiramisu', sub: 'Yeniden Yorumlanan',
@@ -217,6 +262,13 @@ const MENU_DATA = {
       calories: '', allergens: 'Süt, Fındık',
     },
     {
+      name: 'Cannolo Siciliano', sub: 'Ripieno al Momento',
+      desc: 'Servis anında doldurulan geleneksel Sicilya cannolo\'su — ricotta, şeker, Marsala, portakal kabuğu, Bronte fıstığı. Dışı her zaman çıtır.',
+      tags: 'Sicilya Klasiği', price: '460',
+      hidden: false, chefPick: false, vegetarian: true, vegan: false,
+      calories: '', allergens: 'Gluten, Süt, Fındık',
+    },
+    {
       name: 'Küçük Pastacılık Tabağı', sub: 'Mignardises',
       desc: 'Şefin kapanış jesti: macaronlar, çikolata trüfleri, karamel bonbonlar, mini Sicilya kanolları, portakal kabuğu şekeri',
       tags: 'İki Kişilik', price: '480',
@@ -225,71 +277,75 @@ const MENU_DATA = {
     },
   ],
 
-  // ── İÇECEKLER — ŞARAPLAR & KOKTEYLLer ───────────────────────
-  // glass: kadeh fiyatı — boş bırakırsan kadeh seçeneği çıkmaz
-  // bottle: şişe fiyatı
+  // ── İÇECEKLER ────────────────────────────────────────────────
+  // NOT: index.html'de içecekler bölümü #vini section içinde render edilir.
+  // Mobilde siyah arka plan için index.html'deki #vini section'ına
+  // aşağıdaki style eklenmeli:
+  //   <section class="section" id="vini" style="background:#080808;">
+  // Ya da CSS'e şunu ekle:
+  //   #vini { background: var(--black); }
   wineCats: [
     {
       title: 'Şampanya & Köpüklü',
       wines: [
-        { name: 'Krug Grande Cuvée',                    info: 'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass: '850',  bottle: '6.800' },
-        { name: 'Franciacorta Riserva Vittorio Moretti', info: 'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015',                    glass: '480',  bottle: '3.600' },
-        { name: 'Billecart-Salmon Blanc de Blancs',      info: 'Champagne, Fransa · Grand Cru Chardonnay · Prestige Cuvée',                  glass: '',     bottle: '5.200' },
+        { name: 'Krug Grande Cuvée',                    info: 'Champagne, Fransa · Çok yıllık assemblage · Pinot Noir, Chardonnay, Meunier', glass: '850',  bottle: '6800' },
+        { name: 'Franciacorta Riserva Vittorio Moretti', info: 'Lombardiya · Bellavista · Chardonnay, Pinot Nero · 2015',                    glass: '480',  bottle: '3600' },
+        { name: 'Billecart-Salmon Blanc de Blancs',      info: 'Champagne, Fransa · Grand Cru Chardonnay · Prestige Cuvée',                  glass: '',     bottle: '5200' },
       ],
     },
     {
       title: 'Seçkin Beyazlar',
       wines: [
-        { name: 'Gaia & Rey Chardonnay',             info: 'Langhe DOC · Gaja · Piemonte · 2020',                           glass: '620',  bottle: '4.800' },
-        { name: 'Chablis Premier Cru — Montée de Tonnerre', info: 'Domaine Vocoret · Burgundy, Fransa · 2021',              glass: '480',  bottle: '3.200' },
-        { name: 'Vernaccia di San Gimignano Riserva', info: 'DOCG · Montenidoli · Toskana · 2019',                           glass: '320',  bottle: '1.800' },
-        { name: 'Cloudy Bay Sauvignon Blanc',         info: 'Marlborough, Yeni Zelanda · 2023',                              glass: '380',  bottle: '2.400' },
+        { name: 'Gaia & Rey Chardonnay',                info: 'Langhe DOC · Gaja · Piemonte · 2020',               glass: '620',  bottle: '4800' },
+        { name: 'Chablis Premier Cru — Montée de Tonnerre', info: 'Domaine Vocoret · Burgundy, Fransa · 2021',      glass: '480',  bottle: '3200' },
+        { name: 'Vernaccia di San Gimignano Riserva',    info: 'DOCG · Montenidoli · Toskana · 2019',               glass: '320',  bottle: '1800' },
+        { name: 'Cloudy Bay Sauvignon Blanc',            info: 'Marlborough, Yeni Zelanda · 2023',                  glass: '380',  bottle: '2400' },
       ],
     },
     {
       title: 'Roze',
       wines: [
-        { name: 'Whispering Angel Rosé',    info: 'Château d\'Esclans · Provence, Fransa · 2023',          glass: '520',  bottle: '3.800' },
-        { name: 'Cerasuolo d\'Abruzzo DOC', info: 'Valentini · Abruzzo · Montepulciano · Solgun Roze',      glass: '380',  bottle: '2.600' },
+        { name: 'Whispering Angel Rosé',    info: 'Château d\'Esclans · Provence, Fransa · 2023',     glass: '520',  bottle: '3800' },
+        { name: 'Cerasuolo d\'Abruzzo DOC', info: 'Valentini · Abruzzo · Montepulciano · Solgun Roze', glass: '380',  bottle: '2600' },
       ],
     },
     {
       title: 'Önemli Kırmızılar',
       wines: [
-        { name: 'Barolo Brunate',             info: 'DOCG · Roberto Voerzio · Nebbiolo · 2018',                  glass: '920',  bottle: '8.400' },
-        { name: 'Sassicaia',                  info: 'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019',          glass: '1.200', bottle: '11.000' },
-        { name: 'Amarone della Valpolicella', info: 'DOCG · Dal Forno Romano · Veneto · 2015',                   glass: '1.050', bottle: '9.200' },
-        { name: 'Chianti Classico Gran Selezione', info: 'Antinori Badia a Passignano · Toskana · 2019',         glass: '480',  bottle: '4.200' },
-        { name: 'Primitivo di Manduria DOC',  info: 'Feudi di San Marzano · Puglia · Kadifemsi, Meyvesel · 2020', glass: '320',  bottle: '2.200' },
+        { name: 'Barolo Brunate',                  info: 'DOCG · Roberto Voerzio · Nebbiolo · 2018',             glass: '920',  bottle: '8400'  },
+        { name: 'Sassicaia',                       info: 'Bolgheri Sassicaia DOC · Tenuta San Guido · 2019',     glass: '1200', bottle: '11000' },
+        { name: 'Amarone della Valpolicella',      info: 'DOCG · Dal Forno Romano · Veneto · 2015',              glass: '1050', bottle: '9200'  },
+        { name: 'Chianti Classico Gran Selezione', info: 'Antinori Badia a Passignano · Toskana · 2019',         glass: '480',  bottle: '4200'  },
+        { name: 'Primitivo di Manduria DOC',       info: 'Feudi di San Marzano · Puglia · Kadifemsi · 2020',     glass: '320',  bottle: '2200'  },
       ],
     },
     {
       title: 'Tatlı Şaraplar & Digestif',
       wines: [
-        { name: 'Passito di Pantelleria Ben Ryé', info: 'DOC · Donnafugata · Sicilya · Zibibbo · 2021',  glass: '420',  bottle: '2.200' },
-        { name: 'Vin Santo del Chianti',           info: 'Isole e Olena · Toskana · Cantucci ile',       glass: '380',  bottle: '' },
-        { name: 'Grappa di Brunello',              info: 'Biondi-Santi · Montalcino · Sangiovese Grosso posası', glass: '620', bottle: '' },
-        { name: 'Amaro Montenegro',                info: 'Bologna · 40 botanik · Sindirim için',         glass: '280',  bottle: '' },
-        { name: 'Limoncello di Capri',             info: 'Campania · Limon kabuğu · Soğuk servis',       glass: '220',  bottle: '' },
+        { name: 'Passito di Pantelleria Ben Ryé', info: 'DOC · Donnafugata · Sicilya · Zibibbo · 2021',        glass: '420', bottle: '2200' },
+        { name: 'Vin Santo del Chianti',          info: 'Isole e Olena · Toskana · Cantucci ile',              glass: '380', bottle: ''     },
+        { name: 'Grappa di Brunello',             info: 'Biondi-Santi · Montalcino · Sangiovese Grosso posası', glass: '620', bottle: ''     },
+        { name: 'Amaro Montenegro',               info: 'Bologna · 40 botanik · Sindirim için',                glass: '280', bottle: ''     },
+        { name: 'Limoncello di Capri',            info: 'Campania · Limon kabuğu · Soğuk servis',              glass: '220', bottle: ''     },
       ],
     },
     {
       title: 'Signature Cocktails',
       wines: [
-        { name: 'Essenza Negroni',       info: 'Monkey 47 Gin · Campari · Carpano Antica · Portakal · Koca buz küresi',          glass: '680',  bottle: '' },
-        { name: 'Amalfi Coast Sour',     info: 'Limoncello di Capri · Pisco · Taze limon · Gül suyu · Aquafaba köpük',            glass: '620',  bottle: '' },
-        { name: 'Antalya Bellini',       info: 'Taze Akdeniz şeftali püresi · Franciacorta · Taze zencefil · Yenilebilir altın',  glass: '580',  bottle: '' },
-        { name: 'Truffle Martini',       info: 'Grey Goose Vodka · Kuru Vermouth · Beyaz truffle damlası · Yeşil zeytin',         glass: '720',  bottle: '' },
-        { name: 'Aperol Spritz di Lara', info: 'Aperol · Franciacorta · Bitter narenciye · Rosmarino dalı',                       glass: '480',  bottle: '' },
+        { name: 'Essenza Negroni',       info: 'Monkey 47 Gin · Campari · Carpano Antica · Portakal · Koca buz küresi',         glass: '680', bottle: '' },
+        { name: 'Amalfi Coast Sour',     info: 'Limoncello di Capri · Pisco · Taze limon · Gül suyu · Aquafaba köpük',           glass: '620', bottle: '' },
+        { name: 'Antalya Bellini',       info: 'Taze Akdeniz şeftali püresi · Franciacorta · Taze zencefil · Yenilebilir altın', glass: '580', bottle: '' },
+        { name: 'Truffle Martini',       info: 'Grey Goose Vodka · Kuru Vermouth · Beyaz truffle damlası · Yeşil zeytin',        glass: '720', bottle: '' },
+        { name: 'Aperol Spritz di Lara', info: 'Aperol · Franciacorta · Bitter narenciye · Rosmarino dalı',                      glass: '480', bottle: '' },
       ],
     },
     {
       title: 'Alkolsüz & Soft',
       wines: [
-        { name: 'San Pellegrino',   info: 'İtalyan maden suyu · 750ml',          glass: '',     bottle: '180' },
-        { name: 'Acqua Panna',      info: 'İtalyan kaynak suyu · 750ml',          glass: '',     bottle: '180' },
-        { name: 'Taze Sıkılmış',    info: 'Portakal, nar veya greyfurt · Mevsimlik', glass: '160', bottle: '' },
-        { name: 'Essenza Limonata', info: 'Taze limon · Nane · Zencefil · Bal',   glass: '200',  bottle: '' },
+        { name: 'San Pellegrino',   info: 'İtalyan maden suyu · 750ml',             glass: '',    bottle: '180' },
+        { name: 'Acqua Panna',      info: 'İtalyan kaynak suyu · 750ml',             glass: '',    bottle: '180' },
+        { name: 'Taze Sıkılmış',    info: 'Portakal, nar veya greyfurt · Mevsimlik', glass: '160', bottle: ''    },
+        { name: 'Essenza Limonata', info: 'Taze limon · Nane · Zencefil · Bal',      glass: '200', bottle: ''    },
       ],
     },
   ],
@@ -297,7 +353,7 @@ const MENU_DATA = {
   // ── ŞARAP EŞLEŞTİRME KURALLARI ─────────────────────────────
   pairingRules: [
     {
-      keywords: ['istiridye','ostrica','kabuk','deniz','caviale','havyar','crudo','çiğ','karides','gambero','hamsi','ton'],
+      keywords: ['istiridye','ostrica','kabuk','deniz','caviale','havyar','crudo','çiğ','karides','gambero','hamsi','ton','vongole','midye','frutti di mare'],
       wineProfile: 'sparkling',
       reasons: [
         'Deniz ürünlerinin iyot ve mineral notaları köpüklü şarapların asidik yapısıyla mükemmel denge kuruyor.',
@@ -306,7 +362,7 @@ const MENU_DATA = {
       ],
     },
     {
-      keywords: ['balık','branzino','levrek','ricciola','salmone','sogliola','orata','calamari','polpo','ahtapot','ıstakoz'],
+      keywords: ['balık','branzino','levrek','ricciola','salmone','sogliola','orata','calamari','polpo','ahtapot','ıstakoz','bottarga'],
       wineProfile: 'white_mineral',
       reasons: [
         'Balığın narin yapısı, beyaz şarabın mineral ve asidik notalarıyla harika bir armoni oluşturuyor.',
@@ -315,7 +371,7 @@ const MENU_DATA = {
       ],
     },
     {
-      keywords: ['risotto','pasta','makarna','raviolo','tagliolini','spaghetti','pappardelle','uovo','yumurta','burro','tereyağ','parmigiano','parmesan','fonduta','fondü','trüf','tartufo'],
+      keywords: ['risotto','pasta','makarna','raviolo','tagliolini','spaghetti','gnocchi','cacio','pappardelle','uovo','yumurta','burro','tereyağ','parmigiano','parmesan','fonduta','fondü','trüf','tartufo'],
       wineProfile: 'white_full',
       reasons: [
         'Yemekteki kremamsı doku ve zengin aromalar, tam gövdeli beyaz şarabın yağlı yapısıyla uyum içinde.',
@@ -324,7 +380,16 @@ const MENU_DATA = {
       ],
     },
     {
-      keywords: ['kümes','ördek','anatra','piccione','güvercin','quaglia','bıldırcın','animelle','uykuluk','prosciutto'],
+      keywords: ['pizza','margherita','napoletana','forno','quattro formaggi','burrata e pomodori','ortolana'],
+      wineProfile: 'rose_or_light_red',
+      reasons: [
+        'Pizza\'nın hafif ve ferah yapısı, rosé veya hafif kırmızı şarabın meyvesel notalarıyla uyum sağlıyor.',
+        'Fırın aroması ve domates asidiyeti, orta gövdeli şarapların tazeliyiyle güzel bir denge kuruyor.',
+        'İtalyan pizzasının klasik lezzetleri, hafif tanenli kırmızılarla geleneksel bir eşleşme oluşturuyor.',
+      ],
+    },
+    {
+      keywords: ['kümes','ördek','anatra','piccione','güvercin','quaglia','bıldırcın','animelle','uykuluk'],
       wineProfile: 'rose_or_light_red',
       reasons: [
         'Kümes hayvanlarının yumuşak etli yapısı hem rosé hem de hafif kırmızı şaraplarla dengeleniyor.',
@@ -333,7 +398,7 @@ const MENU_DATA = {
       ],
     },
     {
-      keywords: ['manzo','dana','sığır','bistecca','biftek','wagyu','kontrfile','fiorentina','agnello','kuzu','cinghiale','yaban domuzu','selvaggina','av','costata'],
+      keywords: ['manzo','dana','sığır','bistecca','biftek','wagyu','kontrfile','fiorentina','agnello','kuzu','costata','chianina'],
       wineProfile: 'red_full',
       reasons: [
         'Etin güçlü protein yapısı ve yağlılığı, Barolo\'nun ağır tanen yapısıyla mükemmel denge kuruyor.',
@@ -342,7 +407,7 @@ const MENU_DATA = {
       ],
     },
     {
-      keywords: ['dolce','tatlı','dessert','cioccolato','çikolata','tiramisù','tiramisu','panna cotta','gelato','dondurma','nocciola','fındık','caramello','karamel','soufflé','sufle','pasticceria','fondant'],
+      keywords: ['dolce','tatlı','dessert','cioccolato','çikolata','tiramisù','tiramisu','panna cotta','gelato','dondurma','nocciola','fındık','caramello','karamel','soufflé','sufle','pasticceria','fondant','cannolo'],
       wineProfile: 'sweet',
       reasons: [
         'Tatlı şarabın bal ve kuru meyve notaları tatlının zengin lezzetini zarif biçimde tamamlıyor.',
@@ -404,6 +469,22 @@ const MENU_DATA = {
       reason:  'Aynı Chianina ırkından gelen carpaccio, büyük bifteğe hafif ama tutarlı bir giriş yapar.',
     },
 
+    // ── YENİ ANA YEMEK ŞABLONU ──────────────────────────────
+    // Yeni yemek ekleyince aşağıdaki bloğu kopyalayıp düzenle:
+    //
+    // 'Yemek Adı': {
+    //   intro:   'Asistanın ilk cümlesi',
+    //   starter: 'Önerilen Başlangıç Adı',
+    //   reason:  'Neden bu eşleşme açıklaması',
+    // },
+
   },
 
 };
+
+// ── MOBİL İÇECEKLER ARKAPLAN DÜZELTMESİ ────────────────────
+// index.html'deki <section class="section" id="vini"> etiketini
+// şu şekilde güncelle:
+// <section class="section" id="vini" style="background:var(--black);">
+// Ya da index.html CSS bloğuna şunu ekle:
+// #vini { background: var(--black) !important; }
