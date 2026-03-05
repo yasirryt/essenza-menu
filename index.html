@@ -555,7 +555,7 @@ function renderMenu() {
         <div class="wine-item">
           <div><div class="wine-name">${esc(w.name)}</div><div class="wine-info">${esc(w.info)}</div></div>
           <div class="wine-prices">
-            ${w.glass ? `<div class="glass">Kadeh ${cur}${esc(w.glass)}</div>` : ''}
+            ${w.glass ? `<div class="${w.bottle ? 'glass' : 'bottle'}">${cat.softCategory ? '' : 'Kadeh '}${cur}${esc(w.glass)}</div>` : ''}
             ${w.bottle ? `<div class="bottle">Şişe ${cur}${esc(w.bottle)}</div>` : ''}
           </div>
         </div>`).join('')}

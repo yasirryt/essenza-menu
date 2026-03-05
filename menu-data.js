@@ -371,6 +371,7 @@ const MENU_DATA = {
     },
     {
       title: 'Alkolsüz & Soft',
+      softCategory: true,
       wines: [
         { name: 'San Pellegrino',   info: 'İtalyan maden suyu · 750ml',             glass: '',    bottle: '180' },
         { name: 'Acqua Panna',      info: 'İtalyan kaynak suyu · 750ml',             glass: '',    bottle: '180' },
