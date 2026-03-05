@@ -42,7 +42,7 @@ const MENU_DATA = {
   // ── REZERVASYON BUTONU ──────────────────────────────────────
   // WhatsApp linki: 'https://wa.me/90XXXXXXXXXX' (başında 0 olmadan)
   // Kapatmak için:  reservationActive: false
-  reservationActive: false,
+  reservationActive: true,
   reservationLabel:  'Rezervasyon',
   reservationLink:   'https://wa.me/905321590514',
 
