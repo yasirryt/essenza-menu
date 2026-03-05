@@ -17,11 +17,12 @@ if(typeof MENU_DATA === 'undefined'){
 window.MENU_DATA = {
   eyebrow:'Restaurant', heroSub:'Antalya · Lara', footerLogo:'Essenza',
   footerAddr:'Lara Sahil Caddesi, Antalya<br><br>Salı — Pazar arası açık · 19:30 – 23:30<br>Rezervasyon zorunludur',
-  navLabels:['Tadım Menüsü','Başlangıçlar','Pizza','Pasta & Et','Tatlılar','İçecekler'],
+  navLabels:['Tadım Menüsü','Başlangıçlar','Pizza','Pasta & Risotto','Ana Yemekler','Tatlılar','İçecekler'],
   deguLabel:'Tam Deneyim', deguTitle:'Tadım Menüsü',
   antipastiLabel:'Başlangıç İçin', antipastiTitle:'Başlangıçlar',
   primiLabel:'Forno a Legna · 72 Saat Fermentasyon', primiTitle:'Pizza Napoletana',
-  secondiLabel:'Pasta, Risotto & Ana Yemekler', secondiTitle:'Primi & Secondi',
+  secondiLabel:'Pasta & Risotto', secondiTitle:'Primi',
+  terziLabel:'Ana Yemekler', terziTitle:'Secondi',
   dolciLabel:'Yemek Sonu', dolciTitle:'Dolci',
   viniLabel:'Mahzenimiz', viniTitle:'İçecekler',
   currency:'₺', bannerActive:false, bannerText:'',
@@ -30,7 +31,7 @@ window.MENU_DATA = {
   showChefBadge:true, showVeganIcons:true, showAllergens:true, showCalories:false,
   deguBadge:'★ Yasir Şefin İmzası ★', deguName:'Terra & Mare',
   deguSub:'8 kurs · YZ destekli şarap eşleştirmesi mevcut', deguPrice:'8500', pairingBtn:'YZ Destekli Şarap Önerisi',
-  courses:[], antipasti:[], primi:[], secondi:[], dolci:[], wineCats:[],
+  courses:[], antipasti:[], primi:[], secondi:[], terzi:[], dolci:[], wineCats:[],
   pairingRules:[], wineProfiles:{}, assistantSuggestions:{},
 };
 }
@@ -374,14 +375,25 @@ body { background: var(--black); color: var(--white); font-family: 'Jost', sans-
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
-<!-- SECONDI — Pasta & Et -->
+<!-- SECONDI — Pasta & Risotto -->
 <section class="section" id="secondi">
   <div class="section-header">
-    <span class="section-label" id="d-secondiLabel">Pasta, Risotto & Ana Yemekler</span>
-    <h2 class="section-title" id="d-secondiTitle">Primi & Secondi</h2>
+    <span class="section-label" id="d-secondiLabel">Pasta & Risotto</span>
+    <h2 class="section-title" id="d-secondiTitle">Primi</h2>
     <div class="section-line"></div>
   </div>
   <div class="menu-grid" id="d-secondi"></div>
+</section>
+<div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
+
+<!-- TERZI — Ana Yemekler -->
+<section class="section" id="terzi">
+  <div class="section-header">
+    <span class="section-label" id="d-terziLabel">Ana Yemekler</span>
+    <h2 class="section-title" id="d-terziTitle">Secondi</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="menu-grid" id="d-terzi"></div>
 </section>
 <div class="sep"><div class="sep-line"></div><span class="sep-diamond">◆</span><div class="sep-line"></div></div>
 
@@ -475,6 +487,7 @@ function renderMenu() {
   setText('d-antipastiLabel', D.antipastiLabel); setText('d-antipastiTitle', D.antipastiTitle);
   setText('d-primiLabel', D.primiLabel); setText('d-primiTitle', D.primiTitle);
   setText('d-secondiLabel', D.secondiLabel); setText('d-secondiTitle', D.secondiTitle);
+  setText('d-terziLabel', D.terziLabel || 'Ana Yemekler'); setText('d-terziTitle', D.terziTitle || 'Secondi');
   setText('d-dolciLabel', D.dolciLabel); setText('d-dolciTitle', D.dolciTitle);
   setText('d-viniLabel', D.viniLabel); setText('d-viniTitle', D.viniTitle);
 
@@ -502,8 +515,8 @@ function renderMenu() {
   const pb = document.getElementById('d-pairingBtn');
   if(pb){ pb.textContent = D.pairingBtn; pb.onclick = openPairing; }
 
-  // ── NAV — sections dizisi ile navLabels bire bir eşleşiyor (ikisi de 6 eleman)
-  const sections = ['degu','antipasti','primi','secondi','dolci','vini'];
+  // ── NAV — 7 section ile 7 navLabel bire bir eşleşiyor
+  const sections = ['degu','antipasti','primi','secondi','terzi','dolci','vini'];
   const navInner = document.getElementById('d-navInner');
   navInner.innerHTML = '';
   (D.navLabels || []).forEach((label, i) => {
@@ -526,8 +539,10 @@ function renderMenu() {
 
   // MENU SECTIONS
   const cur = D.currency || '₺';
-  ['antipasti','primi','secondi','dolci'].forEach(sec => {
-    document.getElementById('d-'+sec).innerHTML = (D[sec]||[])
+  ['antipasti','primi','secondi','terzi','dolci'].forEach(sec => {
+    const el = document.getElementById('d-'+sec);
+    if(!el) return;
+    el.innerHTML = (D[sec]||[])
       .filter(item => !item.hidden)
       .map(item => `
       <div class="menu-item">
@@ -578,7 +593,7 @@ function scrollToSection(id){
   }
 }
 
-const sectionIds = ['degu','antipasti','primi','secondi','dolci','vini'];
+const sectionIds = ['degu','antipasti','primi','secondi','terzi','dolci','vini'];
 
 // ── FIX: threshold düşürüldü (0.12→0.05), rootMargin -20% kaldırıldı
 // Böylece mobilde küçük ekranda son section'lar da tetikleniyor
@@ -638,48 +653,69 @@ function openPairing(){
 function closePairing(){ document.getElementById('pairingOverlay').classList.remove('open'); }
 
 function fetchPairings(){
-  const PAIRING_RULES = D.pairingRules || [];
-  const WINE_PROFILES = D.wineProfiles || {};
+  // ── Sabit sommelier eşleştirmeleri — her kurs için lezzet analizine dayalı
+  // Kurs numarası → şarap + gerekçe
+  const FIXED_PAIRINGS = {
+    'I': {
+      wine: 'Krug Grande Cuvée',
+      reason: 'Amuse-bouche\'un bottarga tuzluluğu ve kefir asiditesi, Krug\'un maya kompleksliği ve ince balonlarıyla mükemmel denge kuruyor. Şampanyanın mineralli uzun bitişi damağı geceye hazırlıyor.',
+    },
+    'II': {
+      wine: 'Billecart-Salmon Blanc de Blancs',
+      reason: 'İstiridyenin saf iyot aroması ve havyarın kremamsı tuzluluğu, Blanc de Blancs\'ın saf Chardonnay asidiyetiyle örtüşüyor. Renk uyumu da var: deniz kokusu ve narenciye notaları birbirini tamamlıyor.',
+    },
+    'III': {
+      wine: 'Vernaccia di San Gimignano Riserva',
+      reason: 'Mazara karidesi crudo\'nun narenciyeli hafifliği ve taze wasabi sıcaklığı, Vernaccia\'nın mineral ve hafif acımsı bitiş karakteriyle armoni oluşturuyor. İkisi de Akdeniz\'in sadeliğini yansıtıyor.',
+    },
+    'IV': {
+      wine: 'Gaia & Rey Chardonnay',
+      reason: 'Safranın topraksı-egzotik aroması ve kemik iliğinin yoğun yağlılığı, Gaia & Rey\'in meşe fıçı ve sarı meyveli tam gövdeli yapısıyla tam örtüşüyor. Parmesan ve tereyağı ise şarabın kremamsı dokusunu yansıtıyor.',
+    },
+    'V': {
+      wine: 'Chablis Premier Cru — Montée de Tonnerre',
+      reason: 'Confit yumurta sarısının zenginliği Chablis\'in keskin asidiyetiyle dengeleniyor; siyah trüfün toprak aroması ise şarabın kireçtaşı mineralitesiyle konuşuyor. Klasik Burgonya-trüf etkileşimi.',
+    },
+    'VI': {
+      wine: 'Cloudy Bay Sauvignon Blanc',
+      reason: 'Tuzda pişen levreğin saf ve temiz deniz lezzeti, Cloudy Bay\'in taze otsu ve narenciyeli yapısıyla tamamlanıyor. Şarabın asidiyeti balığın doğal yağlılığını temizlerken tarhun yağının yeşil notasını öne çıkarıyor.',
+    },
+    'VII': {
+      wine: 'Passito di Pantelleria Ben Ryé',
+      reason: 'Amalfi limon sorbesi ve nane granitas\'ın ferah asidiyeti, Passito\'nun portakal kabuğu ve bal notalarıyla yumuşak bir köprü kuruyor. İkisi de Güney İtalya kökenli — Sicilya\'dan Campania\'ya zarif bir geçiş.',
+    },
+    'VIII': {
+      wine: 'Amarone della Valpolicella',
+      reason: 'Valrhona %70 ve fındık pralinesi, Amarone\'un kuru incir, kakao ve tütün kompleksliğiyle kusursuz uyum sağlıyor. İkisi de yoğun, kalıcı ve derin — geceyi kapatan güçlü bir final.',
+    },
+  };
+
   const allWines = [];
   (D.wineCats||[]).forEach(cat => cat.wines.forEach(w => allWines.push(w)));
 
   const pairings = (D.courses||[]).map(course => {
-    const text = (course.name + ' ' + course.desc).toLowerCase();
-    let matchedProfile = null;
-    let matchedReasons = [];
-    for(const rule of PAIRING_RULES){
-      if(rule.keywords.some(kw => text.includes(kw))){
-        matchedProfile = rule.wineProfile;
-        matchedReasons = rule.reasons;
-        break;
-      }
+    const fixed = FIXED_PAIRINGS[course.num];
+    if(fixed){
+      // Şarabı menüden bul (varsa)
+      const found = allWines.find(w => w.name.toLowerCase().includes(fixed.wine.toLowerCase().split(' ')[0]));
+      return {
+        courseNum:  course.num,
+        courseName: course.name,
+        wineName:   found ? found.name : fixed.wine,
+        reason:     fixed.reason,
+        isExternal: !found,
+      };
     }
-    if(!matchedProfile){
-      if(text.includes('amuse') || text.includes('hoş geldin') || text.includes('bouchée')){
-        matchedProfile = 'sparkling';
-        matchedReasons = ['Karşılama servisinde köpüklü şarap hem damağı açıyor hem de geceye şık bir giriş yapıyor.'];
-      } else if(text.includes('ön tatlı') || text.includes('sorbesi') || text.includes('granita')){
-        matchedProfile = 'sweet';
-        matchedReasons = ['Ara temizleyici bu servis, hafif tatlı notalarla geçişi zarif kılıyor.'];
-      } else {
-        matchedProfile = 'white_full';
-        matchedReasons = ['Bu kursun dengeli aroması, orta gövdeli bir beyaz şarapla zarif uyum sağlıyor.'];
-      }
-    }
-    const profileKeywords = WINE_PROFILES[matchedProfile] || [];
-    let bestWine = null;
-    for(const kw of profileKeywords){
-      bestWine = allWines.find(w => w.name.toLowerCase().includes(kw.toLowerCase()) || (w.info||'').toLowerCase().includes(kw.toLowerCase()));
-      if(bestWine) break;
-    }
-    const reason = matchedReasons[Math.floor(Math.random() * matchedReasons.length)];
-    if(bestWine){
-      return { courseNum: course.num, courseName: course.name, wineName: bestWine.name, reason, isExternal: false };
-    } else {
-      const gen = { sparkling:'Krug Grande Cuvée veya Franciacorta', white_mineral:'Chablis Premier Cru veya Vernaccia', white_full:'Gaia & Rey Chardonnay', rose_or_light_red:'Whispering Angel Rosé', red_full:'Barolo Brunate veya Sassicaia', sweet:'Passito di Pantelleria' };
-      return { courseNum: course.num, courseName: course.name, wineName: gen[matchedProfile] || 'Sommelierimize danışın', reason: reason + ' Sommelierimize danışabilirsiniz.', isExternal: true };
-    }
+    // Fallback — bilinmeyen kurs numaraları için
+    return {
+      courseNum:  course.num,
+      courseName: course.name,
+      wineName:   'Sommelierimize danışın',
+      reason:     'Bu kurs için sommelierimiz size özel bir öneri sunacaktır.',
+      isExternal: true,
+    };
   });
+
   setTimeout(() => renderPairings(pairings), 600);
 }
 
@@ -759,9 +795,9 @@ function asstChoices(items){
 async function startAsst(){
   await asstBubble('Merhaba, hoş geldiniz. Akşamınızı daha özel kılmak için yardımcı olmak isterim.');
   await asstBubble('Ana yemeğiniz olarak ne düşünüyorsunuz?');
-  const secondiItems = (D.secondi||[]).filter(i=>!i.hidden).map(i=>({label:i.name,item:i}));
-  secondiItems.push({label:'Henüz karar vermedim',item:null});
-  const chosen = await asstChoices(secondiItems);
+  const terziItems = (D.terzi||[]).filter(i=>!i.hidden).map(i=>({label:i.name,item:i}));
+  terziItems.push({label:'Henüz karar vermedim',item:null});
+  const chosen = await asstChoices(terziItems);
   await asstBubble(chosen.label, 'user');
   if(!chosen.item){
     await asstBubble('Sorun değil — bugün menümüzdeki tüm seçenekler birbirini tamamlar nitelikte.');

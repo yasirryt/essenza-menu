@@ -13,9 +13,9 @@ const MENU_DATA = {
   footerAddr: 'Lara Sahil Caddesi, Antalya<br><br>Salı — Pazar arası açık · 19:30 – 23:30<br>Rezervasyon zorunludur',
 
   // ── NAV YAZILARI ────────────────────────────────────────────
-  // ÖNEMLİ: Tam 6 eleman — index.html sections dizisiyle bire bir eşleşiyor:
-  // ['degu', 'antipasti', 'primi', 'secondi', 'dolci', 'vini']
-  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Pizza', 'Pasta & Et', 'Tatlılar', 'İçecekler'],
+  // ÖNEMLİ: Tam 7 eleman — index.html sections dizisiyle bire bir eşleşiyor:
+  // ['degu', 'antipasti', 'primi', 'secondi', 'terzi', 'dolci', 'vini']
+  navLabels: ['Tadım Menüsü', 'Başlangıçlar', 'Pizza', 'Pasta & Risotto', 'Ana Yemekler', 'Tatlılar', 'İçecekler'],
 
   // ── BÖLÜM BAŞLIKLARI ────────────────────────────────────────
   deguLabel:      'Tam Deneyim',
@@ -24,8 +24,10 @@ const MENU_DATA = {
   antipastiTitle: 'Başlangıçlar',
   primiLabel:     'Forno a Legna · 72 Saat Fermentasyon · Caputo Tipo 00',
   primiTitle:     'Pizza Napoletana',
-  secondiLabel:   'Pasta, Risotto & Ana Yemekler',
-  secondiTitle:   'Primi & Secondi',
+  secondiLabel:   'Pasta & Risotto',
+  secondiTitle:   'Primi',
+  terziLabel:     'Ana Yemekler',
+  terziTitle:     'Secondi',
   dolciLabel:     'Yemek Sonu',
   dolciTitle:     'Dolci',
   viniLabel:      'Mahzenimiz',
@@ -177,9 +179,8 @@ const MENU_DATA = {
     },
   ],
 
-  // ── PASTA, RİSOTTO & ANA YEMEKLER ────────────────────────────
+  // ── PASTA & RİSOTTO ──────────────────────────────────────────
   secondi: [
-    // ·· PASTA & RİSOTTO ··
     {
       name: 'Safran Risotto', sub: 'Şefin Yorumu',
       desc: 'Carnaroli Riserva San Massimo, L\'Aquila DOP safranı, dana ilik, monte tereyağı, 36 aylık parmesan, yenilebilir altın',
@@ -229,7 +230,10 @@ const MENU_DATA = {
       hidden: false, chefPick: false, vegetarian: true, vegan: false,
       calories: '', allergens: 'Gluten, Süt',
     },
-    // ·· ANA YEMEKLER ··
+  ],
+
+  // ── ANA YEMEKLER ─────────────────────────────────────────────
+  terzi: [
     {
       name: 'Bresse Güvercini', sub: 'İki Pişirme Tekniği',
       desc: 'Kestane balıyla lake pembemsi göğüs, çıtır confit but, kırmızı şarap sosu, yakılmış soğan püresi, yabani pazı',
