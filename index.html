@@ -538,7 +538,7 @@ function renderMenu() {
     </div>`).join('');
 
   // MENU SECTIONS
-  const cur = D.currency || '₺';
+  const cur = D.currency || '';
   ['antipasti','primi','secondi','terzi','dolci'].forEach(sec => {
     const el = document.getElementById('d-'+sec);
     if(!el) return;
