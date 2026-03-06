@@ -34,7 +34,7 @@ const MENU_DATA = {
   viniTitle:      'İçecekler',
 
   // ── PARA BİRİMİ ─────────────────────────────────────────────
-  currency: '₺',
+  currency: '',
 
   // ── DUYURU BANDI ────────────────────────────────────────────
   bannerActive: false,
@@ -59,7 +59,7 @@ const MENU_DATA = {
   deguBadge:  '★ Yasir Şefin İmzası ★',
   deguName:   'Terra & Mare',
   deguSub:    '8 kurs · YZ destekli şarap eşleştirmesi mevcut',
-  deguPrice:  '8500',
+  deguPrice:  '9500',
   pairingBtn: 'YZ Destekli Şarap Önerisi',
 
   courses: [
